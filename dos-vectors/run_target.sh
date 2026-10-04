@@ -432,7 +432,9 @@ YAML
     -e AUTHENTIK_POSTGRESQL__HOST=authentik-db -e AUTHENTIK_POSTGRESQL__USER=authentik \
     -e AUTHENTIK_POSTGRESQL__PASSWORD=authentik -e AUTHENTIK_POSTGRESQL__NAME=authentik \
     -e AUTHENTIK_REDIS__HOST=authentik-redis -e AUTHENTIK_BOOTSTRAP_PASSWORD=admin \
-    -e AUTHENTIK_BOOTSTRAP_TOKEN=dostoken -e AUTHENTIK_DISABLE_UPDATE_CHECK=true"
+    -e AUTHENTIK_BOOTSTRAP_TOKEN=dostoken -e AUTHENTIK_DISABLE_UPDATE_CHECK=true \
+    -e AUTHENTIK_WEB__WORKERS=3 -e AUTHENTIK_WEB__THREADS=4"   # pin concurrency (3x4=12) to the 8-vCPU box;
+                                                              # else gunicorn auto-sizes workers to HOST cores
   local LIMITS; set_size_limits
   log "starting authentik server + worker ($IMG_AUTHENTIK)"
   docker run -d --name "$C" --network authentik-net -p "127.0.0.1:$P:9000" $LIMITS $ENVS \

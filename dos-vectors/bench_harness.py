@@ -79,7 +79,12 @@ TARGETS = {
                                                    #   8-core grant -> fill ~20 to black out the pool
     "authentic2-sp":  dict(stack="authentic2", pool=16),
     "authentic2-idp": dict(stack="authentic2", pool=16),
-    "authentik-sp":   dict(stack="authentik",  pool="cores"),
+    "authentik-sp":   dict(stack="authentik",  pool=12),      # REAL pool = 3 workers x 4 gthreads (pinned in
+                                                   #   run_target.sh). authentik kills+respawns workers under
+                                                   #   the heavy canonicalization and sheds, so unlike the
+                                                   #   queue-holders (deny at 1.1x) it needs a large overshoot
+                                                   #   -- the multiplier required is itself a measured result
+                                                   #   (sweep via --overshoot; 1.1x->~12%, ~19x->full denial).
     "synapse":        dict(stack="synapse",    pool=1),
 }
 
@@ -106,8 +111,9 @@ SPECS = {
                                                                 #   GitLab rejects payloads >~240KB, so c14n-exc
                                                                 #   can't be made potent -> use the literal
                                                                 #   c14n-inc token so the exc failover never fires
-    "authentik-sp": [("c14n-exc", 40000), ("flattr", 156000)],  # authentik canonicalizes the EXCLUSIVE
-                                                                #   path (inc is inert <~90k); flattr <2.5MiB gate
+    "authentik-sp": [("c14n-inc", 90000), ("flattr", 156000)],  # inclusive C14N1D3 (O(KN^2)); inc only
+                                                                #   becomes potent at N~90k, still <2.5MiB gate.
+                                                                #   literal c14n-inc token -> no exc failover
 }
 
 

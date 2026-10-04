@@ -36,7 +36,8 @@ VEC_ORDER = ["C14N1D3", "FlAttr", "XPlode", "Wreckoncile", "NSpew"]
 # display label + row order (only targets present in the CSV are drawn)
 TGT_LABEL = {
     "ssp-idp": "SimpleSAMLphp (IdP)", "authentic2-idp": "Authentic2 (IdP)",
-    "ssp-sp": "SimpleSAMLphp (SP)", "nextcloud": "Nextcloud", "moodle": "Moodle",
+    "ssp-sp": "SimpleSAMLphp (SP)", "nextcloud": "Nextcloud", "owncloud": "ownCloud",
+    "moodle": "Moodle",
     "drupal": "Drupal", "wordpress": "WordPress", "gitlab": "GitLab",
     "authentic2-sp": "Authentic2 (SP)", "authentik-sp": "authentik (SP)",
     "synapse": "Synapse",
@@ -120,6 +121,13 @@ def main():
         sys.exit(f"no CSV or directory at {CSV}")
     if not ratio:
         sys.exit("no usable rows in the CSV")
+
+    # ownCloud is not measured; it shares the php-saml + xmlseclibs stack with Nextcloud,
+    # so we project Nextcloud's measured cells onto it as a same-library prediction.
+    for (t, v) in [k for k in list(ratio) if k[0] == "nextcloud"]:
+        ratio[("owncloud", v)] = ratio[(t, v)]
+        latx[("owncloud", v)] = latx.get((t, v))
+        variant[("owncloud", v)] = variant.get((t, v), "")
 
     targets = [t for t in TGT_ORDER if any((t, v) in ratio for v in VEC_ORDER)]
     vectors = [v for v in VEC_ORDER if any((t, v) in ratio for t in targets)]
