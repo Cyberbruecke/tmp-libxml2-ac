@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<foo
+	xmlns="http:?/FOO" 
+	xmlns:foo="http://FOO" 
+	xmlns:bar="http://BAR" 
+	xmlns:boo="http://BOO" 
+	xmlns:import="http://IMPORT" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://FOO anyAttr1_0.xsd"><w11039:e xmlns:w11039="u:11039" w11039:a=""><w11040:e xmlns:w11040="u:11040" w11040:a=""><w11041:e xmlns:w11041="u:11041" w11041:a=""><w11042:e xmlns:w11042="u:11042" w11042:a=""><w11043:e xmlns:w11043="u:11043" w11043:a=""><w11044:e xmlns:w11044="u:11044" w11044:a=""><w11045:e xmlns:w11045="u:11045" w11045:a=""><w11046:e xmlns:w11046="u:11046" w11046:a=""><w11047:e xmlns:w11047="u:11047" w11047:a=""><w11048:e xmlns:w11048="u:11048" w11048:a=""><w11049:e xmlns:w11049="u:11049" w11049:a=""><w11050:e xmlns:w11050="u:11050" w11050:a=""><w11051:e xmlns:w11051="u:11051" w11051:a=""><w11052:e xmlns:w11052="u:11052" w11052:a=""><w11053:e xmlns:w11053="u:11053" w11053:a=""><w11054:e xmlns:w11054="u:11054" w11054:a=""><w11055:e xmlns:w11055="u:11055" w11055:a=""><w11056:e xmlns:w11056="u:11056" w11056:a=""><w11057:e xmlns:w11057="u:11057" w11057:a=""><w11058:e xmlns:w11058="u:11058" w11058:a=""><w11059:e xmlns:w11059="u:11059" w11059:a=""><w11060:e xmlns:w11060="u:11060" w11060:a=""><w11061:e xmlns:w11061="u:11061" w11061:a=""><w11062:e xmlns:w11062="u:11062" w11062:a=""><w11063:e xmlns:w11063="u:11063" w11063:a=""><w11064:e xmlns:w11064="u:11064" w11064:a=""><w11065:e xmlns:w11065="u:11065" w11065:a=""><w11066:e xmlns:w11066="u:11066" w11066:a=""><w11067:e xmlns:w11067="u:11067" w11067:a=""><w11068:e xmlns:w11068="u:11068" w11068:a=""><w11069:e xmlns:w11069="u:11069" w11069:a=""><w11070:e xmlns:w11070="u:11070" w11070:a="">
+	<import:imp.element/>
+	<imp.attribute import:imp.attribute="p"/>
+	<imp.group>
+		<import:imp.element/>
+	</imp.group>
+	<basic.A bar:barA="o"/>
+	<basic.B bar:barB="o"/>
+	<basic.C barC="o"/>
+	<basic.D foo:barD="o"/>
+	<basic.E barA="o" bar:barB="o" foo:barC="o"/>
+	<inters.1_1 barA="o" bar:barB="o" foo:barC="o"/>
+	<int1_2 bar:barB="o"/>
+	<inters.1_3 barA="o" foo:barC="o"/>
+	<inters.1_4 barA="o" bar:barB="o" foo:barC="o"/>
+	<inters.2_1 barA="o" foo:barC="o"/>
+	<inters.3_1 bar:barB="o"/>
+	<inters.4_1 barA="o" foo:barC="o"/>
+	<!--inters.5_1 barA="o" bar:barB="o" foo:barC="o"/-->
+	<inters.6_1 bar:barB="o"/>
+</w11070:e></w11069:e></w11068:e></w11067:e></w11066:e></w11065:e></w11064:e></w11063:e></w11062:e></w11061:e></w11060:e></w11059:e></w11058:e></w11057:e></w11056:e></w11055:e></w11054:e></w11053:e></w11052:e></w11051:e></w11050:e></w11049:e></w11048:e></w11047:e></w11046:e></w11045:e></w11044:e></w11043:e></w11042:e></w11041:e></w11040:e></w11039:e></foo>
+
+

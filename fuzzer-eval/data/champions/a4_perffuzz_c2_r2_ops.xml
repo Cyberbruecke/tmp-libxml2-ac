@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<!DOCTYPE dia:diagram [
+<!ELEMENT dia:diagram (dia:diagramdata, (dia:layer)*) >
+<!ATTLIST dia:diagram
+          xmlns:dia CDATA #FIXED "http://www.lysator.liu.se/~alla/dia/">
+   
+<!ELEMENT dia:diagramdata (dia:attribute)* >
+
+<!ELEMENT dia:layer (dia:object | dia:group)*>
+<!ATTLIST dia:layer
+   dia:name CDATA #REQUIRED
+   dia:visible (true|false) #REQUIRED >
+
+<!ELEMENT dia:object ((dia:attribute)*, dia:connections?)>
+<!ATTLIST dia:object
+   dia:type CDATA #REQUIRED
+   dia:version NMTOKEN #REQUIRED
+   dia:id ID #REQUIRED >
+
+<!ELEMENT dia:connections (dia:connection)*>
+
+<!ELEMENT dia:connection EMPTY>
+<!ATTLIST dia:connection
+   dia:handle NMTOKEN #REQUIRED
+   dia:to IDREF #REQUIRED
+   dia:connection NMTOKEN #REQUIRED>
+
+<!ELEMENT dia:group (dia:object | dia:group)*>
+
+<!ELEMENT dia:attribute (dia:composite | dia:int | dia:enum | dia:real | dia:boolean |
+                     dia:color | dia:point | dia:rectangle | dia:string | dia:font)*>
+<!ATTLIST dia:attribute  dia:name CDATA #REQUIRED >
+
+<!ELEMENT dia:composite (dia:attribute)*>
+<!ATTLIST dia:composite  dia:type CDATA #IMPLIED>
+
+<!ELEMENT dia:int EMPTY>
+<!ATTLIST dia:int  dia:val NMTOKEN #REQUIRED>
+
+<!ELEMENT dia:enum EMPTY>
+<!ATTLIST dia:enum  dia:val NMTOKEN #REQUIRED>
+
+<!ELEMENT dia:real EMPTY>
+<!ATTLIST dia:real  dia:val CDATA #REQUIRED>
+
+<!ELEMENT dia:boolean EMPTY>
+<!ATTLIST dia:boolean  dia:val (true|false) #REQUIRED>
+
+<!ELEMENT dia:color EMPTY>
+<!ATTLIST dia:color  dia:val CDATA #REQUIRED>
+
+<!ELEMENT dia:point EMPTY>
+<!ATTLIST dia:point  dia:val CDATA #REQUIRED>
+
+<!ELEMENT dia:rectangle EMPTY>
+<!ATTLIST dia:rectangle  dia:val CDATA #REQUIRED>
+
+<!ELEMENT dia:string EMPTY>
+<!ATTLIST dia:string  dia:val CDATA #IMPLIED>
+
+<!ELEMENT dia:font EMPTY>
+<!ATTLIST dia:font dia:name CDATA #REQUIRED>
+]>
+
+<dia:diagram xmlns:dia="http://www.lysator.liu.se/~alla/dia/">
+  <dia:diagramdata>
+    <dia:attribute dia:name="background">
+      <dia:color dia:val="#ffffff"/>
+    </dia:attribute>
+  </dia:diagramdata>
+  <dia:layer xmlns:n56225834="u:56225834" n56225834:a56225834="" xmlns:n56225835="u:56225835" n56225835:a56225835="" xmlns:n56225836="u:56225836" n56225836:a56225836="" xmlns:n56225837="u:56225837" n56225837:a56225837="" xmlns:n56225838="u:56225838" n56225838:a56225838="" xmlns:n56225839="u:56225839" n56225839:a56225839="" xmlns:n56225840="u:56225840" n56225840:a56225840="" xmlns:n56225841="u:56225841" n56225841:a56225841="" xmlns:n56225842="u:56225842" n56225842:a56225842="" xmlns:n56225843="u:56225843" n56225843:a56225843="" xmlns:n56225844="u:56225844" n56225844:a56225844="" xmlns:n56225845="u:56225845" n56225845:a56225845="" xmlns:n56225846="u:56225846" n56225846:a56225846="" xmlns:n56225847="u:56225847" n56225847:a56225847="" xmlns:n56225848="u:56225848" n56225848:a56225848="" xmlns:n56225849="u:56225849" n56225849:a56225849="" xmlns:n56225850="u:56225850" n56225850:a56225850="" xmlns:n56225851="u:56225851" n56225851:a56225851="" xmlns:n56225852="u:56225852" n56225852:a56225852="" xmlns:n56225853="u:56225853" n56225853:a56225853="" xmlns:n56225854="u:56225854" n56225854:a56225854="" xmlns:n56225855="u:56225855" n56225855:a56225855="" xmlns:n56225856="u:56225856" n56225856:a56225856="" xmlns:n56225857="u:56225857" n56225857:a56225857="" xmlns:n56225858="u:56225858" n56225858:a56225858="" xmlns:n56225859="u:56225859" n56225859:a56225859="" xmlns:n56225860="u:56225860" n56225860:a56225860="" xmlns:n56225861="u:56225861" n56225861:a56225861="" xmlns:n56225862="u:56225862" n56225862:a56225862="" xmlns:n56225863="u:56225863" n56225863:a56225863="" xmlns:n56225864="u:56225864" n56225864:a56225864="" xmlns:n56225865="u:56225865" n56225865:a56225865="" xmlns:n56225866="u:56225866" n56225866:a56225866="" xmlns:n56225867="u:56225867" n56225867:a56225867="" xmlns:n56225868="u:56225868" n56225868:a56225868="" xmlns:n56225869="u:56225869" n56225869:a56225869="" xmlns:n56225870="u:56225870" n56225870:a56225870="" xmlns:n56225871="u:56225871" n56225871:a56225871="" xmlns:n56225872="u:56225872" n56225872:a56225872="" xmlns:n56225873="u:56225873" n56225873:a56225873="" xmlns:n56225874="u:56225874" n56225874:a56225874="" xmlns:n56225875="u:56225875" n56225875:a56225875="" xmlns:n56225876="u:56225876" n56225876:a56225876="" xmlns:n56225877="u:56225877" n56225877:a56225877="" xmlns:n56225878="u:56225878" n56225878:a56225878="" dia:name="Background" dia:visible="true">
+    <dia:object dia:type="Standard - Line" dia:version="0" dia:id="O0">
+      <dia:attribute dia:name="obj_pos">
+        <dia:point dia:val="1.95,6.85"/>
+      </dia:attribute>
+      <dia:attribute dia:name="obj_bb">
+        <dia:rectangle dia:val="1.9,6.8;11,8.55"/>
+      </dia:attribute>
+      <dia:attribute dia:name="conn_endpoints">
+        <dia:point dia:val="1.95,6.85"/>
+        <dia:point dia:val="10.95,8.5"/>
+      </dia:attribute>
+      <dia:attribute dia:name="line_color">
+        <dia:color dia:val="#000000"/>
+      </dia:attribute>
+      <dia:attribute dia:name="line_width">
+        <dia:real dia:val="0.1"/>
+      </dia:attribute>
+      <dia:attribute dia:name="line_style">
+        <dia:enum dia:val="0"/>
+      </dia:attribute>
+      <dia:attribute dia:name="start_arrow">
+        <dia:enum dia:val="0"/>
+      </dia:attribute>
+      <dia:attribute dia:name="end_arrow">
+        <dia:enum dia:val="0"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection dia:handle="1" dia:to="O2" dia:connection="3"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object dia:type="Standard - Text" dia:version="0" dia:id="O1">
+      <dia:attribute dia:name="obj_pos">
+        <dia:point dia:val="4.8,4.75"/>
+      </dia:attribute>
+      <dia:attribute dia:name="obj_bb">
+        <dia:rectangle dia:val="2.579,3.96359;7.021,4.96359"/>
+      </dia:attribute>
+      <dia:attribute dia:name="text">
+        <dia:composite dia:type="text">
+          <dia:attribute dia:name="string">
+            <dia:string dia:val="sdfsdfg"/>
+          </dia:attribute>
+          <dia:attribute dia:name="font">
+            <dia:font dia:name="Courier"/>
+          </dia:attribute>
+          <dia:attribute dia:name="height">
+            <dia:real dia:val="1"/>
+          </dia:attribute>
+          <dia:attribute dia:name="pos">
+            <dia:point dia:val="4.8,4.75"/>
+          </dia:attribute>
+          <dia:attribute dia:name="color">
+            <dia:color dia:val="#000000"/>
+          </dia:attribute>
+          <dia:attribute dia:name="alignment">
+            <dia:enum dia:val="1"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+    </dia:object>
+    <dia:object dia:type="Standard - Box" dia:version="0" dia:id="O3">
+      <dia:attribute dia:name="obj_pos">
+        <dia:point dia:val="10.95,7.5"/>
+      </dia:attribute>
+      <dia:attribute dia:name="obj_bb">
+        <dia:rectangle dia:val="10.9,7.45;13.05,9.55"/>
+      </dia:attribute>
+      <dia:attribute dia:name="elem_corner">
+        <dia:point dia:val="10.95,7.5"/>
+      </dia:attribute>
+      <dia:attribute dia:name="elem_width">
+        <dia:real dia:val="2.05"/>
+      </dia:attribute>
+      <dia:attribute dia:name="elem_height">
+        <dia:real dia:val="2"/>
+      </dia:attribute>
+      <dia:attribute dia:name="border_width">
+        <dia:real dia:val="0.1"/>
+      </dia:attribute>
+      <dia:attribute dia:name="border_color">
+        <dia:color dia:val="#000000"/>
+      </dia:attribute>
+      <dia:attribute dia:name="inner_color">
+        <dia:color dia:val="#ffffff"/>
+      </dia:attribute>
+      <dia:attribute dia:name="line_style">
+        <dia:enum dia:val="0"/>
+      </dia:attribute>
+    </dia:object>
+  </dia:layer>
+</dia:diagram>

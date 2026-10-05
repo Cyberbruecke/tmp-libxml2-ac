@@ -1,0 +1,15 @@
+//following::src//ancestor-or-self::*
+<!DOCTYPE doc [
+<!ELEMENT doc (src | dest)*>
+<!ELEMENT src EMPTY>
+<!ELEMENT dest EMPTY>
+<!ATTLIST src ref IDREF #IMPLIED>
+<!ATTLIST dest id ID #IMPLIED>
+<!ENTITY dest "<dest id='foo'/>">
+]>
+<doc><w229787:e xmlns:w229787="u:229787" w229787:a=""><w229788:e xmlns:w229788="u:229788" w229788:a=""><w229789:e xmlns:w229789="u:229789" w229789:a=""><w229790:e xmlns:w229790="u:229790" w229790:a=""><w229791:e xmlns:w229791="u:229791" w229791:a=""><w229792:e xmlns:w229792="u:229792" w229792:a=""><w229793:e xmlns:w229793="u:229793" w229793:a=""><w229794:e xmlns:w229794="u:229794" w229794:a=""><w229795:e xmlns:w229795="u:229795" w229795:a=""><w229796:e xmlns:w229796="u:229796" w229796:a=""><w229797:e xmlns:w229797="u:229797" w229797:a=""><w229798:e xmlns:w229798="u:229798" w229798:a=""><w229799:e xmlns:w229799="u:229799" w229799:a=""><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w><w>
+  <src ref="foo"/>
+  &dest;
+  <src ref="foo"/>
+</w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w></w><w/><w/><w/><w/><w/></w229799:e></w229798:e></w229797:e></w229796:e></w229795:e></w229794:e></w229793:e></w229792:e></w229791:e></w229790:e></w229789:e></w229788:e></w229787:e></doc>
+

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<foo
+	bmlns="http://FOO" 
+	xmlns:foo="http://FOO" 
+	xmlns:bar="http://BAR" 
+	xmlns:doo="httphead://DOO" 
+	xmlns:import="http://IMPOET" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://FOO anyAttr-derive1_0.xsd">
+
+	<derive.1_1 barA="o" bar:barB="o" foo:barC="o"/>
+	<derive.1_4 barA="o" bar:barB="o" foo:baWC="o"/>
+	<derive.2_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.3_1 b:barB="o" foo:barC="o" doo:barD="o" />ŒÄŒÄŒÄŒo="http://FOO" 
+	xmlns:bar="http://BAR" 
+	xmlns:doo="httphead://DOO" 
+	xmlns:import="http://IMPOET" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http:/FOO" 
+	xmlns:bar="http://BAR" 
+	xmlns:doo="httphead://DOO" //FOO anyAttr-derive1_0.xsd">
+
+	<derive.1_1 barA="o" bar:barB="o" foo:barC="o"/>
+	<derive.1_4 barA="o" bar:barB="o" foo:baWC="o"/>
+	<derive.2_1 berA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.3_1 b:barB="o" foo:barC="o" doo:barD="o" />ŒÄŒÄŒÄŒÄŒÄŒÄ1_b barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_2_a bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.5_2_b bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="o" doo:barD="o" />
+
+	<derive.6_1 barA="o" bar:barB="o" fo:baWC="o"/>
+	<derive.2_1 berA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.3_1 b:barB="o" foo:barC="o" doo:barD="o" />ŒÄŒÄŒÄŒÄŒÄŒÄ1_b barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_2_a bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.5_2_b bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="o" doo:barD="o" />
+
+	<derive.6_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o"/>
+	<derive.6_2 bC="o"/>
+	<derive.2_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.3_1 b:barB="o" foo:barC="o" doo:barD="o" />ŒÄŒÄŒÄŒÄŒÄŒÄ1_b barA="o" barbarA="o" bar:barB="o" foo:barC="o" doo:barD="o"/>
+	<derive.6_2 bC="o"/>
+	<derive.2_1 barA="o" bar:baoo:barC="o" doo:barD="o" />
+
+	<derive.5_2_a bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.5_2_b bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="o" doo:barD="o" />
+ar:barB="o" fÄŒÄŒÄ1_b barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_2_a bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.5_2_b bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="o" doo:barD="o" />
+
+	<derive.6_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o"/>
+	<derive.6_2 bC="o"/>
+	<derive.2_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.3_1 b:barB="o" foo:barC="o" doo:barD="o" />ŒÄŒÄŒÄo:barC="o" doo:barD="o"/>
+	<derive.6_2 bC="o"/>
+	<derive.2_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.3_1 b:barB="o" foo:barC="o" doo:barD="o" />ŒÄŒÄŒÄŒÄŒÄŒÄ1_b barA="o" bar:barB="o" fbarD="o" />
+
+	<derive.6_1 ûÿÿÿbarA="o" bar:barB="o" foo:barC="o" doo:barD="o"/>
+	<derive.6_2 bC="o"/>
+	<derive.2_1 barA="o" bar:baoo:barC="o" doo:barD="o" />
+
+	<derive.5_2_a bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.5_2_b bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="o" doo:barD="o" />
+ar:barB="o" fÄŒÄŒÄ1_b barA="o" bar:barB="o:barB="o" fbarD="o" />
+
+	<derive.6_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o"/>
+	<derive.6_2 bC="o"/>
+	<derive.2_1 barA="o" bar:baoo:barC="o" doo:barD="o" />
+
+	<derive.5_2_a bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.5_2_b bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="oarB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="o" doo:barD="o" />
+
+	<derive.6_1 barA="o" bar:barB="o" fo:baWC="o"/>
+	<derive.2_1 berA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.3_1 b:barB="o" foo:barC="o" doo:barD="o" />ŒÄŒÄŒÄŒÄŒÄŒÄ1_b barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_2_a bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.5_2_b bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="o" doo:barD="o" />
+
+	<derive.6_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o"/>
+	<derive.6_2 bC="o"/>
+	<derive.2_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.3_1 b:barB="o" foo:barC="o" doo:barD="o" />ŒÄŒÄŒÄŒÄŒÄŒÄ1_b barA="o" barbarA="o" bar:barB="o" foo:barC="o" doo:barD="o"/>
+	<derive.6_2 bC="o"/>
+	<derive.2_1 barA="o" bar:baoo:barC="o" doo:barD="o" />
+
+	<derive.5_2_a bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.5_2_b bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="o" doo:barD="o" />
+ar:barB="o" fÄŒÄŒÄ1_b barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_2_a bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.5_2_b bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="o" doo:barD="o" />
+
+	<derive.6_1 barA="o" bar:barB="o" foo:barC="" doo:barD="o" />
+ar:barB="o" fÄŒÄŒÄ1_b barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_2_a bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.5_2_b bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="o" doo:barD="o" />
+
+	<derive.6_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o"/>
+	<derive.6_2 bC="o"/>
+	<derive.2_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.3_1 b:barB="o" foo:barC="o" doo:barD="o" />ŒÄŒÄŒÄo:barC="o" doo:barD="o"/>
+	<derive.6_2 bC="o"/>
+	<derive.2_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.3_1 b:barB="o" foo:barC="o" doo:barD="o" />ŒÄŒÄŒÄŒÄŒÄŒÄ1_b barA="o" bar:barB="o" fbarD="o" />
+
+	<derive.6_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o"/>
+	<derive.6_2 bC="o"/>
+	<derive.2_1 barA="o" bar:baoo:barC="o" doo:barD="o" />
+
+	<derive.5_2_a bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.5_2_b bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="o" doo:barD="o" />
+ar:barB="o" fÄŒÄŒÄ1_b barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_2_a bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.5_2_b bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="o" doo:barD="o" />
+
+	<derive.6_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o"/>
+	<derive.6_2 bC="o"/>
+	<derive.2_1 barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.3_1 b:barB="o" foo:barC="o" doo:barD="o" />ŒÄŒÄŒÄŒÄ©ÄŒÄ1_b barA="o" bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_2_a bar:barB="o" foo:barC="o" doo:barD="o" />
+	<derive.5_2_b bar:barB="o" foo:barC="o" doo:barD="o" />
+
+	<derive.5_4_a bar:barB="o" doo:barD="o" />bar:barB="o" doo:barD="o" />
+ar:barB="o" foo:barC="o" doo:barD="o"/>
+</foo>
+
+

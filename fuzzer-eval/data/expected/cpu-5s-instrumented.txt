@@ -1,0 +1,10 @@
+host     : 13th Gen Intel(R) Core(TM) i7-1355U, 12 cores, Linux
+libxml2  : v2.15.0-124-gc6324894 (c6324894, instrumented)
+criterion: CPU time >= 5 s   (median of 5 runs per input)
+vector                  Stock   AFL++ all  AFL++ only    PerfFuzz    SlowFuzz    Informed
+C14N1D3 (excl.)             -           -           -           -           -           -
+C14N1D3 (incl.)             -         yes         yes           -           -         yes
+XPlode                      -         yes         yes         yes           -         yes
+FlAttr                      -           -           -           -           -           -
+Wreckoncile                 -           -         yes           -           -         yes
+runs clearing            0/40        4/10        4/10        2/10        0/10        6/10

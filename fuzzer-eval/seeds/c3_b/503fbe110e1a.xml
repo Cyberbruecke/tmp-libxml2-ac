@@ -1,0 +1,2 @@
+//*
+<a xmlns:a="bar"><b xmlns:a="foo"/></a>

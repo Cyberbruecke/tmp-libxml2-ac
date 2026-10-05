@@ -1,0 +1,102 @@
+diff --git a/c14n.c b/c14n.c
+index 6414cc52..63259f13 100644
+--- a/c14n.c
++++ b/c14n.c
+@@ -10,6 +10,11 @@
+  * Author: Aleksey Sanin
+  */
+ #define IN_LIBXML
++
++/* AC-fuzzing instrumentation: exact iteration count of the C1/C2 hot loops. */
++unsigned long xmlC14NScanIters = 0;      /* C1: exclusive scan */
++unsigned long xmlC14NIncScanIters = 0;   /* C2: inclusive scan */
++
+ #include "libxml.h"
+ #ifdef LIBXML_C14N_ENABLED
+ 
+@@ -413,6 +418,8 @@ xmlC14NVisibleNsStackFind(xmlC14NVisibleNsStackPtr cur, xmlNsPtr ns)
+         for (i = cur->nsCurEnd - 1; i >= start; --i) {
+             xmlNsPtr ns1 = cur->nsTab[i];
+ 
++            xmlC14NIncScanIters++;   /* AC-fuzzing: count the C2 inclusive scan */
++
+ 	    if(xmlC14NStrEqual(prefix, (ns1 != NULL) ? ns1->prefix : NULL)) {
+ 		return(xmlC14NStrEqual(href, (ns1 != NULL) ? ns1->href : NULL));
+ 	    }
+@@ -446,6 +453,8 @@ xmlExcC14NVisibleNsStackFind(xmlC14NVisibleNsStackPtr cur, xmlNsPtr ns, xmlC14NC
+         for (i = cur->nsCurEnd - 1; i >= start; --i) {
+             xmlNsPtr ns1 = cur->nsTab[i];
+ 
++            xmlC14NScanIters++;   /* AC-fuzzing: count the C1 quadratic scan */
++
+ 	    if(xmlC14NStrEqual(prefix, (ns1 != NULL) ? ns1->prefix : NULL)) {
+ 		if(xmlC14NStrEqual(href, (ns1 != NULL) ? ns1->href : NULL)) {
+ 		    return(xmlC14NIsVisible(ctx, ns1, cur->nodeTab[i]));
+diff --git a/tree.c b/tree.c
+index 5e3c6b53..a4a7a189 100644
+--- a/tree.c
++++ b/tree.c
+@@ -16,6 +16,13 @@
+ #endif
+ 
+ #define IN_LIBXML
++
++/* AC-fuzzing: C5 attribute tail-walk and C7 reconcile-cache scan counts. */
++unsigned long xmlC5AttrWalkIters = 0;
++unsigned long xmlC7ReconIters = 0;
++/* AC-fuzzing: C10 -- xmlNewNs nsDef tail-walk (distinct from C7 reconcile cache). */
++unsigned long xmlC10NsWalkIters = 0;
++
+ #include "libxml.h"
+ 
+ #include <string.h> /* for memset() only ! */
+@@ -554,6 +561,7 @@ xmlNewNs(xmlNode *node, const xmlChar *href, const xmlChar *prefix) {
+                 (prev->href != NULL))
+                 goto error;
+ 	    while (prev->next != NULL) {
++	        xmlC10NsWalkIters++;   /* AC-fuzzing: the C10 quadratic */
+ 	        prev = prev->next;
+ 		if ((xmlStrEqual(prev->prefix, cur->prefix)) &&
+                     (prev->href != NULL))
+@@ -1510,8 +1518,8 @@ xmlNewPropInternal(xmlNodePtr node, xmlNsPtr ns,
+         } else {
+             xmlAttrPtr prev = node->properties;
+ 
+-            while (prev->next != NULL)
+-                prev = prev->next;
++            while (prev->next != NULL) { xmlC5AttrWalkIters++;
++                prev = prev->next; }
+             prev->next = cur;
+             cur->prev = prev;
+         }
+@@ -6018,6 +6026,7 @@ xmlReconciliateNs(xmlDoc *doc, xmlNode *tree) {
+ 	 */
+ 	if (node->ns != NULL) {
+ 	    for (i = 0; i < nbCache; i++) {
++	        xmlC7ReconIters++;   /* AC-fuzzing: the C7 quadratic */
+ 	        if (cache[i].oldNs == node->ns) {
+ 		    node->ns = cache[i].newNs;
+ 		    break;
+diff --git a/xpath.c b/xpath.c
+index 442ce02f..903c7571 100644
+--- a/xpath.c
++++ b/xpath.c
+@@ -19,6 +19,10 @@
+ #endif
+ 
+ #define IN_LIBXML
++
++/* AC-fuzzing: C3 preceding-sibling axis walk counter. */
++unsigned long xmlC3AxisIters = 0;
++
+ #include "libxml.h"
+ 
+ #include <limits.h>
+@@ -6585,6 +6589,7 @@ xmlXPathNextFollowingSibling(xmlXPathParserContext *ctxt, xmlNode *cur) {
+  */
+ xmlNode *
+ xmlXPathNextPrecedingSibling(xmlXPathParserContext *ctxt, xmlNode *cur) {
++    xmlC3AxisIters++;   /* AC-fuzzing: the C3 quadratic */
+     if ((ctxt == NULL) || (ctxt->context == NULL)) return(NULL);
+     if ((ctxt->context->node->type == XML_ATTRIBUTE_NODE) ||
+         (ctxt->context->node->type == XML_NAMESPACE_DECL))

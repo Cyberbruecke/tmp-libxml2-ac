@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<!DOCTYPE dia:diagram [
+<!ELEMENT dia:diagram (dia:diagramdata, (dia:layer)*) >
+<!ATTLIST dia:diagram
+          xmlns:dia CDATA #FIXED "http://www.lysator.liu.se/~alla/dia/">
+   
+<!ELEMENT dia:diagramdata (dia:attribute)* >
+
+<!ELEMENT dia:layer (dia:object | dia:group)*>
+<!ATTLIST dia:layer
+   dia:name CDATA #REQUIRED
+   dia:visible (true|false) #REQUIRED >
+
+<!ELEMENT dia:object ((dia:attribute)*, dia:connections?)>
+<!ATTLIST dia:object
+   dia:type CDATA #REQUIRED
+   dia:version NMTOKEN #REQUIRED
+   dia:id ID #REQUIRED >
+
+<!ELEMENT dia:connections (dia:connection)*>
+
+<!ELEMENT dia:connection EMPTY>
+<!ATTLIST dia:connection
+   dia:handle NMTOKEN #REQUIRED
+   dia:to IDREF #REQUIRED
+   dia:connection NMTOKEN #REQUIRED>
+
+<!ELEMENT dia:group (dia:objgct | dia:group)*>
+
+<!ELEMENT dia:attribute (dia:composite | dia:int | dia:enum | dia:real | dia:boolean |
+                     dia:color | dia:point | dia:rectangle | dia:string | dia:font)*>
+<!ATTLIST dia:attribute  dia:name CDATA #REQUIRED >
+
+<!ELEMENT dia:composite (dia:attribute)*>
+<!ATTLIST dia:composite  dia:type CDATA #IMPLIED>
+
+<!ELEMENT dia:int EMPTY>
+<!ATTLIST dia:int  dia:val NMTOKEN #REQUIRED>
+
+<!ELEMENT dia:enum EMPTY>
+<!ATTLIST dia:enum  dia:val NMTOKEN #REQUIRED>
+
+<!ELEMENT dia:real EMPTY>
+<!ATTLIST dia:real  dia:val CDATA #REQUIRED>
+
+<!ELEMENT dia:boolean EMPTY>
+<!ATTLIST dia:boolean  dia:val (true|false) #REQUIRED>
+
+<!ELEMENT dia:color EMPTY>
+<!ATTLIST dia:color  dia:val CDATA #REQUIRED>
+
+<!ELEMENT dia:point EMPTY>
+<!ATTLIST dia:point  dia:val CDATA #REQUIRED>
+
+<!ELEMENT dia:rectangle EMPTY>
+<!ATTLIST dia:rectangle  dia:val CDATA #REQUIRED>
+
+<!ELEMENT dia:string EMPTY>
+<!ATTLIST dia:string  dia:val CDATA #IMPLIED>
+
+<!ELEMENT dia:font EMPTY>
+<!ATTLIST dia:font dia:name CDATA #REQUIRED>
+]>
+
+<dia:diagram xmlns:n43912942="u:43912942" n43912942:a43912942="" xmlns:n43912943="u:43912943" n43912943:a43912943="" xmlns:n43912944="u:43912944" n43912944:a43912944="" xmlns:n43912945="u:43912945" n43912945:a43912945="" xmlns:n43912946="u:43912946" n43912946:a43912946="" xmlns:n43912947="u:43912947" n43912947:a43912947="" xmlns:n43912948="u:43912948" n43912948:a43912948="" xmlns:n43912949="u:43912949" n43912949:a43912949="" xmlns:n43912950="u:43912950" n43912950:a43912950="" xmlns:n43912951="u:43912951" n43912951:a43912951="" xmlns:n43912952="u:43912952" n43912952:a43912952="" xmlns:n43912953="u:43912953" n43912953:a43912953="" xmlns:n43912954="u:43912954" n43912954:a43912954="" xmlns:n43912955="u:43912955" n43912955:a43912955="" xmlns:n43912956="u:43912956" n43912956:a43912956="" xmlns:n43912957="u:43912957" n43912957:a43912957="" xmlns:n43912958="u:43912958" n43912958:a43912958="" xmlns:n43912959="u:43912959" n43912959:a43912959="" xmlns:n43912960="u:43912960" n43912960:a43912960="" xmlns:n43912961="u:43912961" n43912961:a43912961="" xmlns:n43912962="u:43912962" n43912962:a43912962="" xmlns:n43912963="u:43912963" n43912963:a43912963="" xmlns:n43912964="u:43912964" n43912964:a43912964="" xmlns:n43912965="u:43912965" n43912965:a43912965="" xmlns:n43912966="u:43912966" n43912966:a43912966="" xmlns:n43912967="u:43912967" n43912967:a43912967="" xmlns:n43912968="u:43912968" n43912968:a43912968="" xmlns:n43912969="u:43912969" n43912969:a43912969="" xmlns:n43912970="u:43912970" n43912970:a43912970="" xmlns:n43912971="u:43912971" n43912971:a43912971="" xmlns:n43912972="u:43912972" n43912972:a43912972="" xmlns:n43912973="u:43912973" n43912973:a43912973="" xmlns:n43912974="u:43912974" n43912974:a43912974="" xmlns:n43912975="u:43912975" n43912975:a43912975="" xmlns:n43912976="u:43912976" n43912976:a43912976="" xmlns:n43912977="u:43912977" n43912977:a43912977="" xmlns:n43912978="u:43912978" n43912978:a43912978="" xmlns:n43912979="u:43912979" n43912979:a43912979="" xmlns:n43912980="u:43912980" n43912980:a43912980="" xmlns:n43912981="u:43912981" n43912981:a43912981="" xmlns:n43912982="u:43912982" n43912982:a43912982="" xmlns:n43912983="u:43912983" n43912983:a43912983="" xmlns:n43912984="u:43912984" n43912984:a43912984="" xmlns:n43912985="u:43912985" n43912985:a43912985="" xmlns:n43912986="u:43912986" n43912986:a43912986="" xmlns:n43912987="u:43912987" n43912987:a43912987="" xmlns:dia="http://www.lysator.liu.se/~alla/dia/">
+  <dia:diagramdata>
+    <dia:attribute dia:name="background">
+      <dia:color dia:val="#ffffff"/>
+    </dia:attribute>
+  </dia:diagramdata>
+  <dia:layer dia:name="Background" dia:visible="true">
+    <dia:object dia:type="Standard - Line" dia:version="0" dia:id="O0">
+      <dia:attribute dia:name="obj_pos">
+        <dia:point dia:val="1.95,6.85"/>
+      </dia:attribute>
+      <dia:attribute dia:name="obj_bb">
+        <dia:rectangle dia:val="1.9,6.8;11,8.55"/>
+      </dia:attribute>
+      <dia:attribute dia:name="conn_endpoints">
+        <dia:point dia:val="1.95,6.85"/>
+        <dia:point dia:val="10.95,8.5"/>
+      </dia:attribute>
+      <dia:attribute dia:name="line_color">
+        <dia:color dia:val="#000000"/>
+      </dia:attribute>
+      <dia:attribute dia:name="line_width">
+        <dia:real dia:val="0.1"/>
+      </dia:attribute>
+      <dia:attribute dia:name="line_style">
+        <dia:enum dia:val="0"/>
+      </dia:attribute>
+      <dia:attribute dia:name="start_arrow">
+        <dia:enum dia:val="0"/>
+      </dia:attribute>
+      <dia:attribute dia:name="end_arrow">
+        <dia:enum dia:val="0"/>
+      </dia:attribute>
+      <dia:connections>
+        <dia:connection dia:handle="1" dia:to="O2" dia:connection="3"/>
+      </dia:connections>
+    </dia:object>
+    <dia:object dia:type="Standard - Text" dia:version="0" dia:id="O1">
+      <dia:attribute dia:name="obj_pos">
+        <dia:point dia:val="4.8,4.75"/>
+      </dia:attribute>
+      <dia:attribute dia:name="obj_bb">
+        <dia:rectangle dia:val="2.579,3.96359;7.021,4.96359"/>
+      </dia:attribute>
+      <dia:attribute dia:name="text">
+        <dia:composite dia:type="text">
+          <dia:attribute dia:name="string">
+            <dia:string dia:val="sdfsdfg"/>
+          </dia:attribute>
+          <dia:attribute dia:name="font">
+            <dia:font dia:name="Courier"/>
+          </dia:attribute>
+          <dia:attribute dia:name="height">
+            <dia:real dia:val="1"/>
+          </dia:attribute>
+          <dia:attribute dia:name="pos">
+            <dia:point dia:val="4.8,4.75"/>
+          </dia:attribute>
+          <dia:attribute dia:name="color">
+            <dia:color dia:val="#000000"/>
+          </dia:attribute>
+          <dia:attribute dia:name="alignment">
+            <dia:enum dia:val="1"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+    </dia:object>
+    <dia:object dia:type="Standard - Box" dia:version="0" dia:id="O2">
+      <dia:attribute dia:name="obj_pos">
+        <dia:point dia:val="10.95,7.5"/>
+      </dia:attribute>
+      <dia:attribute dia:name="obj_bb">
+        <dia:rectangle dia:val="10.9,7.45;13.05,9.55"/>
+      </dia:attribute>
+      <dia:attribute dia:name="elem_corner">
+        <dia:point dia:val="10.95,7.5"/>
+      </dia:attribute>
+      <dia:attribute dia:name="elem_width">
+        <dia:real dia:val="2.05"/>
+      </dia:attribute>
+      <dia:attribute dia:name="elem_height">
+        <dia:real dia:val="2"/>
+      </dia:attribute>
+      <dia:attribute dia:name="border_width">
+        <dia:real dia:val="0.1"/>
+      </dia:attribute>
+      <dia:attribute dia:name="border_color">
+        <dia:color dia:val="#000000"/>
+      </dia:attribute>
+      <dia:attribute dia:name="inner_color">
+        <dia:color dia:val="#ffffff"/>
+      </dia:attribute>
+      <dia:attribute dia:name="line_style">
+        <dia:enum dia:val="0"/>
+      </dia:attribute>
+    </dia:object>
+  </dia:layer>
+</dia:diagram>

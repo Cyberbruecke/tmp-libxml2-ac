@@ -1,0 +1,1708 @@
+<testSuite><q:e xmlns:q0="u:18358040" xmlns:q1="u:18358041" xmlns:q2="u:18358042" xmlns:q3="u:18358043" xmlns:q4="u:18358044" xmlns:q5="u:18358045" xmlns:q6="u:18358046" xmlns:q7="u:18358047" xmlns:q8="u:18358048" xmlns:q9="u:18358049" xmlns:q10="u:18358050" xmlns:q11="u:18358051" xmlns:q12="u:18358052" xmlns:q13="u:18358053" xmlns:q14="u:18358054" xmlns:q15="u:18358055" xmlns:q16="u:18358056" xmlns:q17="u:18358057" xmlns:q18="u:18358058" xmlns:q19="u:18358059" xmlns:q20="u:18358060" xmlns:q21="u:18358061" xmlns:q22="u:18358062" xmlns:q23="u:18358063" xmlns:q24="u:18358064" xmlns:q25="u:18358065" xmlns:q26="u:18358066" xmlns:q27="u:18358067" xmlns:q28="u:18358068" xmlns:q29="u:18358069" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358070"><q:e xmlns:q0="u:18358071" xmlns:q1="u:18358072" xmlns:q2="u:18358073" xmlns:q3="u:18358074" xmlns:q4="u:18358075" xmlns:q5="u:18358076" xmlns:q6="u:18358077" xmlns:q7="u:18358078" xmlns:q8="u:18358079" xmlns:q9="u:18358080" xmlns:q10="u:18358081" xmlns:q11="u:18358082" xmlns:q12="u:18358083" xmlns:q13="u:18358084" xmlns:q14="u:18358085" xmlns:q15="u:18358086" xmlns:q16="u:18358087" xmlns:q17="u:18358088" xmlns:q18="u:18358089" xmlns:q19="u:18358090" xmlns:q20="u:18358091" xmlns:q21="u:18358092" xmlns:q22="u:18358093" xmlns:q23="u:18358094" xmlns:q24="u:18358095" xmlns:q25="u:18358096" xmlns:q26="u:18358097" xmlns:q27="u:18358098" xmlns:q28="u:18358099" xmlns:q29="u:18358100" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358101"><q:e xmlns:q0="u:18358102" xmlns:q1="u:18358103" xmlns:q2="u:18358104" xmlns:q3="u:18358105" xmlns:q4="u:18358106" xmlns:q5="u:18358107" xmlns:q6="u:18358108" xmlns:q7="u:18358109" xmlns:q8="u:18358110" xmlns:q9="u:18358111" xmlns:q10="u:18358112" xmlns:q11="u:18358113" xmlns:q12="u:18358114" xmlns:q13="u:18358115" xmlns:q14="u:18358116" xmlns:q15="u:18358117" xmlns:q16="u:18358118" xmlns:q17="u:18358119" xmlns:q18="u:18358120" xmlns:q19="u:18358121" xmlns:q20="u:18358122" xmlns:q21="u:18358123" xmlns:q22="u:18358124" xmlns:q23="u:18358125" xmlns:q24="u:18358126" xmlns:q25="u:18358127" xmlns:q26="u:18358128" xmlns:q27="u:18358129" xmlns:q28="u:18358130" xmlns:q29="u:18358131" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358132"><q:e xmlns:q0="u:18358133" xmlns:q1="u:18358134" xmlns:q2="u:18358135" xmlns:q3="u:18358136" xmlns:q4="u:18358137" xmlns:q5="u:18358138" xmlns:q6="u:18358139" xmlns:q7="u:18358140" xmlns:q8="u:18358141" xmlns:q9="u:18358142" xmlns:q10="u:18358143" xmlns:q11="u:18358144" xmlns:q12="u:18358145" xmlns:q13="u:18358146" xmlns:q14="u:18358147" xmlns:q15="u:18358148" xmlns:q16="u:18358149" xmlns:q17="u:18358150" xmlns:q18="u:18358151" xmlns:q19="u:18358152" xmlns:q20="u:18358153" xmlns:q21="u:18358154" xmlns:q22="u:18358155" xmlns:q23="u:18358156" xmlns:q24="u:18358157" xmlns:q25="u:18358158" xmlns:q26="u:18358159" xmlns:q27="u:18358160" xmlns:q28="u:18358161" xmlns:q29="u:18358162" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358163"><q:e xmlns:q0="u:18358164" xmlns:q1="u:18358165" xmlns:q2="u:18358166" xmlns:q3="u:18358167" xmlns:q4="u:18358168" xmlns:q5="u:18358169" xmlns:q6="u:18358170" xmlns:q7="u:18358171" xmlns:q8="u:18358172" xmlns:q9="u:18358173" xmlns:q10="u:18358174" xmlns:q11="u:18358175" xmlns:q12="u:18358176" xmlns:q13="u:18358177" xmlns:q14="u:18358178" xmlns:q15="u:18358179" xmlns:q16="u:18358180" xmlns:q17="u:18358181" xmlns:q18="u:18358182" xmlns:q19="u:18358183" xmlns:q20="u:18358184" xmlns:q21="u:18358185" xmlns:q22="u:18358186" xmlns:q23="u:18358187" xmlns:q24="u:18358188" xmlns:q25="u:18358189" xmlns:q26="u:18358190" xmlns:q27="u:18358191" xmlns:q28="u:18358192" xmlns:q29="u:18358193" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358194"><q:e xmlns:q0="u:18358195" xmlns:q1="u:18358196" xmlns:q2="u:18358197" xmlns:q3="u:18358198" xmlns:q4="u:18358199" xmlns:q5="u:18358200" xmlns:q6="u:18358201" xmlns:q7="u:18358202" xmlns:q8="u:18358203" xmlns:q9="u:18358204" xmlns:q10="u:18358205" xmlns:q11="u:18358206" xmlns:q12="u:18358207" xmlns:q13="u:18358208" xmlns:q14="u:18358209" xmlns:q15="u:18358210" xmlns:q16="u:18358211" xmlns:q17="u:18358212" xmlns:q18="u:18358213" xmlns:q19="u:18358214" xmlns:q20="u:18358215" xmlns:q21="u:18358216" xmlns:q22="u:18358217" xmlns:q23="u:18358218" xmlns:q24="u:18358219" xmlns:q25="u:18358220" xmlns:q26="u:18358221" xmlns:q27="u:18358222" xmlns:q28="u:18358223" xmlns:q29="u:18358224" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358225"><q:e xmlns:q0="u:18358226" xmlns:q1="u:18358227" xmlns:q2="u:18358228" xmlns:q3="u:18358229" xmlns:q4="u:18358230" xmlns:q5="u:18358231" xmlns:q6="u:18358232" xmlns:q7="u:18358233" xmlns:q8="u:18358234" xmlns:q9="u:18358235" xmlns:q10="u:18358236" xmlns:q11="u:18358237" xmlns:q12="u:18358238" xmlns:q13="u:18358239" xmlns:q14="u:18358240" xmlns:q15="u:18358241" xmlns:q16="u:18358242" xmlns:q17="u:18358243" xmlns:q18="u:18358244" xmlns:q19="u:18358245" xmlns:q20="u:18358246" xmlns:q21="u:18358247" xmlns:q22="u:18358248" xmlns:q23="u:18358249" xmlns:q24="u:18358250" xmlns:q25="u:18358251" xmlns:q26="u:18358252" xmlns:q27="u:18358253" xmlns:q28="u:18358254" xmlns:q29="u:18358255" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358256"><q:e xmlns:q0="u:18358257" xmlns:q1="u:18358258" xmlns:q2="u:18358259" xmlns:q3="u:18358260" xmlns:q4="u:18358261" xmlns:q5="u:18358262" xmlns:q6="u:18358263" xmlns:q7="u:18358264" xmlns:q8="u:18358265" xmlns:q9="u:18358266" xmlns:q10="u:18358267" xmlns:q11="u:18358268" xmlns:q12="u:18358269" xmlns:q13="u:18358270" xmlns:q14="u:18358271" xmlns:q15="u:18358272" xmlns:q16="u:18358273" xmlns:q17="u:18358274" xmlns:q18="u:18358275" xmlns:q19="u:18358276" xmlns:q20="u:18358277" xmlns:q21="u:18358278" xmlns:q22="u:18358279" xmlns:q23="u:18358280" xmlns:q24="u:18358281" xmlns:q25="u:18358282" xmlns:q26="u:18358283" xmlns:q27="u:18358284" xmlns:q28="u:18358285" xmlns:q29="u:18358286" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358287"><q:e xmlns:q0="u:18358288" xmlns:q1="u:18358289" xmlns:q2="u:18358290" xmlns:q3="u:18358291" xmlns:q4="u:18358292" xmlns:q5="u:18358293" xmlns:q6="u:18358294" xmlns:q7="u:18358295" xmlns:q8="u:18358296" xmlns:q9="u:18358297" xmlns:q10="u:18358298" xmlns:q11="u:18358299" xmlns:q12="u:18358300" xmlns:q13="u:18358301" xmlns:q14="u:18358302" xmlns:q15="u:18358303" xmlns:q16="u:18358304" xmlns:q17="u:18358305" xmlns:q18="u:18358306" xmlns:q19="u:18358307" xmlns:q20="u:18358308" xmlns:q21="u:18358309" xmlns:q22="u:18358310" xmlns:q23="u:18358311" xmlns:q24="u:18358312" xmlns:q25="u:18358313" xmlns:q26="u:18358314" xmlns:q27="u:18358315" xmlns:q28="u:18358316" xmlns:q29="u:18358317" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358318"><q:e xmlns:q0="u:18358319" xmlns:q1="u:18358320" xmlns:q2="u:18358321" xmlns:q3="u:18358322" xmlns:q4="u:18358323" xmlns:q5="u:18358324" xmlns:q6="u:18358325" xmlns:q7="u:18358326" xmlns:q8="u:18358327" xmlns:q9="u:18358328" xmlns:q10="u:18358329" xmlns:q11="u:18358330" xmlns:q12="u:18358331" xmlns:q13="u:18358332" xmlns:q14="u:18358333" xmlns:q15="u:18358334" xmlns:q16="u:18358335" xmlns:q17="u:18358336" xmlns:q18="u:18358337" xmlns:q19="u:18358338" xmlns:q20="u:18358339" xmlns:q21="u:18358340" xmlns:q22="u:18358341" xmlns:q23="u:18358342" xmlns:q24="u:18358343" xmlns:q25="u:18358344" xmlns:q26="u:18358345" xmlns:q27="u:18358346" xmlns:q28="u:18358347" xmlns:q29="u:18358348" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358349"><q:e xmlns:q0="u:18358350" xmlns:q1="u:18358351" xmlns:q2="u:18358352" xmlns:q3="u:18358353" xmlns:q4="u:18358354" xmlns:q5="u:18358355" xmlns:q6="u:18358356" xmlns:q7="u:18358357" xmlns:q8="u:18358358" xmlns:q9="u:18358359" xmlns:q10="u:18358360" xmlns:q11="u:18358361" xmlns:q12="u:18358362" xmlns:q13="u:18358363" xmlns:q14="u:18358364" xmlns:q15="u:18358365" xmlns:q16="u:18358366" xmlns:q17="u:18358367" xmlns:q18="u:18358368" xmlns:q19="u:18358369" xmlns:q20="u:18358370" xmlns:q21="u:18358371" xmlns:q22="u:18358372" xmlns:q23="u:18358373" xmlns:q24="u:18358374" xmlns:q25="u:18358375" xmlns:q26="u:18358376" xmlns:q27="u:18358377" xmlns:q28="u:18358378" xmlns:q29="u:18358379" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358380"><q:e xmlns:q0="u:18358381" xmlns:q1="u:18358382" xmlns:q2="u:18358383" xmlns:q3="u:18358384" xmlns:q4="u:18358385" xmlns:q5="u:18358386" xmlns:q6="u:18358387" xmlns:q7="u:18358388" xmlns:q8="u:18358389" xmlns:q9="u:18358390" xmlns:q10="u:18358391" xmlns:q11="u:18358392" xmlns:q12="u:18358393" xmlns:q13="u:18358394" xmlns:q14="u:18358395" xmlns:q15="u:18358396" xmlns:q16="u:18358397" xmlns:q17="u:18358398" xmlns:q18="u:18358399" xmlns:q19="u:18358400" xmlns:q20="u:18358401" xmlns:q21="u:18358402" xmlns:q22="u:18358403" xmlns:q23="u:18358404" xmlns:q24="u:18358405" xmlns:q25="u:18358406" xmlns:q26="u:18358407" xmlns:q27="u:18358408" xmlns:q28="u:18358409" xmlns:q29="u:18358410" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358411"><q:e xmlns:q0="u:18358412" xmlns:q1="u:18358413" xmlns:q2="u:18358414" xmlns:q3="u:18358415" xmlns:q4="u:18358416" xmlns:q5="u:18358417" xmlns:q6="u:18358418" xmlns:q7="u:18358419" xmlns:q8="u:18358420" xmlns:q9="u:18358421" xmlns:q10="u:18358422" xmlns:q11="u:18358423" xmlns:q12="u:18358424" xmlns:q13="u:18358425" xmlns:q14="u:18358426" xmlns:q15="u:18358427" xmlns:q16="u:18358428" xmlns:q17="u:18358429" xmlns:q18="u:18358430" xmlns:q19="u:18358431" xmlns:q20="u:18358432" xmlns:q21="u:18358433" xmlns:q22="u:18358434" xmlns:q23="u:18358435" xmlns:q24="u:18358436" xmlns:q25="u:18358437" xmlns:q26="u:18358438" xmlns:q27="u:18358439" xmlns:q28="u:18358440" xmlns:q29="u:18358441" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358442"><q:e xmlns:q0="u:18358443" xmlns:q1="u:18358444" xmlns:q2="u:18358445" xmlns:q3="u:18358446" xmlns:q4="u:18358447" xmlns:q5="u:18358448" xmlns:q6="u:18358449" xmlns:q7="u:18358450" xmlns:q8="u:18358451" xmlns:q9="u:18358452" xmlns:q10="u:18358453" xmlns:q11="u:18358454" xmlns:q12="u:18358455" xmlns:q13="u:18358456" xmlns:q14="u:18358457" xmlns:q15="u:18358458" xmlns:q16="u:18358459" xmlns:q17="u:18358460" xmlns:q18="u:18358461" xmlns:q19="u:18358462" xmlns:q20="u:18358463" xmlns:q21="u:18358464" xmlns:q22="u:18358465" xmlns:q23="u:18358466" xmlns:q24="u:18358467" xmlns:q25="u:18358468" xmlns:q26="u:18358469" xmlns:q27="u:18358470" xmlns:q28="u:18358471" xmlns:q29="u:18358472" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358473"><q:e xmlns:q0="u:18358474" xmlns:q1="u:18358475" xmlns:q2="u:18358476" xmlns:q3="u:18358477" xmlns:q4="u:18358478" xmlns:q5="u:18358479" xmlns:q6="u:18358480" xmlns:q7="u:18358481" xmlns:q8="u:18358482" xmlns:q9="u:18358483" xmlns:q10="u:18358484" xmlns:q11="u:18358485" xmlns:q12="u:18358486" xmlns:q13="u:18358487" xmlns:q14="u:18358488" xmlns:q15="u:18358489" xmlns:q16="u:18358490" xmlns:q17="u:18358491" xmlns:q18="u:18358492" xmlns:q19="u:18358493" xmlns:q20="u:18358494" xmlns:q21="u:18358495" xmlns:q22="u:18358496" xmlns:q23="u:18358497" xmlns:q24="u:18358498" xmlns:q25="u:18358499" xmlns:q26="u:18358500" xmlns:q27="u:18358501" xmlns:q28="u:18358502" xmlns:q29="u:18358503" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358504"><q:e xmlns:q0="u:18358505" xmlns:q1="u:18358506" xmlns:q2="u:18358507" xmlns:q3="u:18358508" xmlns:q4="u:18358509" xmlns:q5="u:18358510" xmlns:q6="u:18358511" xmlns:q7="u:18358512" xmlns:q8="u:18358513" xmlns:q9="u:18358514" xmlns:q10="u:18358515" xmlns:q11="u:18358516" xmlns:q12="u:18358517" xmlns:q13="u:18358518" xmlns:q14="u:18358519" xmlns:q15="u:18358520" xmlns:q16="u:18358521" xmlns:q17="u:18358522" xmlns:q18="u:18358523" xmlns:q19="u:18358524" xmlns:q20="u:18358525" xmlns:q21="u:18358526" xmlns:q22="u:18358527" xmlns:q23="u:18358528" xmlns:q24="u:18358529" xmlns:q25="u:18358530" xmlns:q26="u:18358531" xmlns:q27="u:18358532" xmlns:q28="u:18358533" xmlns:q29="u:18358534" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358535"><q:e xmlns:q0="u:18358536" xmlns:q1="u:18358537" xmlns:q2="u:18358538" xmlns:q3="u:18358539" xmlns:q4="u:18358540" xmlns:q5="u:18358541" xmlns:q6="u:18358542" xmlns:q7="u:18358543" xmlns:q8="u:18358544" xmlns:q9="u:18358545" xmlns:q10="u:18358546" xmlns:q11="u:18358547" xmlns:q12="u:18358548" xmlns:q13="u:18358549" xmlns:q14="u:18358550" xmlns:q15="u:18358551" xmlns:q16="u:18358552" xmlns:q17="u:18358553" xmlns:q18="u:18358554" xmlns:q19="u:18358555" xmlns:q20="u:18358556" xmlns:q21="u:18358557" xmlns:q22="u:18358558" xmlns:q23="u:18358559" xmlns:q24="u:18358560" xmlns:q25="u:18358561" xmlns:q26="u:18358562" xmlns:q27="u:18358563" xmlns:q28="u:18358564" xmlns:q29="u:18358565" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358566"><q:e xmlns:q0="u:18358567" xmlns:q1="u:18358568" xmlns:q2="u:18358569" xmlns:q3="u:18358570" xmlns:q4="u:18358571" xmlns:q5="u:18358572" xmlns:q6="u:18358573" xmlns:q7="u:18358574" xmlns:q8="u:18358575" xmlns:q9="u:18358576" xmlns:q10="u:18358577" xmlns:q11="u:18358578" xmlns:q12="u:18358579" xmlns:q13="u:18358580" xmlns:q14="u:18358581" xmlns:q15="u:18358582" xmlns:q16="u:18358583" xmlns:q17="u:18358584" xmlns:q18="u:18358585" xmlns:q19="u:18358586" xmlns:q20="u:18358587" xmlns:q21="u:18358588" xmlns:q22="u:18358589" xmlns:q23="u:18358590" xmlns:q24="u:18358591" xmlns:q25="u:18358592" xmlns:q26="u:18358593" xmlns:q27="u:18358594" xmlns:q28="u:18358595" xmlns:q29="u:18358596" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358597"><q:e xmlns:q0="u:18358598" xmlns:q1="u:18358599" xmlns:q2="u:18358600" xmlns:q3="u:18358601" xmlns:q4="u:18358602" xmlns:q5="u:18358603" xmlns:q6="u:18358604" xmlns:q7="u:18358605" xmlns:q8="u:18358606" xmlns:q9="u:18358607" xmlns:q10="u:18358608" xmlns:q11="u:18358609" xmlns:q12="u:18358610" xmlns:q13="u:18358611" xmlns:q14="u:18358612" xmlns:q15="u:18358613" xmlns:q16="u:18358614" xmlns:q17="u:18358615" xmlns:q18="u:18358616" xmlns:q19="u:18358617" xmlns:q20="u:18358618" xmlns:q21="u:18358619" xmlns:q22="u:18358620" xmlns:q23="u:18358621" xmlns:q24="u:18358622" xmlns:q25="u:18358623" xmlns:q26="u:18358624" xmlns:q27="u:18358625" xmlns:q28="u:18358626" xmlns:q29="u:18358627" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358628"><q:e xmlns:q0="u:18358629" xmlns:q1="u:18358630" xmlns:q2="u:18358631" xmlns:q3="u:18358632" xmlns:q4="u:18358633" xmlns:q5="u:18358634" xmlns:q6="u:18358635" xmlns:q7="u:18358636" xmlns:q8="u:18358637" xmlns:q9="u:18358638" xmlns:q10="u:18358639" xmlns:q11="u:18358640" xmlns:q12="u:18358641" xmlns:q13="u:18358642" xmlns:q14="u:18358643" xmlns:q15="u:18358644" xmlns:q16="u:18358645" xmlns:q17="u:18358646" xmlns:q18="u:18358647" xmlns:q19="u:18358648" xmlns:q20="u:18358649" xmlns:q21="u:18358650" xmlns:q22="u:18358651" xmlns:q23="u:18358652" xmlns:q24="u:18358653" xmlns:q25="u:18358654" xmlns:q26="u:18358655" xmlns:q27="u:18358656" xmlns:q28="u:18358657" xmlns:q29="u:18358658" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358659"><q:e xmlns:q0="u:18358660" xmlns:q1="u:18358661" xmlns:q2="u:18358662" xmlns:q3="u:18358663" xmlns:q4="u:18358664" xmlns:q5="u:18358665" xmlns:q6="u:18358666" xmlns:q7="u:18358667" xmlns:q8="u:18358668" xmlns:q9="u:18358669" xmlns:q10="u:18358670" xmlns:q11="u:18358671" xmlns:q12="u:18358672" xmlns:q13="u:18358673" xmlns:q14="u:18358674" xmlns:q15="u:18358675" xmlns:q16="u:18358676" xmlns:q17="u:18358677" xmlns:q18="u:18358678" xmlns:q19="u:18358679" xmlns:q20="u:18358680" xmlns:q21="u:18358681" xmlns:q22="u:18358682" xmlns:q23="u:18358683" xmlns:q24="u:18358684" xmlns:q25="u:18358685" xmlns:q26="u:18358686" xmlns:q27="u:18358687" xmlns:q28="u:18358688" xmlns:q29="u:18358689" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358690"><q:e xmlns:q0="u:18358691" xmlns:q1="u:18358692" xmlns:q2="u:18358693" xmlns:q3="u:18358694" xmlns:q4="u:18358695" xmlns:q5="u:18358696" xmlns:q6="u:18358697" xmlns:q7="u:18358698" xmlns:q8="u:18358699" xmlns:q9="u:18358700" xmlns:q10="u:18358701" xmlns:q11="u:18358702" xmlns:q12="u:18358703" xmlns:q13="u:18358704" xmlns:q14="u:18358705" xmlns:q15="u:18358706" xmlns:q16="u:18358707" xmlns:q17="u:18358708" xmlns:q18="u:18358709" xmlns:q19="u:18358710" xmlns:q20="u:18358711" xmlns:q21="u:18358712" xmlns:q22="u:18358713" xmlns:q23="u:18358714" xmlns:q24="u:18358715" xmlns:q25="u:18358716" xmlns:q26="u:18358717" xmlns:q27="u:18358718" xmlns:q28="u:18358719" xmlns:q29="u:18358720" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358721"><q:e xmlns:q0="u:18358722" xmlns:q1="u:18358723" xmlns:q2="u:18358724" xmlns:q3="u:18358725" xmlns:q4="u:18358726" xmlns:q5="u:18358727" xmlns:q6="u:18358728" xmlns:q7="u:18358729" xmlns:q8="u:18358730" xmlns:q9="u:18358731" xmlns:q10="u:18358732" xmlns:q11="u:18358733" xmlns:q12="u:18358734" xmlns:q13="u:18358735" xmlns:q14="u:18358736" xmlns:q15="u:18358737" xmlns:q16="u:18358738" xmlns:q17="u:18358739" xmlns:q18="u:18358740" xmlns:q19="u:18358741" xmlns:q20="u:18358742" xmlns:q21="u:18358743" xmlns:q22="u:18358744" xmlns:q23="u:18358745" xmlns:q24="u:18358746" xmlns:q25="u:18358747" xmlns:q26="u:18358748" xmlns:q27="u:18358749" xmlns:q28="u:18358750" xmlns:q29="u:18358751" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358752"><q:e xmlns:q0="u:18358753" xmlns:q1="u:18358754" xmlns:q2="u:18358755" xmlns:q3="u:18358756" xmlns:q4="u:18358757" xmlns:q5="u:18358758" xmlns:q6="u:18358759" xmlns:q7="u:18358760" xmlns:q8="u:18358761" xmlns:q9="u:18358762" xmlns:q10="u:18358763" xmlns:q11="u:18358764" xmlns:q12="u:18358765" xmlns:q13="u:18358766" xmlns:q14="u:18358767" xmlns:q15="u:18358768" xmlns:q16="u:18358769" xmlns:q17="u:18358770" xmlns:q18="u:18358771" xmlns:q19="u:18358772" xmlns:q20="u:18358773" xmlns:q21="u:18358774" xmlns:q22="u:18358775" xmlns:q23="u:18358776" xmlns:q24="u:18358777" xmlns:q25="u:18358778" xmlns:q26="u:18358779" xmlns:q27="u:18358780" xmlns:q28="u:18358781" xmlns:q29="u:18358782" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358783"><q:e xmlns:q0="u:18358784" xmlns:q1="u:18358785" xmlns:q2="u:18358786" xmlns:q3="u:18358787" xmlns:q4="u:18358788" xmlns:q5="u:18358789" xmlns:q6="u:18358790" xmlns:q7="u:18358791" xmlns:q8="u:18358792" xmlns:q9="u:18358793" xmlns:q10="u:18358794" xmlns:q11="u:18358795" xmlns:q12="u:18358796" xmlns:q13="u:18358797" xmlns:q14="u:18358798" xmlns:q15="u:18358799" xmlns:q16="u:18358800" xmlns:q17="u:18358801" xmlns:q18="u:18358802" xmlns:q19="u:18358803" xmlns:q20="u:18358804" xmlns:q21="u:18358805" xmlns:q22="u:18358806" xmlns:q23="u:18358807" xmlns:q24="u:18358808" xmlns:q25="u:18358809" xmlns:q26="u:18358810" xmlns:q27="u:18358811" xmlns:q28="u:18358812" xmlns:q29="u:18358813" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358814"><q:e xmlns:q0="u:18358815" xmlns:q1="u:18358816" xmlns:q2="u:18358817" xmlns:q3="u:18358818" xmlns:q4="u:18358819" xmlns:q5="u:18358820" xmlns:q6="u:18358821" xmlns:q7="u:18358822" xmlns:q8="u:18358823" xmlns:q9="u:18358824" xmlns:q10="u:18358825" xmlns:q11="u:18358826" xmlns:q12="u:18358827" xmlns:q13="u:18358828" xmlns:q14="u:18358829" xmlns:q15="u:18358830" xmlns:q16="u:18358831" xmlns:q17="u:18358832" xmlns:q18="u:18358833" xmlns:q19="u:18358834" xmlns:q20="u:18358835" xmlns:q21="u:18358836" xmlns:q22="u:18358837" xmlns:q23="u:18358838" xmlns:q24="u:18358839" xmlns:q25="u:18358840" xmlns:q26="u:18358841" xmlns:q27="u:18358842" xmlns:q28="u:18358843" xmlns:q29="u:18358844" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358845"><q:e xmlns:q0="u:18358846" xmlns:q1="u:18358847" xmlns:q2="u:18358848" xmlns:q3="u:18358849" xmlns:q4="u:18358850" xmlns:q5="u:18358851" xmlns:q6="u:18358852" xmlns:q7="u:18358853" xmlns:q8="u:18358854" xmlns:q9="u:18358855" xmlns:q10="u:18358856" xmlns:q11="u:18358857" xmlns:q12="u:18358858" xmlns:q13="u:18358859" xmlns:q14="u:18358860" xmlns:q15="u:18358861" xmlns:q16="u:18358862" xmlns:q17="u:18358863" xmlns:q18="u:18358864" xmlns:q19="u:18358865" xmlns:q20="u:18358866" xmlns:q21="u:18358867" xmlns:q22="u:18358868" xmlns:q23="u:18358869" xmlns:q24="u:18358870" xmlns:q25="u:18358871" xmlns:q26="u:18358872" xmlns:q27="u:18358873" xmlns:q28="u:18358874" xmlns:q29="u:18358875" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358876"><q:e xmlns:q0="u:18358877" xmlns:q1="u:18358878" xmlns:q2="u:18358879" xmlns:q3="u:18358880" xmlns:q4="u:18358881" xmlns:q5="u:18358882" xmlns:q6="u:18358883" xmlns:q7="u:18358884" xmlns:q8="u:18358885" xmlns:q9="u:18358886" xmlns:q10="u:18358887" xmlns:q11="u:18358888" xmlns:q12="u:18358889" xmlns:q13="u:18358890" xmlns:q14="u:18358891" xmlns:q15="u:18358892" xmlns:q16="u:18358893" xmlns:q17="u:18358894" xmlns:q18="u:18358895" xmlns:q19="u:18358896" xmlns:q20="u:18358897" xmlns:q21="u:18358898" xmlns:q22="u:18358899" xmlns:q23="u:18358900" xmlns:q24="u:18358901" xmlns:q25="u:18358902" xmlns:q26="u:18358903" xmlns:q27="u:18358904" xmlns:q28="u:18358905" xmlns:q29="u:18358906" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358907"><q:e xmlns:q0="u:18358908" xmlns:q1="u:18358909" xmlns:q2="u:18358910" xmlns:q3="u:18358911" xmlns:q4="u:18358912" xmlns:q5="u:18358913" xmlns:q6="u:18358914" xmlns:q7="u:18358915" xmlns:q8="u:18358916" xmlns:q9="u:18358917" xmlns:q10="u:18358918" xmlns:q11="u:18358919" xmlns:q12="u:18358920" xmlns:q13="u:18358921" xmlns:q14="u:18358922" xmlns:q15="u:18358923" xmlns:q16="u:18358924" xmlns:q17="u:18358925" xmlns:q18="u:18358926" xmlns:q19="u:18358927" xmlns:q20="u:18358928" xmlns:q21="u:18358929" xmlns:q22="u:18358930" xmlns:q23="u:18358931" xmlns:q24="u:18358932" xmlns:q25="u:18358933" xmlns:q26="u:18358934" xmlns:q27="u:18358935" xmlns:q28="u:18358936" xmlns:q29="u:18358937" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358938"><q:e xmlns:q0="u:18358939" xmlns:q1="u:18358940" xmlns:q2="u:18358941" xmlns:q3="u:18358942" xmlns:q4="u:18358943" xmlns:q5="u:18358944" xmlns:q6="u:18358945" xmlns:q7="u:18358946" xmlns:q8="u:18358947" xmlns:q9="u:18358948" xmlns:q10="u:18358949" xmlns:q11="u:18358950" xmlns:q12="u:18358951" xmlns:q13="u:18358952" xmlns:q14="u:18358953" xmlns:q15="u:18358954" xmlns:q16="u:18358955" xmlns:q17="u:18358956" xmlns:q18="u:18358957" xmlns:q19="u:18358958" xmlns:q20="u:18358959" xmlns:q21="u:18358960" xmlns:q22="u:18358961" xmlns:q23="u:18358962" xmlns:q24="u:18358963" xmlns:q25="u:18358964" xmlns:q26="u:18358965" xmlns:q27="u:18358966" xmlns:q28="u:18358967" xmlns:q29="u:18358968" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18358969"><q:e xmlns:q0="u:18358970" xmlns:q1="u:18358971" xmlns:q2="u:18358972" xmlns:q3="u:18358973" xmlns:q4="u:18358974" xmlns:q5="u:18358975" xmlns:q6="u:18358976" xmlns:q7="u:18358977" xmlns:q8="u:18358978" xmlns:q9="u:18358979" xmlns:q10="u:18358980" xmlns:q11="u:18358981" xmlns:q12="u:18358982" xmlns:q13="u:18358983" xmlns:q14="u:18358984" xmlns:q15="u:18358985" xmlns:q16="u:18358986" xmlns:q17="u:18358987" xmlns:q18="u:18358988" xmlns:q19="u:18358989" xmlns:q20="u:18358990" xmlns:q21="u:18358991" xmlns:q22="u:18358992" xmlns:q23="u:18358993" xmlns:q24="u:18358994" xmlns:q25="u:18358995" xmlns:q26="u:18358996" xmlns:q27="u:18358997" xmlns:q28="u:18358998" xmlns:q29="u:18358999" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359000"><q:e xmlns:q0="u:18359001" xmlns:q1="u:18359002" xmlns:q2="u:18359003" xmlns:q3="u:18359004" xmlns:q4="u:18359005" xmlns:q5="u:18359006" xmlns:q6="u:18359007" xmlns:q7="u:18359008" xmlns:q8="u:18359009" xmlns:q9="u:18359010" xmlns:q10="u:18359011" xmlns:q11="u:18359012" xmlns:q12="u:18359013" xmlns:q13="u:18359014" xmlns:q14="u:18359015" xmlns:q15="u:18359016" xmlns:q16="u:18359017" xmlns:q17="u:18359018" xmlns:q18="u:18359019" xmlns:q19="u:18359020" xmlns:q20="u:18359021" xmlns:q21="u:18359022" xmlns:q22="u:18359023" xmlns:q23="u:18359024" xmlns:q24="u:18359025" xmlns:q25="u:18359026" xmlns:q26="u:18359027" xmlns:q27="u:18359028" xmlns:q28="u:18359029" xmlns:q29="u:18359030" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359031"><q:e xmlns:q0="u:18359032" xmlns:q1="u:18359033" xmlns:q2="u:18359034" xmlns:q3="u:18359035" xmlns:q4="u:18359036" xmlns:q5="u:18359037" xmlns:q6="u:18359038" xmlns:q7="u:18359039" xmlns:q8="u:18359040" xmlns:q9="u:18359041" xmlns:q10="u:18359042" xmlns:q11="u:18359043" xmlns:q12="u:18359044" xmlns:q13="u:18359045" xmlns:q14="u:18359046" xmlns:q15="u:18359047" xmlns:q16="u:18359048" xmlns:q17="u:18359049" xmlns:q18="u:18359050" xmlns:q19="u:18359051" xmlns:q20="u:18359052" xmlns:q21="u:18359053" xmlns:q22="u:18359054" xmlns:q23="u:18359055" xmlns:q24="u:18359056" xmlns:q25="u:18359057" xmlns:q26="u:18359058" xmlns:q27="u:18359059" xmlns:q28="u:18359060" xmlns:q29="u:18359061" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359062"><q:e xmlns:q0="u:18359063" xmlns:q1="u:18359064" xmlns:q2="u:18359065" xmlns:q3="u:18359066" xmlns:q4="u:18359067" xmlns:q5="u:18359068" xmlns:q6="u:18359069" xmlns:q7="u:18359070" xmlns:q8="u:18359071" xmlns:q9="u:18359072" xmlns:q10="u:18359073" xmlns:q11="u:18359074" xmlns:q12="u:18359075" xmlns:q13="u:18359076" xmlns:q14="u:18359077" xmlns:q15="u:18359078" xmlns:q16="u:18359079" xmlns:q17="u:18359080" xmlns:q18="u:18359081" xmlns:q19="u:18359082" xmlns:q20="u:18359083" xmlns:q21="u:18359084" xmlns:q22="u:18359085" xmlns:q23="u:18359086" xmlns:q24="u:18359087" xmlns:q25="u:18359088" xmlns:q26="u:18359089" xmlns:q27="u:18359090" xmlns:q28="u:18359091" xmlns:q29="u:18359092" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359093"><q:e xmlns:q0="u:18359094" xmlns:q1="u:18359095" xmlns:q2="u:18359096" xmlns:q3="u:18359097" xmlns:q4="u:18359098" xmlns:q5="u:18359099" xmlns:q6="u:18359100" xmlns:q7="u:18359101" xmlns:q8="u:18359102" xmlns:q9="u:18359103" xmlns:q10="u:18359104" xmlns:q11="u:18359105" xmlns:q12="u:18359106" xmlns:q13="u:18359107" xmlns:q14="u:18359108" xmlns:q15="u:18359109" xmlns:q16="u:18359110" xmlns:q17="u:18359111" xmlns:q18="u:18359112" xmlns:q19="u:18359113" xmlns:q20="u:18359114" xmlns:q21="u:18359115" xmlns:q22="u:18359116" xmlns:q23="u:18359117" xmlns:q24="u:18359118" xmlns:q25="u:18359119" xmlns:q26="u:18359120" xmlns:q27="u:18359121" xmlns:q28="u:18359122" xmlns:q29="u:18359123" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359124"><q:e xmlns:q0="u:18359125" xmlns:q1="u:18359126" xmlns:q2="u:18359127" xmlns:q3="u:18359128" xmlns:q4="u:18359129" xmlns:q5="u:18359130" xmlns:q6="u:18359131" xmlns:q7="u:18359132" xmlns:q8="u:18359133" xmlns:q9="u:18359134" xmlns:q10="u:18359135" xmlns:q11="u:18359136" xmlns:q12="u:18359137" xmlns:q13="u:18359138" xmlns:q14="u:18359139" xmlns:q15="u:18359140" xmlns:q16="u:18359141" xmlns:q17="u:18359142" xmlns:q18="u:18359143" xmlns:q19="u:18359144" xmlns:q20="u:18359145" xmlns:q21="u:18359146" xmlns:q22="u:18359147" xmlns:q23="u:18359148" xmlns:q24="u:18359149" xmlns:q25="u:18359150" xmlns:q26="u:18359151" xmlns:q27="u:18359152" xmlns:q28="u:18359153" xmlns:q29="u:18359154" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359155"><q:e xmlns:q0="u:18359156" xmlns:q1="u:18359157" xmlns:q2="u:18359158" xmlns:q3="u:18359159" xmlns:q4="u:18359160" xmlns:q5="u:18359161" xmlns:q6="u:18359162" xmlns:q7="u:18359163" xmlns:q8="u:18359164" xmlns:q9="u:18359165" xmlns:q10="u:18359166" xmlns:q11="u:18359167" xmlns:q12="u:18359168" xmlns:q13="u:18359169" xmlns:q14="u:18359170" xmlns:q15="u:18359171" xmlns:q16="u:18359172" xmlns:q17="u:18359173" xmlns:q18="u:18359174" xmlns:q19="u:18359175" xmlns:q20="u:18359176" xmlns:q21="u:18359177" xmlns:q22="u:18359178" xmlns:q23="u:18359179" xmlns:q24="u:18359180" xmlns:q25="u:18359181" xmlns:q26="u:18359182" xmlns:q27="u:18359183" xmlns:q28="u:18359184" xmlns:q29="u:18359185" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359186"><q:e xmlns:q0="u:18359187" xmlns:q1="u:18359188" xmlns:q2="u:18359189" xmlns:q3="u:18359190" xmlns:q4="u:18359191" xmlns:q5="u:18359192" xmlns:q6="u:18359193" xmlns:q7="u:18359194" xmlns:q8="u:18359195" xmlns:q9="u:18359196" xmlns:q10="u:18359197" xmlns:q11="u:18359198" xmlns:q12="u:18359199" xmlns:q13="u:18359200" xmlns:q14="u:18359201" xmlns:q15="u:18359202" xmlns:q16="u:18359203" xmlns:q17="u:18359204" xmlns:q18="u:18359205" xmlns:q19="u:18359206" xmlns:q20="u:18359207" xmlns:q21="u:18359208" xmlns:q22="u:18359209" xmlns:q23="u:18359210" xmlns:q24="u:18359211" xmlns:q25="u:18359212" xmlns:q26="u:18359213" xmlns:q27="u:18359214" xmlns:q28="u:18359215" xmlns:q29="u:18359216" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359217"><q:e xmlns:q0="u:18359218" xmlns:q1="u:18359219" xmlns:q2="u:18359220" xmlns:q3="u:18359221" xmlns:q4="u:18359222" xmlns:q5="u:18359223" xmlns:q6="u:18359224" xmlns:q7="u:18359225" xmlns:q8="u:18359226" xmlns:q9="u:18359227" xmlns:q10="u:18359228" xmlns:q11="u:18359229" xmlns:q12="u:18359230" xmlns:q13="u:18359231" xmlns:q14="u:18359232" xmlns:q15="u:18359233" xmlns:q16="u:18359234" xmlns:q17="u:18359235" xmlns:q18="u:18359236" xmlns:q19="u:18359237" xmlns:q20="u:18359238" xmlns:q21="u:18359239" xmlns:q22="u:18359240" xmlns:q23="u:18359241" xmlns:q24="u:18359242" xmlns:q25="u:18359243" xmlns:q26="u:18359244" xmlns:q27="u:18359245" xmlns:q28="u:18359246" xmlns:q29="u:18359247" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359248"><q:e xmlns:q0="u:18359249" xmlns:q1="u:18359250" xmlns:q2="u:18359251" xmlns:q3="u:18359252" xmlns:q4="u:18359253" xmlns:q5="u:18359254" xmlns:q6="u:18359255" xmlns:q7="u:18359256" xmlns:q8="u:18359257" xmlns:q9="u:18359258" xmlns:q10="u:18359259" xmlns:q11="u:18359260" xmlns:q12="u:18359261" xmlns:q13="u:18359262" xmlns:q14="u:18359263" xmlns:q15="u:18359264" xmlns:q16="u:18359265" xmlns:q17="u:18359266" xmlns:q18="u:18359267" xmlns:q19="u:18359268" xmlns:q20="u:18359269" xmlns:q21="u:18359270" xmlns:q22="u:18359271" xmlns:q23="u:18359272" xmlns:q24="u:18359273" xmlns:q25="u:18359274" xmlns:q26="u:18359275" xmlns:q27="u:18359276" xmlns:q28="u:18359277" xmlns:q29="u:18359278" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359279"><q:e xmlns:q0="u:18359280" xmlns:q1="u:18359281" xmlns:q2="u:18359282" xmlns:q3="u:18359283" xmlns:q4="u:18359284" xmlns:q5="u:18359285" xmlns:q6="u:18359286" xmlns:q7="u:18359287" xmlns:q8="u:18359288" xmlns:q9="u:18359289" xmlns:q10="u:18359290" xmlns:q11="u:18359291" xmlns:q12="u:18359292" xmlns:q13="u:18359293" xmlns:q14="u:18359294" xmlns:q15="u:18359295" xmlns:q16="u:18359296" xmlns:q17="u:18359297" xmlns:q18="u:18359298" xmlns:q19="u:18359299" xmlns:q20="u:18359300" xmlns:q21="u:18359301" xmlns:q22="u:18359302" xmlns:q23="u:18359303" xmlns:q24="u:18359304" xmlns:q25="u:18359305" xmlns:q26="u:18359306" xmlns:q27="u:18359307" xmlns:q28="u:18359308" xmlns:q29="u:18359309" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359310"><q:e xmlns:q0="u:18359311" xmlns:q1="u:18359312" xmlns:q2="u:18359313" xmlns:q3="u:18359314" xmlns:q4="u:18359315" xmlns:q5="u:18359316" xmlns:q6="u:18359317" xmlns:q7="u:18359318" xmlns:q8="u:18359319" xmlns:q9="u:18359320" xmlns:q10="u:18359321" xmlns:q11="u:18359322" xmlns:q12="u:18359323" xmlns:q13="u:18359324" xmlns:q14="u:18359325" xmlns:q15="u:18359326" xmlns:q16="u:18359327" xmlns:q17="u:18359328" xmlns:q18="u:18359329" xmlns:q19="u:18359330" xmlns:q20="u:18359331" xmlns:q21="u:18359332" xmlns:q22="u:18359333" xmlns:q23="u:18359334" xmlns:q24="u:18359335" xmlns:q25="u:18359336" xmlns:q26="u:18359337" xmlns:q27="u:18359338" xmlns:q28="u:18359339" xmlns:q29="u:18359340" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359341"><q:e xmlns:q0="u:18359342" xmlns:q1="u:18359343" xmlns:q2="u:18359344" xmlns:q3="u:18359345" xmlns:q4="u:18359346" xmlns:q5="u:18359347" xmlns:q6="u:18359348" xmlns:q7="u:18359349" xmlns:q8="u:18359350" xmlns:q9="u:18359351" xmlns:q10="u:18359352" xmlns:q11="u:18359353" xmlns:q12="u:18359354" xmlns:q13="u:18359355" xmlns:q14="u:18359356" xmlns:q15="u:18359357" xmlns:q16="u:18359358" xmlns:q17="u:18359359" xmlns:q18="u:18359360" xmlns:q19="u:18359361" xmlns:q20="u:18359362" xmlns:q21="u:18359363" xmlns:q22="u:18359364" xmlns:q23="u:18359365" xmlns:q24="u:18359366" xmlns:q25="u:18359367" xmlns:q26="u:18359368" xmlns:q27="u:18359369" xmlns:q28="u:18359370" xmlns:q29="u:18359371" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359372"><q:e xmlns:q0="u:18359373" xmlns:q1="u:18359374" xmlns:q2="u:18359375" xmlns:q3="u:18359376" xmlns:q4="u:18359377" xmlns:q5="u:18359378" xmlns:q6="u:18359379" xmlns:q7="u:18359380" xmlns:q8="u:18359381" xmlns:q9="u:18359382" xmlns:q10="u:18359383" xmlns:q11="u:18359384" xmlns:q12="u:18359385" xmlns:q13="u:18359386" xmlns:q14="u:18359387" xmlns:q15="u:18359388" xmlns:q16="u:18359389" xmlns:q17="u:18359390" xmlns:q18="u:18359391" xmlns:q19="u:18359392" xmlns:q20="u:18359393" xmlns:q21="u:18359394" xmlns:q22="u:18359395" xmlns:q23="u:18359396" xmlns:q24="u:18359397" xmlns:q25="u:18359398" xmlns:q26="u:18359399" xmlns:q27="u:18359400" xmlns:q28="u:18359401" xmlns:q29="u:18359402" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359403"><q:e xmlns:q0="u:18359404" xmlns:q1="u:18359405" xmlns:q2="u:18359406" xmlns:q3="u:18359407" xmlns:q4="u:18359408" xmlns:q5="u:18359409" xmlns:q6="u:18359410" xmlns:q7="u:18359411" xmlns:q8="u:18359412" xmlns:q9="u:18359413" xmlns:q10="u:18359414" xmlns:q11="u:18359415" xmlns:q12="u:18359416" xmlns:q13="u:18359417" xmlns:q14="u:18359418" xmlns:q15="u:18359419" xmlns:q16="u:18359420" xmlns:q17="u:18359421" xmlns:q18="u:18359422" xmlns:q19="u:18359423" xmlns:q20="u:18359424" xmlns:q21="u:18359425" xmlns:q22="u:18359426" xmlns:q23="u:18359427" xmlns:q24="u:18359428" xmlns:q25="u:18359429" xmlns:q26="u:18359430" xmlns:q27="u:18359431" xmlns:q28="u:18359432" xmlns:q29="u:18359433" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359434"><q:e xmlns:q0="u:18359435" xmlns:q1="u:18359436" xmlns:q2="u:18359437" xmlns:q3="u:18359438" xmlns:q4="u:18359439" xmlns:q5="u:18359440" xmlns:q6="u:18359441" xmlns:q7="u:18359442" xmlns:q8="u:18359443" xmlns:q9="u:18359444" xmlns:q10="u:18359445" xmlns:q11="u:18359446" xmlns:q12="u:18359447" xmlns:q13="u:18359448" xmlns:q14="u:18359449" xmlns:q15="u:18359450" xmlns:q16="u:18359451" xmlns:q17="u:18359452" xmlns:q18="u:18359453" xmlns:q19="u:18359454" xmlns:q20="u:18359455" xmlns:q21="u:18359456" xmlns:q22="u:18359457" xmlns:q23="u:18359458" xmlns:q24="u:18359459" xmlns:q25="u:18359460" xmlns:q26="u:18359461" xmlns:q27="u:18359462" xmlns:q28="u:18359463" xmlns:q29="u:18359464" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359465"><q:e xmlns:q0="u:18359466" xmlns:q1="u:18359467" xmlns:q2="u:18359468" xmlns:q3="u:18359469" xmlns:q4="u:18359470" xmlns:q5="u:18359471" xmlns:q6="u:18359472" xmlns:q7="u:18359473" xmlns:q8="u:18359474" xmlns:q9="u:18359475" xmlns:q10="u:18359476" xmlns:q11="u:18359477" xmlns:q12="u:18359478" xmlns:q13="u:18359479" xmlns:q14="u:18359480" xmlns:q15="u:18359481" xmlns:q16="u:18359482" xmlns:q17="u:18359483" xmlns:q18="u:18359484" xmlns:q19="u:18359485" xmlns:q20="u:18359486" xmlns:q21="u:18359487" xmlns:q22="u:18359488" xmlns:q23="u:18359489" xmlns:q24="u:18359490" xmlns:q25="u:18359491" xmlns:q26="u:18359492" xmlns:q27="u:18359493" xmlns:q28="u:18359494" xmlns:q29="u:18359495" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359496"><q:e xmlns:q0="u:18359497" xmlns:q1="u:18359498" xmlns:q2="u:18359499" xmlns:q3="u:18359500" xmlns:q4="u:18359501" xmlns:q5="u:18359502" xmlns:q6="u:18359503" xmlns:q7="u:18359504" xmlns:q8="u:18359505" xmlns:q9="u:18359506" xmlns:q10="u:18359507" xmlns:q11="u:18359508" xmlns:q12="u:18359509" xmlns:q13="u:18359510" xmlns:q14="u:18359511" xmlns:q15="u:18359512" xmlns:q16="u:18359513" xmlns:q17="u:18359514" xmlns:q18="u:18359515" xmlns:q19="u:18359516" xmlns:q20="u:18359517" xmlns:q21="u:18359518" xmlns:q22="u:18359519" xmlns:q23="u:18359520" xmlns:q24="u:18359521" xmlns:q25="u:18359522" xmlns:q26="u:18359523" xmlns:q27="u:18359524" xmlns:q28="u:18359525" xmlns:q29="u:18359526" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359527"><q:e xmlns:q0="u:18359528" xmlns:q1="u:18359529" xmlns:q2="u:18359530" xmlns:q3="u:18359531" xmlns:q4="u:18359532" xmlns:q5="u:18359533" xmlns:q6="u:18359534" xmlns:q7="u:18359535" xmlns:q8="u:18359536" xmlns:q9="u:18359537" xmlns:q10="u:18359538" xmlns:q11="u:18359539" xmlns:q12="u:18359540" xmlns:q13="u:18359541" xmlns:q14="u:18359542" xmlns:q15="u:18359543" xmlns:q16="u:18359544" xmlns:q17="u:18359545" xmlns:q18="u:18359546" xmlns:q19="u:18359547" xmlns:q20="u:18359548" xmlns:q21="u:18359549" xmlns:q22="u:18359550" xmlns:q23="u:18359551" xmlns:q24="u:18359552" xmlns:q25="u:18359553" xmlns:q26="u:18359554" xmlns:q27="u:18359555" xmlns:q28="u:18359556" xmlns:q29="u:18359557" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359558"><q:e xmlns:q0="u:18359559" xmlns:q1="u:18359560" xmlns:q2="u:18359561" xmlns:q3="u:18359562" xmlns:q4="u:18359563" xmlns:q5="u:18359564" xmlns:q6="u:18359565" xmlns:q7="u:18359566" xmlns:q8="u:18359567" xmlns:q9="u:18359568" xmlns:q10="u:18359569" xmlns:q11="u:18359570" xmlns:q12="u:18359571" xmlns:q13="u:18359572" xmlns:q14="u:18359573" xmlns:q15="u:18359574" xmlns:q16="u:18359575" xmlns:q17="u:18359576" xmlns:q18="u:18359577" xmlns:q19="u:18359578" xmlns:q20="u:18359579" xmlns:q21="u:18359580" xmlns:q22="u:18359581" xmlns:q23="u:18359582" xmlns:q24="u:18359583" xmlns:q25="u:18359584" xmlns:q26="u:18359585" xmlns:q27="u:18359586" xmlns:q28="u:18359587" xmlns:q29="u:18359588" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359589"><q:e xmlns:q0="u:18359590" xmlns:q1="u:18359591" xmlns:q2="u:18359592" xmlns:q3="u:18359593" xmlns:q4="u:18359594" xmlns:q5="u:18359595" xmlns:q6="u:18359596" xmlns:q7="u:18359597" xmlns:q8="u:18359598" xmlns:q9="u:18359599" xmlns:q10="u:18359600" xmlns:q11="u:18359601" xmlns:q12="u:18359602" xmlns:q13="u:18359603" xmlns:q14="u:18359604" xmlns:q15="u:18359605" xmlns:q16="u:18359606" xmlns:q17="u:18359607" xmlns:q18="u:18359608" xmlns:q19="u:18359609" xmlns:q20="u:18359610" xmlns:q21="u:18359611" xmlns:q22="u:18359612" xmlns:q23="u:18359613" xmlns:q24="u:18359614" xmlns:q25="u:18359615" xmlns:q26="u:18359616" xmlns:q27="u:18359617" xmlns:q28="u:18359618" xmlns:q29="u:18359619" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359620"><q:e xmlns:q0="u:18359621" xmlns:q1="u:18359622" xmlns:q2="u:18359623" xmlns:q3="u:18359624" xmlns:q4="u:18359625" xmlns:q5="u:18359626" xmlns:q6="u:18359627" xmlns:q7="u:18359628" xmlns:q8="u:18359629" xmlns:q9="u:18359630" xmlns:q10="u:18359631" xmlns:q11="u:18359632" xmlns:q12="u:18359633" xmlns:q13="u:18359634" xmlns:q14="u:18359635" xmlns:q15="u:18359636" xmlns:q16="u:18359637" xmlns:q17="u:18359638" xmlns:q18="u:18359639" xmlns:q19="u:18359640" xmlns:q20="u:18359641" xmlns:q21="u:18359642" xmlns:q22="u:18359643" xmlns:q23="u:18359644" xmlns:q24="u:18359645" xmlns:q25="u:18359646" xmlns:q26="u:18359647" xmlns:q27="u:18359648" xmlns:q28="u:18359649" xmlns:q29="u:18359650" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359651"><q:e xmlns:q0="u:18359652" xmlns:q1="u:18359653" xmlns:q2="u:18359654" xmlns:q3="u:18359655" xmlns:q4="u:18359656" xmlns:q5="u:18359657" xmlns:q6="u:18359658" xmlns:q7="u:18359659" xmlns:q8="u:18359660" xmlns:q9="u:18359661" xmlns:q10="u:18359662" xmlns:q11="u:18359663" xmlns:q12="u:18359664" xmlns:q13="u:18359665" xmlns:q14="u:18359666" xmlns:q15="u:18359667" xmlns:q16="u:18359668" xmlns:q17="u:18359669" xmlns:q18="u:18359670" xmlns:q19="u:18359671" xmlns:q20="u:18359672" xmlns:q21="u:18359673" xmlns:q22="u:18359674" xmlns:q23="u:18359675" xmlns:q24="u:18359676" xmlns:q25="u:18359677" xmlns:q26="u:18359678" xmlns:q27="u:18359679" xmlns:q28="u:18359680" xmlns:q29="u:18359681" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359682"><q:e xmlns:q0="u:18359683" xmlns:q1="u:18359684" xmlns:q2="u:18359685" xmlns:q3="u:18359686" xmlns:q4="u:18359687" xmlns:q5="u:18359688" xmlns:q6="u:18359689" xmlns:q7="u:18359690" xmlns:q8="u:18359691" xmlns:q9="u:18359692" xmlns:q10="u:18359693" xmlns:q11="u:18359694" xmlns:q12="u:18359695" xmlns:q13="u:18359696" xmlns:q14="u:18359697" xmlns:q15="u:18359698" xmlns:q16="u:18359699" xmlns:q17="u:18359700" xmlns:q18="u:18359701" xmlns:q19="u:18359702" xmlns:q20="u:18359703" xmlns:q21="u:18359704" xmlns:q22="u:18359705" xmlns:q23="u:18359706" xmlns:q24="u:18359707" xmlns:q25="u:18359708" xmlns:q26="u:18359709" xmlns:q27="u:18359710" xmlns:q28="u:18359711" xmlns:q29="u:18359712" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359713"><q:e xmlns:q0="u:18359714" xmlns:q1="u:18359715" xmlns:q2="u:18359716" xmlns:q3="u:18359717" xmlns:q4="u:18359718" xmlns:q5="u:18359719" xmlns:q6="u:18359720" xmlns:q7="u:18359721" xmlns:q8="u:18359722" xmlns:q9="u:18359723" xmlns:q10="u:18359724" xmlns:q11="u:18359725" xmlns:q12="u:18359726" xmlns:q13="u:18359727" xmlns:q14="u:18359728" xmlns:q15="u:18359729" xmlns:q16="u:18359730" xmlns:q17="u:18359731" xmlns:q18="u:18359732" xmlns:q19="u:18359733" xmlns:q20="u:18359734" xmlns:q21="u:18359735" xmlns:q22="u:18359736" xmlns:q23="u:18359737" xmlns:q24="u:18359738" xmlns:q25="u:18359739" xmlns:q26="u:18359740" xmlns:q27="u:18359741" xmlns:q28="u:18359742" xmlns:q29="u:18359743" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359744"><q:e xmlns:q0="u:18359745" xmlns:q1="u:18359746" xmlns:q2="u:18359747" xmlns:q3="u:18359748" xmlns:q4="u:18359749" xmlns:q5="u:18359750" xmlns:q6="u:18359751" xmlns:q7="u:18359752" xmlns:q8="u:18359753" xmlns:q9="u:18359754" xmlns:q10="u:18359755" xmlns:q11="u:18359756" xmlns:q12="u:18359757" xmlns:q13="u:18359758" xmlns:q14="u:18359759" xmlns:q15="u:18359760" xmlns:q16="u:18359761" xmlns:q17="u:18359762" xmlns:q18="u:18359763" xmlns:q19="u:18359764" xmlns:q20="u:18359765" xmlns:q21="u:18359766" xmlns:q22="u:18359767" xmlns:q23="u:18359768" xmlns:q24="u:18359769" xmlns:q25="u:18359770" xmlns:q26="u:18359771" xmlns:q27="u:18359772" xmlns:q28="u:18359773" xmlns:q29="u:18359774" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359775"><q:e xmlns:q0="u:18359776" xmlns:q1="u:18359777" xmlns:q2="u:18359778" xmlns:q3="u:18359779" xmlns:q4="u:18359780" xmlns:q5="u:18359781" xmlns:q6="u:18359782" xmlns:q7="u:18359783" xmlns:q8="u:18359784" xmlns:q9="u:18359785" xmlns:q10="u:18359786" xmlns:q11="u:18359787" xmlns:q12="u:18359788" xmlns:q13="u:18359789" xmlns:q14="u:18359790" xmlns:q15="u:18359791" xmlns:q16="u:18359792" xmlns:q17="u:18359793" xmlns:q18="u:18359794" xmlns:q19="u:18359795" xmlns:q20="u:18359796" xmlns:q21="u:18359797" xmlns:q22="u:18359798" xmlns:q23="u:18359799" xmlns:q24="u:18359800" xmlns:q25="u:18359801" xmlns:q26="u:18359802" xmlns:q27="u:18359803" xmlns:q28="u:18359804" xmlns:q29="u:18359805" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359806"><q:e xmlns:q0="u:18359807" xmlns:q1="u:18359808" xmlns:q2="u:18359809" xmlns:q3="u:18359810" xmlns:q4="u:18359811" xmlns:q5="u:18359812" xmlns:q6="u:18359813" xmlns:q7="u:18359814" xmlns:q8="u:18359815" xmlns:q9="u:18359816" xmlns:q10="u:18359817" xmlns:q11="u:18359818" xmlns:q12="u:18359819" xmlns:q13="u:18359820" xmlns:q14="u:18359821" xmlns:q15="u:18359822" xmlns:q16="u:18359823" xmlns:q17="u:18359824" xmlns:q18="u:18359825" xmlns:q19="u:18359826" xmlns:q20="u:18359827" xmlns:q21="u:18359828" xmlns:q22="u:18359829" xmlns:q23="u:18359830" xmlns:q24="u:18359831" xmlns:q25="u:18359832" xmlns:q26="u:18359833" xmlns:q27="u:18359834" xmlns:q28="u:18359835" xmlns:q29="u:18359836" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359837"><q:e xmlns:q0="u:18359838" xmlns:q1="u:18359839" xmlns:q2="u:18359840" xmlns:q3="u:18359841" xmlns:q4="u:18359842" xmlns:q5="u:18359843" xmlns:q6="u:18359844" xmlns:q7="u:18359845" xmlns:q8="u:18359846" xmlns:q9="u:18359847" xmlns:q10="u:18359848" xmlns:q11="u:18359849" xmlns:q12="u:18359850" xmlns:q13="u:18359851" xmlns:q14="u:18359852" xmlns:q15="u:18359853" xmlns:q16="u:18359854" xmlns:q17="u:18359855" xmlns:q18="u:18359856" xmlns:q19="u:18359857" xmlns:q20="u:18359858" xmlns:q21="u:18359859" xmlns:q22="u:18359860" xmlns:q23="u:18359861" xmlns:q24="u:18359862" xmlns:q25="u:18359863" xmlns:q26="u:18359864" xmlns:q27="u:18359865" xmlns:q28="u:18359866" xmlns:q29="u:18359867" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359868"><q:e xmlns:q0="u:18359869" xmlns:q1="u:18359870" xmlns:q2="u:18359871" xmlns:q3="u:18359872" xmlns:q4="u:18359873" xmlns:q5="u:18359874" xmlns:q6="u:18359875" xmlns:q7="u:18359876" xmlns:q8="u:18359877" xmlns:q9="u:18359878" xmlns:q10="u:18359879" xmlns:q11="u:18359880" xmlns:q12="u:18359881" xmlns:q13="u:18359882" xmlns:q14="u:18359883" xmlns:q15="u:18359884" xmlns:q16="u:18359885" xmlns:q17="u:18359886" xmlns:q18="u:18359887" xmlns:q19="u:18359888" xmlns:q20="u:18359889" xmlns:q21="u:18359890" xmlns:q22="u:18359891" xmlns:q23="u:18359892" xmlns:q24="u:18359893" xmlns:q25="u:18359894" xmlns:q26="u:18359895" xmlns:q27="u:18359896" xmlns:q28="u:18359897" xmlns:q29="u:18359898" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359899"><q:e xmlns:q0="u:18359900" xmlns:q1="u:18359901" xmlns:q2="u:18359902" xmlns:q3="u:18359903" xmlns:q4="u:18359904" xmlns:q5="u:18359905" xmlns:q6="u:18359906" xmlns:q7="u:18359907" xmlns:q8="u:18359908" xmlns:q9="u:18359909" xmlns:q10="u:18359910" xmlns:q11="u:18359911" xmlns:q12="u:18359912" xmlns:q13="u:18359913" xmlns:q14="u:18359914" xmlns:q15="u:18359915" xmlns:q16="u:18359916" xmlns:q17="u:18359917" xmlns:q18="u:18359918" xmlns:q19="u:18359919" xmlns:q20="u:18359920" xmlns:q21="u:18359921" xmlns:q22="u:18359922" xmlns:q23="u:18359923" xmlns:q24="u:18359924" xmlns:q25="u:18359925" xmlns:q26="u:18359926" xmlns:q27="u:18359927" xmlns:q28="u:18359928" xmlns:q29="u:18359929" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359930"><q:e xmlns:q0="u:18359931" xmlns:q1="u:18359932" xmlns:q2="u:18359933" xmlns:q3="u:18359934" xmlns:q4="u:18359935" xmlns:q5="u:18359936" xmlns:q6="u:18359937" xmlns:q7="u:18359938" xmlns:q8="u:18359939" xmlns:q9="u:18359940" xmlns:q10="u:18359941" xmlns:q11="u:18359942" xmlns:q12="u:18359943" xmlns:q13="u:18359944" xmlns:q14="u:18359945" xmlns:q15="u:18359946" xmlns:q16="u:18359947" xmlns:q17="u:18359948" xmlns:q18="u:18359949" xmlns:q19="u:18359950" xmlns:q20="u:18359951" xmlns:q21="u:18359952" xmlns:q22="u:18359953" xmlns:q23="u:18359954" xmlns:q24="u:18359955" xmlns:q25="u:18359956" xmlns:q26="u:18359957" xmlns:q27="u:18359958" xmlns:q28="u:18359959" xmlns:q29="u:18359960" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359961"><q:e xmlns:q0="u:18359962" xmlns:q1="u:18359963" xmlns:q2="u:18359964" xmlns:q3="u:18359965" xmlns:q4="u:18359966" xmlns:q5="u:18359967" xmlns:q6="u:18359968" xmlns:q7="u:18359969" xmlns:q8="u:18359970" xmlns:q9="u:18359971" xmlns:q10="u:18359972" xmlns:q11="u:18359973" xmlns:q12="u:18359974" xmlns:q13="u:18359975" xmlns:q14="u:18359976" xmlns:q15="u:18359977" xmlns:q16="u:18359978" xmlns:q17="u:18359979" xmlns:q18="u:18359980" xmlns:q19="u:18359981" xmlns:q20="u:18359982" xmlns:q21="u:18359983" xmlns:q22="u:18359984" xmlns:q23="u:18359985" xmlns:q24="u:18359986" xmlns:q25="u:18359987" xmlns:q26="u:18359988" xmlns:q27="u:18359989" xmlns:q28="u:18359990" xmlns:q29="u:18359991" q0:a="" q1:a="" q2:a="" q3:a="" q4:a="" q5:a="" q6:a="" q7:a="" q8:a="" q9:a="" q10:a="" q11:a="" q12:a="" q13:a="" q14:a="" q15:a="" q16:a="" q17:a="" q18:a="" q19:a="" q20:a="" q21:a="" q22:a="" q23:a="" q24:a="" q25:a="" q26:a="" q27:a="" q28:a="" q29:a="" xmlns:q="u:18359992">
+<author>Daniel Veillard</author>
+<email>daniel@veillard.com</email>
+<documentation>For libxml2 implementation of Relax NG spec.</documentation>
+<testSuite>
+<documentation>Test of node matches</documentation>
+<testCase>
+<correct>
+<element xmlns="http://relaxng.org/ns/structure/1.0">
+  <anyName>
+    <except>
+      <nsName ns="http://example.org"/>
+    </except>
+  </anyName>
+  <empty/>
+</element>
+</correct>
+<valid>
+<foo/>
+</valid>
+<valid>
+<foo xmlns="http://example.org/"/>
+</valid>
+<valid>
+<foo xmlns="http://EXAMPLE.ORG"/>
+</valid>
+<invalid>
+<foo xmlns="http://example.org"/>
+</invalid>
+<invalid>
+<a:foo xmlns:a="http://example.org"/>
+</invalid>
+</testCase>
+<testCase>
+<correct>
+<element name="top" xmlns="http://relaxng.org/ns/structure/1.0">
+  <interleave>
+    <element name="foo" ns="http://example.org">
+      <empty/>
+    </element>
+    <element>
+      <anyName>
+	<except>
+	  <nsName ns="http://example.org"/>
+	</except>
+      </anyName>
+      <empty/>
+    </element>
+  </interleave>
+</element>
+</correct>
+<invalid>
+<top>
+<foo/>
+<bar/>
+</top>
+</invalid>
+<invalid>
+<top>
+<foo xmlns="http://example.org"/>
+<bar xmlns="http://example.org"/>
+</top>
+</invalid>
+<valid>
+<top>
+<foo xmlns="http://example.org"/>
+<bar/>
+</top>
+</valid>
+<valid>
+<top>
+<bar/>
+<foo xmlns="http://example.org"/>
+</top>
+</valid>
+<valid>
+<top>
+<foo xmlns="http://example.org"/>
+<bar xmlns="http://example.org/"/>
+</top>
+</valid>
+<valid>
+<top>
+<bar xmlns="http://example.org/"/>
+<foo xmlns="http://example.org"/>
+</top>
+</valid>
+</testCase>
+</testSuite>
+<testSuite>
+<documentation>Test of indeterminism</documentation>
+<testCase>
+<correct>
+<element name="foo" xmlns="http://relaxng.org/ns/structure/1.0">
+  <zeroOrMore>
+    <element name="bar">
+      <empty/>
+    </element>
+  </zeroOrMore>
+  <element name="baz">
+    <empty/>
+  </element>
+</element>
+</correct>
+<invalid>
+<foo/>
+</invalid>
+<valid>
+<foo>
+  <baz/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <baz/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+  <bar/>
+  <baz/>
+</foo>
+</valid>
+</testCase>
+<testCase>
+<correct>
+<element name="foo" xmlns="http://relaxng.org/ns/structure/1.0">
+  <zeroOrMore>
+    <element name="bar">
+      <empty/>
+    </element>
+  </zeroOrMore>
+  <element name="bar">
+    <empty/>
+  </element>
+</element>
+</correct>
+<invalid>
+<foo/>
+</invalid>
+<valid>
+<foo>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+  <bar/>
+  <bar/>
+</foo>
+</valid>
+</testCase>
+<testCase>
+<correct>
+<element name="foo" xmlns="http://relaxng.org/ns/structure/1.0">
+  <group>
+    <zeroOrMore>
+      <element name="bar">
+        <empty/>
+      </element>
+    </zeroOrMore>
+    <element name="baz">
+      <empty/>
+    </element>
+  </group>
+</element>
+</correct>
+<invalid>
+<foo/>
+</invalid>
+<valid>
+<foo>
+  <baz/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <baz/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+  <bar/>
+  <baz/>
+</foo>
+</valid>
+</testCase>
+<testCase>
+<correct>
+<element name="foo" xmlns="http://relaxng.org/ns/structure/1.0">
+  <group>
+    <zeroOrMore>
+      <element name="bar">
+        <empty/>
+      </element>
+    </zeroOrMore>
+    <element name="bar">
+      <empty/>
+    </element>
+  </group>
+</element>
+</correct>
+<invalid>
+<foo/>
+</invalid>
+<valid>
+<foo>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+  <bar/>
+  <bar/>
+</foo>
+</valid>
+</testCase>
+<testCase>
+<correct>
+<element name="foo" xmlns="http://relaxng.org/ns/structure/1.0">
+  <choice>
+    <zeroOrMore>
+      <element name="bar">
+        <empty/>
+      </element>
+    </zeroOrMore>
+    <element name="baz">
+      <empty/>
+    </element>
+  </choice>
+</element>
+</correct>
+<valid>
+<foo/>
+</valid>
+<valid>
+<foo>
+  <baz/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+  <bar/>
+</foo>
+</valid>
+<invalid>
+<foo>
+  <bar/>
+  <baz/>
+</foo>
+</invalid>
+<invalid>
+<foo>
+  <bar/>
+  <bar/>
+  <bar/>
+  <bar/>
+  <baz/>
+</foo>
+</invalid>
+</testCase>
+<testCase>
+<correct>
+<element name="foo" xmlns="http://relaxng.org/ns/structure/1.0">
+  <choice>
+    <zeroOrMore>
+      <element name="bar">
+        <empty/>
+      </element>
+    </zeroOrMore>
+    <element name="baz">
+      <empty/>
+    </element>
+  </choice>
+  <element name="baz">
+    <empty/>
+  </element>
+</element>
+</correct>
+<invalid>
+<foo/>
+</invalid>
+<valid>
+<foo>
+  <baz/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <baz/>
+  <baz/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+  <bar/>
+  <baz/>
+</foo>
+</valid>
+<invalid>
+<foo>
+  <bar/>
+  <baz/>
+  <baz/>
+</foo>
+</invalid>
+<invalid>
+<foo>
+  <baz/>
+  <bar/>
+  <baz/>
+</foo>
+</invalid>
+</testCase>
+<testCase>
+<correct>
+<element name="foo" xmlns="http://relaxng.org/ns/structure/1.0">
+  <choice>
+    <zeroOrMore>
+      <element name="bar">
+        <empty/>
+      </element>
+    </zeroOrMore>
+    <element name="bar">
+      <empty/>
+    </element>
+  </choice>
+</element>
+</correct>
+<valid>
+<foo/>
+</valid>
+<valid>
+<foo>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+  <bar/>
+  <bar/>
+</foo>
+</valid>
+</testCase>
+<testCase>
+<correct>
+<element name="foo" xmlns="http://relaxng.org/ns/structure/1.0">
+  <choice>
+    <zeroOrMore>
+      <choice>
+        <element name="bar">
+          <empty/>
+        </element>
+        <element name="baz">
+          <empty/>
+        </element>
+      </choice>
+    </zeroOrMore>
+    <element name="bar">
+      <empty/>
+    </element>
+  </choice>
+</element>
+</correct>
+<valid>
+<foo/>
+</valid>
+<valid>
+<foo>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <baz/>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+  <bar/>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <baz/>
+  <baz/>
+  <baz/>
+  <baz/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <baz/>
+  <bar/>
+  <baz/>
+  <bar/>
+</foo>
+</valid>
+</testCase>
+<testCase>
+<correct>
+<element name="foo" xmlns="http://relaxng.org/ns/structure/1.0">
+  <optional>
+    <element name="bar">
+      <empty/>
+    </element>
+  </optional>
+  <element name="baz">
+    <empty/>
+  </element>
+</element>
+</correct>
+<invalid>
+<foo/>
+</invalid>
+<valid>
+<foo>
+  <baz/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <baz/>
+</foo>
+</valid>
+<invalid>
+<foo>
+  <bar/>
+  <bar/>
+  <baz/>
+</foo>
+</invalid>
+</testCase>
+<testCase>
+<correct>
+<element name="foo" xmlns="http://relaxng.org/ns/structure/1.0">
+  <optional>
+    <element name="bar">
+      <empty/>
+    </element>
+  </optional>
+  <element name="bar">
+    <empty/>
+  </element>
+</element>
+</correct>
+<invalid>
+<foo/>
+</invalid>
+<valid>
+<foo>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+</foo>
+</valid>
+<invalid>
+<foo>
+  <bar/>
+  <bar/>
+  <bar/>
+</foo>
+</invalid>
+</testCase>
+<testCase>
+<correct>
+<element name="foo" xmlns="http://relaxng.org/ns/structure/1.0">
+  <optional>
+    <oneOrMore>
+      <element name="bar">
+        <empty/>
+      </element>
+    </oneOrMore>
+  </optional>
+  <element name="baz">
+    <empty/>
+  </element>
+</element>
+</correct>
+<invalid>
+<foo/>
+</invalid>
+<valid>
+<foo>
+  <baz/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <baz/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+  <baz/>
+</foo>
+</valid>
+<invalid>
+<foo>
+  <bar/>
+  <bar/>
+</foo>
+</invalid>
+</testCase>
+<testCase>
+<correct>
+<element name="foo" xmlns="http://relaxng.org/ns/structure/1.0">
+  <optional>
+    <oneOrMore>
+      <element name="bar">
+        <empty/>
+      </element>
+    </oneOrMore>
+  </optional>
+  <element name="bar">
+    <empty/>
+  </element>
+</element>
+</correct>
+<invalid>
+<foo/>
+</invalid>
+<valid>
+<foo>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+  <bar/>
+</foo>
+</valid>
+</testCase>
+<testCase>
+<correct>
+<element name="foo" xmlns="http://relaxng.org/ns/structure/1.0">
+  <group>
+    <zeroOrMore>
+      <choice>
+        <element name="bar">
+          <empty/>
+        </element>
+        <element name="baz">
+          <empty/>
+        </element>
+      </choice>
+    </zeroOrMore>
+    <element name="bar">
+      <empty/>
+    </element>
+  </group>
+</element>
+</correct>
+<invalid>
+<foo/>
+</invalid>
+<valid>
+<foo>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <baz/>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <bar/>
+  <bar/>
+  <bar/>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <baz/>
+  <baz/>
+  <baz/>
+  <bar/>
+</foo>
+</valid>
+<valid>
+<foo>
+  <baz/>
+  <bar/>
+  <baz/>
+  <bar/>
+</foo>
+</valid>
+<invalid>
+<foo>
+  <bar/>
+  <baz/>
+  <bar/>
+  <baz/>
+</foo>
+</invalid>
+</testCase>
+<testCase>
+<correct>
+<element name="list" xmlns="http://relaxng.org/ns/structure/1.0">
+  <oneOrMore>
+    <element name="label">
+      <empty/>
+    </element>
+    <optional>
+      <element name="opt">
+        <empty/>
+      </element>
+    </optional>
+    <element name="item">
+      <empty/>
+    </element>
+  </oneOrMore>
+</element>
+</correct>
+<invalid>
+<list>
+</list>
+</invalid>
+<valid>
+<list>
+  <label/>
+  <item/>
+</list>
+</valid>
+<valid>
+<list>
+  <label/>
+  <item/>
+  <label/>
+  <item/>
+</list>
+</valid>
+<valid>
+<list>
+  <label/>
+  <opt/>
+  <item/>
+  <label/>
+  <opt/>
+  <item/>
+</list>
+</valid>
+<invalid>
+<list>
+  <label/>
+  <item/>
+  <label/>
+  <opt/>
+  <opt/>
+  <item/>
+</list>
+</invalid>
+</testCase>
+<testCase>
+<correct>
+<element name="list" xmlns="http://relaxng.org/ns/structure/1.0">
+  <oneOrMore>
+    <element name="label">
+      <empty/>
+    </element>
+    <zeroOrMore>
+      <element name="opt">
+        <empty/>
+      </element>
+    </zeroOrMore>
+    <element name="item">
+      <empty/>
+    </element>
+  </oneOrMore>
+</element>
+</correct>
+<invalid>
+<list>
+</list>
+</invalid>
+<valid>
+<list>
+  <label/>
+  <item/>
+</list>
+</valid>
+<valid>
+<list>
+  <label/>
+  <item/>
+  <label/>
+  <item/>
+</list>
+</valid>
+<valid>
+<list>
+  <label/>
+  <opt/>
+  <item/>
+  <label/>
+  <opt/>
+  <item/>
+</list>
+</valid>
+<valid>
+<list>
+  <label/>
+  <item/>
+  <label/>
+  <opt/>
+  <opt/>
+  <item/>
+</list>
+</valid>
+</testCase>
+<testCase>
+<correct>
+<element name="list" xmlns="http://relaxng.org/ns/structure/1.0">
+  <oneOrMore>
+    <element name="label">
+      <empty/>
+    </element>
+    <zeroOrMore>
+      <element name="opt">
+        <empty/>
+      </element>
+      <element name="opt2">
+        <empty/>
+      </element>
+    </zeroOrMore>
+    <element name="item">
+      <empty/>
+    </element>
+  </oneOrMore>
+</element>
+</correct>
+<invalid>
+<list>
+</list>
+</invalid>
+<valid>
+<list>
+  <label/>
+  <item/>
+</list>
+</valid>
+<valid>
+<list>
+  <label/>
+  <item/>
+  <label/>
+  <item/>
+</list>
+</valid>
+<valid>
+<list>
+  <label/>
+  <opt/>
+  <opt2/>
+  <item/>
+  <label/>
+  <opt/>
+  <opt2/>
+  <item/>
+</list>
+</valid>
+<valid>
+<list>
+  <label/>
+  <item/>
+  <label/>
+  <opt/>
+  <opt2/>
+  <opt/>
+  <opt2/>
+  <item/>
+</list>
+</valid>
+<invalid>
+<list>
+  <label/>
+  <opt/>
+  <item/>
+  <label/>
+  <item/>
+</list>
+</invalid>
+<invalid>
+<list>
+  <label/>
+  <item/>
+  <label/>
+  <opt2/>
+  <opt/>
+  <item/>
+</list>
+</invalid>
+<invalid>
+<list>
+  <label/>
+  <item/>
+  <label/>
+  <opt/>
+  <opt2/>
+  <opt/>
+  <item/>
+</list>
+</invalid>
+</testCase>
+</testSuite>
+<testSuite>
+<documentation>Test of grammars merging</documentation>
+<testCase>
+<resource name="dbk.rng">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <ref name="p"/>
+  </start>
+  <define name="p.ext">
+    <notAllowed/>
+  </define>
+  <define name="p">
+    <element name="p">
+      <choice>
+        <ref name="p.ext"/>
+	<empty/>
+        <element name="a">
+          <text/>
+        </element>
+      </choice>
+    </element>
+  </define>
+</grammar>
+</resource>
+<correct>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <grammar>
+      <include href="dbk.rng"/>
+      <define name="p.ext" combine="choice">
+        <element name="b">
+          <text/>
+        </element>
+      </define>
+    </grammar>
+  </start>
+</grammar>
+</correct>
+<valid>
+<p/>
+</valid>
+<valid>
+<p>
+  <a/>
+</p>
+</valid>
+<valid>
+<p>
+  <b/>
+</p>
+</valid>
+<invalid>
+<b/>
+</invalid>
+<invalid>
+<p>
+  <b/>
+  <b/>
+</p>
+</invalid>
+</testCase>
+<testCase>
+<resource name="dbk.rng">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <ref name="p"/>
+  </start>
+  <define name="p.ext">
+    <notAllowed/>
+  </define>
+  <define name="p">
+    <element name="p">
+      <choice>
+        <ref name="p.ext"/>
+	<empty/>
+        <element name="a">
+          <text/>
+        </element>
+      </choice>
+    </element>
+  </define>
+  <define name="c">
+    <element name="c">
+      <empty/>
+    </element>
+  </define>
+</grammar>
+</resource>
+<correct>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <grammar>
+      <include href="dbk.rng"/>
+      <define name="p.ext" combine="choice">
+        <choice>
+	  <ref name="c"/>
+	  <parentRef name="d"/>
+          <element name="b">
+            <text/>
+          </element>
+        </choice>
+      </define>
+    </grammar>
+  </start>
+  <define name="d">
+    <element name="d">
+      <empty/>
+    </element>
+  </define>
+</grammar>
+</correct>
+<valid>
+<p/>
+</valid>
+<valid>
+<p>
+  <a/>
+</p>
+</valid>
+<valid>
+<p>
+  <b/>
+</p>
+</valid>
+<valid>
+<p>
+  <c/>
+</p>
+</valid>
+<valid>
+<p>
+  <d/>
+</p>
+</valid>
+<invalid>
+<b/>
+</invalid>
+<invalid>
+<c/>
+</invalid>
+<invalid>
+<d/>
+</invalid>
+<invalid>
+<p>
+  <b/>
+  <c/>
+</p>
+</invalid>
+<invalid>
+<p>
+  <d/>
+  <c/>
+</p>
+</invalid>
+</testCase>
+<testCase>
+<resource name="dbk.rng">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <ref name="p"/>
+  </start>
+  <define name="p.ext">
+    <notAllowed/>
+  </define>
+  <define name="p">
+    <element name="p">
+      <choice>
+        <ref name="p.ext"/>
+	<empty/>
+        <element name="a">
+          <text/>
+        </element>
+      </choice>
+    </element>
+  </define>
+  <define name="c">
+    <element name="c">
+      <empty/>
+    </element>
+  </define>
+</grammar>
+</resource>
+<resource name="proof.rng">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <ref name="e"/>
+  </start>
+  <define name="d">
+    <element name="d">
+      <empty/>
+    </element>
+  </define>
+  <define name="e">
+    <element name="e">
+      <empty/>
+    </element>
+  </define>
+  <define name="f">
+    <element name="f">
+      <empty/>
+    </element>
+  </define>
+</grammar>
+</resource>
+<correct>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <grammar>
+      <include href="dbk.rng"/>
+      <define name="p.ext" combine="choice">
+        <choice>
+	  <ref name="c"/>
+	  <grammar>
+	    <include href="proof.rng"/>
+	    <start combine="choice">
+	      <ref name="d"/>
+	    </start>
+	  </grammar>
+          <element name="b">
+            <text/>
+          </element>
+        </choice>
+      </define>
+    </grammar>
+  </start>
+  <define name="g">
+    <element name="g">
+      <empty/>
+    </element>
+  </define>
+</grammar>
+</correct>
+<valid>
+<p/>
+</valid>
+<valid>
+<p>
+  <a/>
+</p>
+</valid>
+<valid>
+<p>
+  <b/>
+</p>
+</valid>
+<valid>
+<p>
+  <c/>
+</p>
+</valid>
+<valid>
+<p>
+  <d/>
+</p>
+</valid>
+<valid>
+<p>
+  <e/>
+</p>
+</valid>
+<invalid>
+<p>
+  <f/>
+</p>
+</invalid>
+<invalid>
+<p>
+  <g/>
+</p>
+</invalid>
+<invalid>
+<b/>
+</invalid>
+<invalid>
+<c/>
+</invalid>
+<invalid>
+<d/>
+</invalid>
+<invalid>
+<e/>
+</invalid>
+<invalid>
+<f/>
+</invalid>
+<invalid>
+<g/>
+</invalid>
+<invalid>
+<p>
+  <d/>
+  <c/>
+</p>
+</invalid>
+<invalid>
+<p>
+  <d/>
+  <e/>
+</p>
+</invalid>
+</testCase>
+<testCase>
+<resource name="dbk.rng">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <ref name="p"/>
+  </start>
+  <define name="p.ext">
+    <notAllowed/>
+  </define>
+  <define name="p">
+    <element name="p">
+      <choice>
+        <ref name="p.ext"/>
+	<empty/>
+        <element name="a">
+          <text/>
+        </element>
+      </choice>
+    </element>
+  </define>
+  <define name="c">
+    <element name="c">
+      <empty/>
+    </element>
+  </define>
+</grammar>
+</resource>
+<resource name="proof.rng">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+         ns="http://example.org/ns/proofsystem">
+  <start>
+    <ref name="e"/>
+  </start>
+  <define name="d">
+    <element name="d">
+      <empty/>
+    </element>
+  </define>
+  <define name="e">
+    <element name="e">
+      <empty/>
+    </element>
+  </define>
+  <define name="f">
+    <element name="f">
+      <empty/>
+    </element>
+  </define>
+</grammar>
+</resource>
+<correct>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <grammar>
+      <include href="dbk.rng"/>
+      <define name="p.ext" combine="choice">
+        <choice>
+	  <ref name="c"/>
+	  <grammar>
+	    <include href="proof.rng"/>
+	    <start combine="choice">
+	      <ref name="d"/>
+	    </start>
+	  </grammar>
+          <element name="b">
+            <text/>
+          </element>
+        </choice>
+      </define>
+    </grammar>
+  </start>
+  <define name="g">
+    <element name="g">
+      <empty/>
+    </element>
+  </define>
+</grammar>
+</correct>
+<valid>
+<p/>
+</valid>
+<valid>
+<p>
+  <a/>
+</p>
+</valid>
+<valid>
+<p>
+  <b/>
+</p>
+</valid>
+<valid>
+<p>
+  <c/>
+</p>
+</valid>
+<valid>
+<p xmlns:p="http://example.org/ns/proofsystem">
+  <p:d/>
+</p>
+</valid>
+<invalid>
+<p>
+  <d/>
+</p>
+</invalid>
+<valid>
+<p xmlns:p="http://example.org/ns/proofsystem">
+  <p:e/>
+</p>
+</valid>
+<invalid>
+<p>
+  <e/>
+</p>
+</invalid>
+<invalid>
+<p xmlns:p="http://example.org/ns/proofsystem">
+  <p:f/>
+</p>
+</invalid>
+<invalid>
+<p>
+  <f/>
+</p>
+</invalid>
+<invalid>
+<p>
+  <g/>
+</p>
+</invalid>
+<invalid>
+<b/>
+</invalid>
+<invalid>
+<c/>
+</invalid>
+<invalid>
+<d/>
+</invalid>
+<invalid>
+<e/>
+</invalid>
+<invalid>
+<f/>
+</invalid>
+<invalid>
+<g/>
+</invalid>
+<invalid>
+<p xmlns:p="http://example.org/ns/proofsystem">
+  <p:d/>
+  <c/>
+</p>
+</invalid>
+<invalid>
+<p xmlns:p="http://example.org/ns/proofsystem">
+  <p:d/>
+  <p:e/>
+</p>
+</invalid>
+</testCase>
+<testCase>
+<resource name="ext.rng">
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <ref name="p"/>
+  </start>
+  <define name="p">
+    <element name="p">
+      <empty/>
+    </element>
+  </define>
+</grammar>
+</resource>
+<correct>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <element name="top">
+      <choice>
+        <ref name="include1"/>
+        <ref name="include2"/>
+      </choice>
+    </element>
+  </start>
+  <define name="include1">
+    <grammar>
+      <include href="ext.rng">
+        <start>
+	 <element name="a">
+	   <choice>
+	     <empty/>
+	     <ref name="p"/>
+	   </choice>
+	 </element>
+	</start>
+      </include>
+    </grammar>
+  </define>
+  <define name="include2">
+    <grammar>
+      <include href="ext.rng">
+        <start>
+	 <element name="b">
+	   <choice>
+	     <empty/>
+	     <ref name="p"/>
+	   </choice>
+	 </element>
+	</start>
+      </include>
+    </grammar>
+  </define>
+</grammar>
+</correct>
+<invalid>
+<top/>
+</invalid>
+<invalid>
+<a/>
+</invalid>
+<invalid>
+<b/>
+</invalid>
+<invalid>
+<p/>
+</invalid>
+<valid>
+<top>
+  <a/>
+</top>
+</valid>
+<valid>
+<top>
+  <b/>
+</top>
+</valid>
+<valid>
+<top>
+  <a>
+    <p/>
+  </a>
+</top>
+</valid>
+<valid>
+<top>
+  <b>
+    <p/>
+  </b>
+</top>
+</valid>
+</testCase>
+</testSuite>
+<testSuite>
+<documentation>Test of ID/IDREF</documentation>
+<testCase>
+<correct>
+<element name="top" xmlns="http://relaxng.org/ns/structure/1.0"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <zeroOrMore>
+    <choice>
+      <element name="ref">
+        <attribute name="id">
+	  <data type="ID"/>
+	</attribute>
+	<text/>
+      </element>
+      <element name="xref">
+        <attribute name="link">
+	  <data type="IDREF"/>
+	</attribute>
+	<text/>
+      </element>
+    </choice>
+  </zeroOrMore>
+</element>
+</correct>
+<valid>
+<top>
+</top>
+</valid>
+<invalid>
+<top>
+  <xref link="id1"/>
+</top>
+</invalid>
+<valid>
+<top>
+  <ref id="id1"/>
+</top>
+</valid>
+<valid>
+<top>
+  <xref link="id1"/>
+  <ref id="id1"/>
+</top>
+</valid>
+<valid>
+<top>
+  <xref link="  id1 "/>
+  <ref id="     id1   "/>
+  <xref link="id1 "/>
+  <xref link="  id1"/>
+</top>
+</valid>
+<valid>
+<top>
+  <ref id="id1"/>
+  <xref link="id1"/>
+</top>
+</valid>
+<invalid>
+<top>
+  <ref id="id1"/>
+  <ref id="id1"/>
+</top>
+</invalid>
+</testCase>
+<testCase>
+<correct>
+<element name="top" xmlns="http://relaxng.org/ns/structure/1.0"
+         datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <zeroOrMore>
+    <choice>
+      <element name="ref">
+        <attribute name="id">
+	  <data type="ID"/>
+	</attribute>
+	<text/>
+      </element>
+      <element name="xref">
+        <attribute name="link">
+	  <data type="IDREFS"/>
+	</attribute>
+	<text/>
+      </element>
+    </choice>
+  </zeroOrMore>
+</element>
+</correct>
+<valid>
+<top>
+</top>
+</valid>
+<invalid>
+<top>
+  <xref link="id1"/>
+</top>
+</invalid>
+<valid>
+<top>
+  <ref id="id1"/>
+</top>
+</valid>
+<valid>
+<top>
+  <xref link="id1"/>
+  <ref id="id1"/>
+</top>
+</valid>
+<valid>
+<top>
+  <xref link="id1 id1"/>
+  <ref id="id1"/>
+</top>
+</valid>
+<valid>
+<top>
+  <ref id="id1"/>
+  <xref link="id1"/>
+</top>
+</valid>
+<valid>
+<top>
+  <ref id="id2"/>
+  <xref link="id1 id2"/>
+  <ref id="id1"/>
+</top>
+</valid>
+<valid>
+<top>
+  <ref id="id2"/>
+  <xref link=" id2    id1   id2 "/>
+  <ref id="id1"/>
+</top>
+</valid>
+<invalid>
+<top>
+  <ref id="id2"/>
+  <xref link="id1 id2"/>
+</top>
+</invalid>
+<invalid>
+<top>
+  <xref link="id1 id2"/>
+  <ref id="id1"/>
+</top>
+</invalid>
+<invalid>
+<top>
+  <ref id="id1"/>
+  <ref id="id1"/>
+</top>
+</invalid>
+</testCase>
+</testSuite>
+<testSuite>
+<documentation>Test of ENTITY/ENTITIES</documentation>
+<testCase>
+<correct>
+<element xmlns="http://relaxng.org/ns/structure/1.0" name="doc" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <data type="ENTITY"/>
+</element>
+</correct>
+<invalid>
+<doc></doc>
+</invalid>
+<invalid>
+<doc>foo</doc>
+</invalid>
+<valid dtd="&#10;&lt;!DOCTYPE doc [&#10;&lt;!ENTITY foo SYSTEM 'whatever' NDATA jpeg&gt;&#10;]&gt;">
+<doc>foo</doc>
+</valid>
+<valid dtd="&#10;&lt;!DOCTYPE doc [&#10;&lt;!ENTITY foo SYSTEM 'whatever' NDATA jpeg&gt;&#10;]&gt;">
+<doc>  foo </doc>
+</valid>
+<invalid dtd="&#10;&lt;!DOCTYPE doc [&#10;&lt;!ENTITY foo SYSTEM 'whatever' NDATA jpeg&gt;&#10;]&gt;">
+<doc>foo bar</doc>
+</invalid>
+</testCase>
+<testCase>
+<correct>
+<element xmlns="http://relaxng.org/ns/structure/1.0" name="doc" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <data type="ENTITIES"/>
+</element>
+</correct>
+<invalid>
+<doc></doc>
+</invalid>
+<invalid>
+<doc>foo</doc>
+</invalid>
+<valid dtd="&#10;&lt;!DOCTYPE doc [&#10;&lt;!ENTITY foo SYSTEM 'whatever' NDATA jpeg&gt; &#10;&lt;!ENTITY bar SYSTEM 'whatever' NDATA jpeg&gt; &#10;]&gt;">
+<doc> foo bar </doc>
+</valid>
+<valid dtd="&#10;&lt;!DOCTYPE doc [&#10;&lt;!ENTITY foo SYSTEM 'whatever' NDATA jpeg&gt; &#10;&lt;!ENTITY bar SYSTEM 'whatever' NDATA jpeg&gt; &#10;]&gt;">
+<doc> foo bar foo</doc>
+</valid>
+<invalid dtd="&#10;&lt;!DOCTYPE doc [&#10;&lt;!ENTITY foo SYSTEM 'whatever' NDATA jpeg&gt;]&gt;">
+<doc>foo bar</doc>
+</invalid>
+</testCase>
+</testSuite>
+<testSuite>
+<documentation>Test of Mixed</documentation>
+<testCase>
+<correct>
+<element name="mix" xmlns="http://relaxng.org/ns/structure/1.0">
+  <mixed>
+    <zeroOrMore>
+      <choice>
+        <element name="a">
+	  <empty/>
+	</element>
+        <element name="b">
+	  <empty/>
+	</element>
+        <element name="c">
+	  <empty/>
+	</element>
+      </choice>
+    </zeroOrMore>
+  </mixed>
+  <element name="d">
+    <empty/>
+  </element>
+</element>
+</correct>
+<valid>
+<mix>
+  <d/>
+</mix>
+</valid>
+<valid>
+<mix>
+  <b/>
+  <a/>
+  <c/>
+  <b/>
+  <d/>
+</mix>
+</valid>
+<valid>
+<mix>
+  mixed
+  <c/>
+  <d/>
+</mix>
+</valid>
+<valid>
+<mix>
+  <c/>
+  mixed
+  <d/>
+</mix>
+</valid>
+<valid>
+<mix>
+  <b/>
+  is
+  <a/>
+  inter
+  <c/>
+  mixed
+  <b/>
+  <d/>
+</mix>
+</valid>
+<valid>
+<mix>
+  mixed
+  <b/>
+  .
+  <d/>
+</mix>
+</valid>
+<valid>
+<mix>
+  this
+  <b/>
+  is
+  <a/>
+  inter
+  <c/>
+  mixed
+  <b/>
+  .
+  <d/>
+</mix>
+</valid>
+</testCase>
+</testSuite>
+</q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></q:e></testSuite>

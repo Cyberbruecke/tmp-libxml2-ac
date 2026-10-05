@@ -1,0 +1,2 @@
+//preceding-sibling::nod//child::*[position() > 7]//following-sibling::*//child::*[following::node()]
+<r><e/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/></r>

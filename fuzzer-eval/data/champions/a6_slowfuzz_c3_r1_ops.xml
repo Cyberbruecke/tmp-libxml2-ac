@@ -1,0 +1,2 @@
+//following-sibling::*[following::node()]/preceding::*[count(preceding-sibling::node()) > 4]
+<r><e/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/><r/></r>

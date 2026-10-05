@@ -1,0 +1,10 @@
+host     : 13th Gen Intel(R) Core(TM) i7-1355U, 12 cores, Linux
+libxml2  : v2.15.0-124-gc6324894 (c6324894, instrumented)
+criterion: operation count >= 8000000   (median of 5 runs per input)
+vector                  Stock   AFL++ all  AFL++ only    PerfFuzz    SlowFuzz    Informed
+C14N1D3 (excl.)             -         yes         yes           -           -         yes
+C14N1D3 (incl.)             -         yes         yes           -         yes         yes
+XPlode                      -         yes         yes         yes           -         yes
+FlAttr                      -         yes         yes           -           -         yes
+Wreckoncile                 -           -           -           -           -           -
+runs clearing            0/40        6/10        7/10        2/10        1/10        7/10

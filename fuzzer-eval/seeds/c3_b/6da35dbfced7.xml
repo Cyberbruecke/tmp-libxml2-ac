@@ -1,0 +1,6 @@
+//*
+<!DOCTYPE doc [
+<!ELEMENT doc (a)? >
+<!ELEMENT a EMPTY>
+]>
+<doc></doc>

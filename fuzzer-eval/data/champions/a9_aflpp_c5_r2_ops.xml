@@ -1,0 +1,1505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "dtds/xhtml1-strict.dtd">
+<?xml-stylesheet href="W3C-PR.css" type="text/css"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>XHTML 1.0: The Extensible HyperText Markup
+Language</title>
+<link rel="stylesheet"
+href="W3C-PR.css" type="text/css" />
+<style type="text/css">
+span.term { font-style: italic; color: rgb(0, 0, 192) }
+code {
+	color: green;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+code.greenmono {
+	color: green;
+	font-family: monospace;
+	font-weight: bold;
+}
+.good {
+	border: solid green;
+	border-width: 2px;
+	color: green;
+	font-weight: bold;
+	margin-right: 5%;
+	margin-left: 0;
+}
+.bad  {
+	border: solid red;
+	border-width: 2px;
+	margin-left: 0;
+	margin-right: 5%;
+	color: rgb(192, 101, 101);
+}
+
+img {
+	color: white;
+	border: none;
+}
+
+div.navbar { text-align: center; }
+div.contents {
+	background-color: rgb(204,204,255);
+	padding: 0.5em;
+	border: none;
+	margin-right: 5%;
+}
+.tocline { list-style: none; }
+table.exceptions { background-color: rgb(255,255,153); }
+</style>
+</head>
+<body>
+<div class="navbar">
+  <a href="#toc">table of contents</a> 
+  <hr />
+</div>
+<div class="head"><p><a href="http://www.w3.org/"><img class="head"
+src="w3c_home.gif" alt="W3C" /></a></p>
+
+<h1 class="head"><a name="title" id="title">XHTML</a><sup>&#8482;</sup> 1.0:
+The Extensible HyperText Markup Language</h1>
+
+<h2>A Reformulation of HTML 4.0 in XML 1.0</h2>
+
+<h3>W3C Proposed Recommendation 10 December 1999</h3>
+
+<dl>
+<dt>This version:</dt>
+
+<dd><a href=
+"http://www.w3.org/TR/1999/PR-xhtml1-19991210">
+http://www.w3.org/TR/1999/PR-xhtml1-19991210</a> <br />
+(<a href="xhtml1.ps">Postscript version</a>,
+<a href="xhtml1.pdf">PDF version</a>,
+<a href="xhtml1.zip">ZIP archive</a>, or
+<a href="xhtml1.tgz">Gzip'd TAR archive</a>)
+</dd>
+
+<dt>Latest version:</dt>
+
+<dd><a href="http://www.w3.org/TR/xhtml1">
+http://www.w3.org/TR/xhtml1</a></dd>
+
+<dt>Previous versions:</dt>
+
+<dd><a href=
+"http://www.w3.org/TR/1999/WD-xhtml1-19991124">
+http://www.w3.org/TR/1999/WD-xhtml1-19991124</a></dd>
+<dd><a href=
+"http://www.w3.org/TR/1999/PR-xhtml1-19990824">
+http://www.w3.org/TR/1999/PR-xhtml1-19990824</a></dd>
+
+<dt>Authors:</dt>
+
+<dd>See <a href="#acks">acknowledgements</a>.</dd>
+</dl>
+
+<p class="copyright"><a href= 
+"http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">
+Copyright</a> &copy; 1999 <a href="http://www.w3.org/">W3C</a><sup>&reg;</sup>
+(<a href="http://www.lcs.mit.edu/">MIT</a>, <a href= 
+"http://www.inria.fr/">INRIA</a>, <a href=
+"http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. <abbr
+title="World Wide Web Consortium">W3C</abbr> <a
+href= 
+"http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">
+liability</a>, <a href= 
+"http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">
+trademark</a>, <a href= 
+"http://www.w3.org/Consortium/Legal/copyright-documents">document
+use</a> and <a href= 
+"http://www.w3.org/Consortium/Legal/copyright-software">software
+licensing</a> rules apply.</p>
+<hr />
+</div>
+
+<h2 class="notoc">Abstract</h2>
+
+<p>This specification defines <abbr title="Extensible Hypertext Markup
+Language">XHTML</abbr> 1.0, a reformulation of HTML
+4.0 as an XML 1.0 application, and three <abbr title="Document Type
+Definition">DTDs</abbr> corresponding to
+the ones defined by HTML 4.0. The semantics of the elements and
+their attributes are defined in the W3C Recommendation for HTML
+4.0. These semantics provide the foundation for future
+extensibility of XHTML. Compatibility with existing HTML user
+agents is possible by following a small set of guidelines.</p>
+
+<h2>Status of this document</h2>
+
+<p><em>This section describes the status of this document at the time
+of its publication. Other documents may supersede this document. The
+latest status of this document series is maintained at the W3C.</em></p>
+
+<p>This specification is a Proposed Recommendation of the HTML Working Group. It is 
+a revision of the Proposed Recommendation dated <a
+href= "http://www.w3.org/TR/1999/PR-xhtml1-19990824/">24 August
+1999</a> incorporating changes as a result of comments from the Proposed
+Recommendation review, and 
+comments and further deliberations of the W3C HTML Working Group. A 
+<a href="xhtml1-diff-19991210.html">diff-marked version</a> from the previous
+proposed recommendation is available for comparison purposes.</p>
+
+<p>On 10 December 1999, this document enters a
+<a href="http://www.w3.org/Consortium/Process/#RecsPR">
+Proposed Recommendation</a> review period. From that date until 8 January
+2000,
+W3C Advisory Committee representatives are encouraged
+to review this specification and return comments in their completed
+ballots to w3c-html-review@w3.org. Please send any comments of a
+confidential nature in separate email to w3t-html@w3.org, which is
+visible to the Team only.</p>
+
+<p>No sooner than 14 days after the end of the review period, the
+Director will announce the document's disposition: it may become a W3C
+Recommendation (possibly with minor changes), it may revert to Working
+Draft status, or it may be dropped as a W3C work item.</p>
+
+<p>Publication as a Proposed Recommendation does not imply endorsement
+by the W3C membership.  This is still a draft document and may be
+updated, replaced or obsoleted by other documents at any time. It is
+inappropriate to cite W3C Proposed Recommendation as other than "work
+in progress."</p>
+
+<p>This document has been produced as part of the <a href= 
+"http://www.w3.org/MarkUp/">W3C HTML Activity</a>. The goals of
+the <a href="http://www.w3.org/MarkUp/Group/">HTML Working
+Group</a> <i>(<a href="http://cgi.w3.org/MemberAccess/">members
+only</a>)</i> are discussed in the <a href= 
+"http://www.w3.org/MarkUp/Group/HTMLcharter">HTML Working Group
+charter</a> <i>(<a href="http://cgi.w3.org/MemberAccess/">members
+only</a>)</i>.</p>
+
+<p>A list of current W3C Recommendations and other technical documents
+can be found at <a
+href="http://www.w3.org/TR">http://www.w3.org/TR</a>.</p>
+
+<p>Public discussion on <abbr title="HyperText Markup
+Language">HTML</abbr> features takes place on the mailing list <a
+href="mailto:www-html@w3.org"> www-html@w3.org</a> (<a href=
+"http://lists.w3.org/Archives/Public/www-html/">archive</a>). The W3C
+staff contact for work on HTML is <a href= "mailto:dsr@w3.org">Dave
+Raggett</a>.</p>
+
+<p>Please report errors in this document to <a
+href="mailto:www-html-editor@w3.org">www-html-editor@w3.org</a>.</p>
+
+<p>The list of known errors in this specification is available at <a
+href="http://www.w3.org/1999/12/PR-xhtml1-19991210-errata">http://www.w3.org/1999/12/PR-xhtml1-19991210-errata</a>.</p>
+
+<h2 class="notoc"><a id="toc" name="toc">Contents</a></h2>
+
+<div class="contents">
+<ul class="toc">
+<li class="tocline">1. <a href="#xhtml">What is XHTML?</a> 
+
+<ul class="toc">
+<li class="tocline">1.1 <a href="#html4">What is HTML 4.0?</a></li>
+
+<li class="tocline">1.2 <a href="#xml">What is XML?</a></li>
+
+<li class="tocline">1.3 <a href="#why">Why the need for XHTML?</a></li>
+</ul>
+</li>
+
+<li class="tocline">2. <a href="#defs">Definitions</a> 
+
+<ul class="toc">
+<li class="tocline">2.1 <a href="#terms">Terminology</a></li>
+
+<li class="tocline">2.2 <a href="#general">General Terms</a></li>
+</ul>
+</li>
+
+<li class="tocline">3. <a href="#normative">Normative Definition of XHTML 1.0</a>
+
+
+<ul class="toc">
+<li class="tocline">3.1 <a href="#docconf">Document Conformance</a></li>
+
+<li class="tocline">3.2 <a href="#uaconf">User Agent Conformance</a></li>
+</ul>
+</li>
+
+<li class="tocline">4. <a href="#diffs">Differences with HTML 4.0</a> 
+
+</li>
+
+<li class="tocline">5. <a href="#issues">Compatibility Issues</a> 
+
+<ul class="toc">
+<li class="tocline">5.1 <a href="#media">Internet Media Types</a></li>
+</ul>
+</li>
+
+<li class="tocline">6. <a href="#future">Future Directions</a> 
+
+<ul class="toc">
+<li class="tocline">6.1 <a href="#mods">Modularizing HTML</a></li>
+
+<li class="tocline">6.2 <a href="#extensions">Subsets and Extensibility</a></li>
+
+<li class="tocline">6.3 <a href="#profiles">Document Profiles</a></li>
+</ul>
+</li>
+
+<li class="tocline"><a href="#dtds">Appendix A. DTDs</a></li>
+
+<li class="tocline"><a href="#prohibitions">Appendix B. Element
+Prohibitions</a></li>
+
+<li class="tocline"><a href="#guidelines">Appendix C. HTML Compatibility Guidelines</a></li>
+
+<li class="tocline"><a href="#acks">Appendix D. Acknowledgements</a></li>
+
+<li class="tocline"><a href="#refs">Appendix E. References</a></li>
+</ul>
+</div>
+
+<!--OddPage-->
+<h1><a name="xhtml" id="xhtml">1. What is XHTML?</a></h1>
+
+<p>XHTML is a family of current and future document types and modules that
+reproduce, subset, and extend HTML 4.0 <a href="#ref-html4">[HTML]</a>. XHTML family document types are <abbr title="Extensible Markup Language">XML</abbr> based,
+and ultimately are designed to work in conjunction with XML-based user agents.
+The details of this family and its evolution are
+discussed in more detail in the section on <a href="#future">Future
+Directions</a>. </p>
+
+<p>XHTML 1.0 (this specification) is the first document type in the XHTML
+family. It is a reformulation of the three HTML 4.0 document types as
+applications of XML 1.0 <a href="#ref-xml"> [XML]</a>. It is intended
+to be used as a language for content that is both XML-conforming and, if some
+simple <a href="#guidelines">guidelines</a> are followed, 
+operates in HTML 4.0 conforming user agents. Developers who migrate
+their content to XHTML 1.0 will realize the following benefits:</p>
+
+<ul>
+<li>XHTML documents are XML conforming. As such, they are readily viewed,
+edited, and validated with standard XML tools.</li>
+<li>XHTML documents can be written to
+to operate as well or better than they did before in existing
+HTML 4.0-conforming user agents as well as in new, XHTML 1.0 conforming user
+agents.</li>
+<li>XHTML documents can utilize applications (e.g. scripts and applets) that rely
+upon either the HTML Document Object Model or the XML Document Object Model <a
+href="#ref-dom">[DOM]</a>.</li>
+<li>As the XHTML family evolves, documents conforming to XHTML 1.0 will be more
+likely to interoperate within and among various XHTML environments.</li>
+</ul>
+
+<p>The XHTML family is the next step in the evolution of the Internet. By
+migrating to XHTML today, content developers can enter the XML world with all
+of its attendant benefits, while still remaining confident in their
+content's backward and future compatibility.</p>
+
+<h2><a name="html4" id="html4">1.1 What is HTML 4.0?</a></h2>
+
+<p>HTML 4.0 <a href="#ref-html4">[HTML]</a> is an <abbr title="Standard
+Generalized Markup Language">SGML</abbr> (Standard
+Generalized Markup Language) application conforming to
+International Standard <abbr title="Organization for International
+Standardization">ISO</abbr> 8879, and is widely regarded as the
+standard publishing language of the World Wide Web.</p>
+
+<p>SGML is a language for describing markup languages,
+particularly those used in electronic document exchange, document
+management, and document publishing. HTML is an example of a
+language defined in SGML.</p>
+
+<p>SGML has been around since the middle 1980's and has remained
+quite stable. Much of this stability stems from the fact that the
+language is both feature-rich and flexible. This flexibility,
+however, comes at a price, and that price is a level of
+complexity that has inhibited its adoption in a diversity of
+environments, including the World Wide Web.</p>
+
+<p>HTML, as originally conceived, was to be a language for the
+exchange of scientific and other technical documents, suitable
+for use by non-document specialists. HTML addressed the problem
+of SGML complexity by specifying a small set of structural and
+semantic tags suitable for authoring relatively simple documents.
+In addition to simplifying the document structure, HTML added
+support for hypertext. Multimedia capabilities were added
+later.</p>
+
+<p>In a remarkably short space of time, HTML became wildly
+popular and rapidly outgrew its original purpose. Since HTML's
+inception, there has been rapid invention of new elements for use
+within HTML (as a standard) and for adapting HTML to vertical,
+highly specialized, markets. This plethora of new elements has
+led to compatibility problems for documents across different
+platforms.</p>
+
+<p>As the heterogeneity of both software and platforms rapidly
+proliferate, it is clear that the suitability of 'classic' HTML
+4.0 for use on these platforms is somewhat limited.</p>
+
+<h2><a name="xml" id="xml">1.2 What is XML?</a></h2>
+
+<p>XML<sup>&#8482;</sup> is the shorthand for Extensible Markup
+Language, and is an acronym of Extensible Markup Language <a
+href="#ref-xml">[XML]</a>.</p>
+
+<p>XML was conceived as a means of regaining the power and
+flexibility of SGML without most of its complexity. Although a
+restricted form of SGML, XML nonetheless preserves most of SGML's
+power and richness, and yet still retains all of SGML's commonly
+used features.</p>
+
+<p p31767214="" p31767215="" p31767216="" p31767217="" p31767218="" p31767219="" p31767220="" p31767221="" p31767222="" p31767223="" p31767224="" p31767225="" p31767226="" p31767227="" p31767228="" p31767229="" p31767230="" p31767231="" p31767232="" p31767233="" p31767234="" p31767235="" p31767236="" p31767237="" p31767238="" p31767239="" p31767240="" p31767241="" p31767242="" p31767243="" p31767244="" p31767245="" p31767246="" p31767247="" p31767248="" p31767249="" p31767250="" p31767251="" p31767252="" p31767253="" p31767254="" p31767255="" p31767256="" p31767257="" p31767258="" p31767259="" p31767260="" p31767261="" p31767262="" p31767263="" p31767264="" p31767265="" p31767266="" p31767267="" p31767268="" p31767269="" p31767270="" p31767271="" p31767272="" p31767273="" p31767274="" p31767275="" p31767276="" p31767277="" p31767278="" p31767279="" p31767280="" p31767281="" p31767282="" p31767283="" p31767284="" p31767285="" p31767286="" p31767287="" p31767288="" p31767289="" p31767290="" p31767291="" p31767292="" p31767293="" p31767294="" p31767295="" p31767296="" p31767297="" p31767298="" p31767299="" p31767300="" p31767301="" p31767302="" p31767303="" p31767304="" p31767305="" p31767306="" p31767307="" p31767308="" p31767309="" p31767310="" p31767311="" p31767312="" p31767313="" p31767314="" p31767315="" p31767316="" p31767317="" p31767318="" p31767319="" p31767320="" p31767321="" p31767322="" p31767323="" p31767324="" p31767325="" p31767326="" p31767327="" p31767328="" p31767329="" p31767330="" p31767331="" p31767332="" p31767333="" p31767334="" p31767335="" p31767336="" p31767337="" p31767338="" p31767339="" p31767340="" p31767341="" p31767342="" p31767343="" p31767344="" p31767345="" p31767346="" p31767347="" p31767348="" p31767349="" p31767350="" p31767351="" p31767352="" p31767353="" p31767354="" p31767355="" p31767356="" p31767357="" p31767358="" p31767359="" p31767360="" p31767361="" p31767362="" p31767363="" p31767364="" p31767365="" p31767366="" p31767367="" p31767368="" p31767369="" p31767370="" p31767371="" p31767372="" p31767373="" p31767374="" p31767375="" p31767376="" p31767377="" p31767378="" p31767379="" p31767380="" p31767381="" p31767382="" p31767383="" p31767384="" p31767385="" p31767386="" p31767387="" p31767388="" p31767389="" p31767390="" p31767391="" p31767392="" p31767393="" p31767394="" p31767395="" p31767396="" p31767397="" p31767398="" p31767399="" p31767400="" p31767401="" p31767402="" p31767403="" p31767404="" p31767405="" p31767406="" p31767407="" p31767408="" p31767409="" p31767410="" p31767411="" p31767412="" p31767413="" p31767414="" p31767415="" p31767416="" p31767417="" p31767418="" p31767419="" p31767420="" p31767421="" p31767422="" p31767423="" p31767424="" p31767425="" p31767426="" p31767427="" p31767428="" p31767429="" p31767430="" p31767431="" p31767432="" p31767433="" p31767434="" p31767435="" p31767436="" p31767437="" p31767438="" p31767439="" p31767440="" p31767441="" p31767442="" p31767443="" p31767444="" p31767445="" p31767446="" p31767447="" p31767448="" p31767449="" p31767450="" p31767451="" p31767452="" p31767453="" p31767454="" p31767455="" p31767456="" p31767457="" p31767458="" p31767459="" p31767460="" p31767461="" p31767462="" p31767463="" p31767464="" p31767465="" p31767466="" p31767467="" p31767468="" p31767469="" p31767470="" p31767471="" p31767472="" p31767473="" p31767474="" p31767475="" p31767476="" p31767477="" p31767478="" p31767479="" p31767480="" p31767481="" p31767482="" p31767483="" p31767484="" p31767485="" p31767486="" p31767487="" p31767488="" p31767489="" p31767490="" p31767491="" p31767492="" p31767493="" p31767494="" p31767495="" p31767496="" p31767497="" p31767498="" p31767499="" p31767500="" p31767501="" p31767502="" p31767503="" p31767504="" p31767505="" p31767506="" p31767507="" p31767508="" p31767509="" p31767510="" p31767511="" p31767512="" p31767513="" p31767514="" p31767515="" p31767516="" p31767517="" p31767518="" p31767519="" p31767520="" p31767521="" p31767522="" p31767523="" p31767524="" p31767525="" p31767526="" p31767527="" p31767528="" p31767529="" p31767530="" p31767531="" p31767532="" p31767533="" p31767534="" p31767535="" p31767536="" p31767537="" p31767538="" p31767539="" p31767540="" p31767541="" p31767542="" p31767543="" p31767544="" p31767545="" p31767546="" p31767547="" p31767548="" p31767549="" p31767550="" p31767551="" p31767552="" p31767553="" p31767554="" p31767555="" p31767556="" p31767557="" p31767558="" p31767559="" p31767560="" p31767561="" p31767562="" p31767563="" p31767564="" p31767565="" p31767566="" p31767567="" p31767568="" p31767569="" p31767570="" p31767571="" p31767572="" p31767573="" p31767574="" p31767575="" p31767576="" p31767577="" p31767578="" p31767579="" p31767580="" p31767581="" p31767582="" p31767583="" p31767584="" p31767585="" p31767586="" p31767587="" p31767588="" p31767589="" p31767590="" p31767591="" p31767592="" p31767593="" p31767594="" p31767595="" p31767596="" p31767597="" p31767598="" p31767599="" p31767600="" p31767601="" p31767602="" p31767603="" p31767604="" p31767605="" p31767606="" p31767607="" p31767608="" p31767609="" p31767610="" p31767611="" p31767612="" p31767613="" p31767614="" p31767615="" p31767616="" p31767617="" p31767618="" p31767619="" p31767620="" p31767621="" p31767622="" p31767623="" p31767624="" p31767625="" p31767626="" p31767627="" p31767628="" p31767629="" p31767630="" p31767631="" p31767632="" p31767633="" p31767634="" p31767635="" p31767636="" p31767637="" p31767638="" p31767639="" p31767640="" p31767641="" p31767642="" p31767643="" p31767644="" p31767645="" p31767646="" p31767647="" p31767648="" p31767649="" p31767650="" p31767651="" p31767652="" p31767653="" p31767654="" p31767655="" p31767656="" p31767657="" p31767658="" p31767659="" p31767660="" p31767661="" p31767662="" p31767663="" p31767664="" p31767665="" p31767666="" p31767667="" p31767668="" p31767669="" p31767670="" p31767671="" p31767672="" p31767673="" p31767674="" p31767675="" p31767676="" p31767677="" p31767678="" p31767679="" p31767680="" p31767681="" p31767682="" p31767683="" p31767684="" p31767685="" p31767686="" p31767687="" p31767688="" p31767689="" p31767690="" p31767691="" p31767692="" p31767693="" p31767694="" p31767695="" p31767696="" p31767697="" p31767698="" p31767699="" p31767700="" p31767701="" p31767702="" p31767703="" p31767704="" p31767705="" p31767706="" p31767707="" p31767708="" p31767709="" p31767710="" p31767711="" p31767712="" p31767713="" p31767714="" p31767715="" p31767716="" p31767717="" p31767718="" p31767719="" p31767720="" p31767721="" p31767722="" p31767723="" p31767724="" p31767725="" p31767726="" p31767727="" p31767728="" p31767729="" p31767730="" p31767731="" p31767732="" p31767733="" p31767734="" p31767735="" p31767736="" p31767737="" p31767738="" p31767739="" p31767740="" p31767741="" p31767742="" p31767743="" p31767744="" p31767745="" p31767746="" p31767747="" p31767748="" p31767749="" p31767750="" p31767751="" p31767752="" p31767753="" p31767754="" p31767755="" p31767756="" p31767757="" p31767758="" p31767759="" p31767760="" p31767761="" p31767762="" p31767763="" p31767764="" p31767765="" p31767766="" p31767767="" p31767768="" p31767769="" p31767770="" p31767771="" p31767772="" p31767773="" p31767774="" p31767775="" p31767776="" p31767777="" p31767778="" p31767779="" p31767780="" p31767781="" p31767782="" p31767783="" p31767784="" p31767785="" p31767786="" p31767787="" p31767788="" p31767789="" p31767790="" p31767791="" p31767792="" p31767793="" p31767794="" p31767795="" p31767796="" p31767797="" p31767798="" p31767799="" p31767800="" p31767801="" p31767802="" p31767803="" p31767804="" p31767805="" p31767806="" p31767807="" p31767808="" p31767809="" p31767810="" p31767811="" p31767812="" p31767813="" p31767814="" p31767815="" p31767816="" p31767817="" p31767818="" p31767819="" p31767820="" p31767821="" p31767822="" p31767823="" p31767824="" p31767825="" p31767826="" p31767827="" p31767828="" p31767829="" p31767830="" p31767831="" p31767832="" p31767833="" p31767834="" p31767835="" p31767836="" p31767837="" p31767838="" p31767839="" p31767840="" p31767841="" p31767842="" p31767843="" p31767844="" p31767845="" p31767846="" p31767847="" p31767848="" p31767849="" p31767850="" p31767851="" p31767852="" p31767853="" p31767854="" p31767855="" p31767856="" p31767857="" p31767858="" p31767859="" p31767860="" p31767861="" p31767862="" p31767863="" p31767864="" p31767865="" p31767866="" p31767867="" p31767868="" p31767869="" p31767870="" p31767871="" p31767872="" p31767873="" p31767874="" p31767875="" p31767876="" p31767877="" p31767878="" p31767879="" p31767880="" p31767881="" p31767882="" p31767883="" p31767884="" p31767885="" p31767886="" p31767887="" p31767888="" p31767889="" p31767890="" p31767891="" p31767892="" p31767893="" p31767894="" p31767895="" p31767896="" p31767897="" p31767898="" p31767899="" p31767900="" p31767901="" p31767902="" p31767903="" p31767904="" p31767905="" p31767906="" p31767907="" p31767908="" p31767909="" p31767910="" p31767911="" p31767912="" p31767913="" p31767914="" p31767915="" p31767916="" p31767917="" p31767918="" p31767919="" p31767920="" p31767921="" p31767922="" p31767923="" p31767924="" p31767925="" p31767926="" p31767927="" p31767928="" p31767929="" p31767930="" p31767931="" p31767932="" p31767933="" p31767934="" p31767935="" p31767936="" p31767937="" p31767938="" p31767939="" p31767940="" p31767941="" p31767942="" p31767943="" p31767944="" p31767945="" p31767946="" p31767947="" p31767948="" p31767949="" p31767950="" p31767951="" p31767952="" p31767953="" p31767954="" p31767955="" p31767956="" p31767957="" p31767958="" p31767959="" p31767960="" p31767961="" p31767962="" p31767963="" p31767964="" p31767965="" p31767966="" p31767967="" p31767968="" p31767969="" p31767970="" p31767971="" p31767972="" p31767973="" p31767974="" p31767975="" p31767976="" p31767977="" p31767978="" p31767979="" p31767980="" p31767981="" p31767982="" p31767983="" p31767984="" p31767985="" p31767986="" p31767987="" p31767988="" p31767989="" p31767990="" p31767991="" p31767992="" p31767993="" p31767994="" p31767995="" p31767996="" p31767997="" p31767998="" p31767999="" p31768000="" p31768001="" p31768002="" p31768003="" p31768004="" p31768005="" p31768006="" p31768007="" p31768008="" p31768009="" p31768010="" p31768011="" p31768012="" p31768013="" p31768014="" p31768015="" p31768016="" p31768017="" p31768018="" p31768019="" p31768020="" p31768021="" p31768022="" p31768023="" p31768024="" p31768025="" p31768026="" p31768027="" p31768028="" p31768029="" p31768030="" p31768031="" p31768032="" p31768033="" p31768034="" p31768035="" p31768036="" p31768037="" p31768038="" p31768039="" p31768040="" p31768041="" p31768042="" p31768043="" p31768044="" p31768045="" p31768046="" p31768047="" p31768048="" p31768049="" p31768050="" p31768051="" p31768052="" p31768053="" p31768054="" p31768055="" p31768056="" p31768057="" p31768058="" p31768059="" p31768060="" p31768061="" p31768062="" p31768063="" p31768064="" p31768065="" p31768066="" p31768067="" p31768068="" p31768069="" p31768070="" p31768071="" p31768072="" p31768073="" p31768074="" p31768075="" p31768076="" p31768077="" p31768078="" p31768079="" p31768080="" p31768081="" p31768082="" p31768083="" p31768084="" p31768085="" p31768086="" p31768087="" p31768088="" p31768089="" p31768090="" p31768091="" p31768092="" p31768093="" p31768094="" p31768095="" p31768096="" p31768097="" p31768098="" p31768099="" p31768100="" p31768101="" p31768102="" p31768103="" p31768104="" p31768105="" p31768106="" p31768107="" p31768108="" p31768109="" p31768110="" p31768111="" p31768112="" p31768113="" p31768114="" p31768115="" p31768116="" p31768117="" p31768118="" p31768119="" p31768120="" p31768121="" p31768122="" p31768123="" p31768124="" p31768125="" p31768126="" p31768127="" p31768128="" p31768129="" p31768130="" p31768131="" p31768132="" p31768133="" p31768134="" p31768135="" p31768136="" p31768137="" p31768138="" p31768139="" p31768140="" p31768141="" p31768142="" p31768143="" p31768144="" p31768145="" p31768146="" p31768147="" p31768148="" p31768149="" p31768150="" p31768151="" p31768152="" p31768153="" p31768154="" p31768155="" p31768156="" p31768157="" p31768158="" p31768159="" p31768160="" p31768161="" p31768162="" p31768163="" p31768164="" p31768165="" p31768166="" p31768167="" p31768168="" p31768169="" p31768170="" p31768171="" p31768172="" p31768173="" p31768174="" p31768175="" p31768176="" p31768177="" p31768178="" p31768179="" p31768180="" p31768181="" p31768182="" p31768183="" p31768184="" p31768185="" p31768186="" p31768187="" p31768188="" p31768189="" p31768190="" p31768191="" p31768192="" p31768193="" p31768194="" p31768195="" p31768196="" p31768197="" p31768198="" p31768199="" p31768200="" p31768201="" p31768202="" p31768203="" p31768204="" p31768205="" p31768206="" p31768207="" p31768208="" p31768209="" p31768210="" p31768211="" p31768212="" p31768213="" p31768214="" p31768215="" p31768216="" p31768217="" p31768218="" p31768219="" p31768220="" p31768221="" p31768222="" p31768223="" p31768224="" p31768225="" p31768226="" p31768227="" p31768228="" p31768229="" p31768230="" p31768231="" p31768232="" p31768233="" p31768234="" p31768235="" p31768236="" p31768237="" p31768238="" p31768239="" p31768240="" p31768241="" p31768242="" p31768243="" p31768244="" p31768245="" p31768246="" p31768247="" p31768248="" p31768249="" p31768250="" p31768251="" p31768252="" p31768253="" p31768254="" p31768255="" p31768256="" p31768257="" p31768258="" p31768259="" p31768260="" p31768261="" p31768262="" p31768263="" p31768264="" p31768265="" p31768266="" p31768267="" p31768268="" p31768269="" p31768270="" p31768271="" p31768272="" p31768273="" p31768274="" p31768275="" p31768276="" p31768277="" p31768278="" p31768279="" p31768280="" p31768281="" p31768282="" p31768283="" p31768284="" p31768285="" p31768286="" p31768287="" p31768288="" p31768289="" p31768290="" p31768291="" p31768292="" p31768293="" p31768294="" p31768295="" p31768296="" p31768297="" p31768298="" p31768299="" p31768300="" p31768301="" p31768302="" p31768303="" p31768304="" p31768305="" p31768306="" p31768307="" p31768308="" p31768309="" p31768310="" p31768311="" p31768312="" p31768313="" p31768314="" p31768315="" p31768316="" p31768317="" p31768318="" p31768319="" p31768320="" p31768321="" p31768322="" p31768323="" p31768324="" p31768325="" p31768326="" p31768327="" p31768328="" p31768329="" p31768330="" p31768331="" p31768332="" p31768333="" p31768334="" p31768335="" p31768336="" p31768337="" p31768338="" p31768339="" p31768340="" p31768341="" p31768342="" p31768343="" p31768344="" p31768345="" p31768346="" p31768347="" p31768348="" p31768349="" p31768350="" p31768351="" p31768352="" p31768353="" p31768354="" p31768355="" p31768356="" p31768357="" p31768358="" p31768359="" p31768360="" p31768361="" p31768362="" p31768363="" p31768364="" p31768365="" p31768366="" p31768367="" p31768368="" p31768369="" p31768370="" p31768371="" p31768372="" p31768373="" p31768374="" p31768375="" p31768376="" p31768377="" p31768378="" p31768379="" p31768380="" p31768381="" p31768382="" p31768383="" p31768384="" p31768385="" p31768386="" p31768387="" p31768388="" p31768389="" p31768390="" p31768391="" p31768392="" p31768393="" p31768394="" p31768395="" p31768396="" p31768397="" p31768398="" p31768399="" p31768400="" p31768401="" p31768402="" p31768403="" p31768404="" p31768405="" p31768406="" p31768407="" p31768408="" p31768409="" p31768410="" p31768411="" p31768412="" p31768413="" p31768414="" p31768415="" p31768416="" p31768417="" p31768418="" p31768419="" p31768420="" p31768421="" p31768422="" p31768423="" p31768424="" p31768425="" p31768426="" p31768427="" p31768428="" p31768429="" p31768430="" p31768431="" p31768432="" p31768433="" p31768434="" p31768435="" p31768436="" p31768437="" p31768438="" p31768439="" p31768440="" p31768441="" p31768442="" p31768443="" p31768444="" p31768445="" p31768446="" p31768447="" p31768448="" p31768449="" p31768450="" p31768451="" p31768452="" p31768453="" p31768454="" p31768455="" p31768456="" p31768457="" p31768458="" p31768459="" p31768460="" p31768461="" p31768462="" p31768463="" p31768464="" p31768465="" p31768466="" p31768467="" p31768468="" p31768469="" p31768470="" p31768471="" p31768472="" p31768473="" p31768474="" p31768475="" p31768476="" p31768477="" p31768478="" p31768479="" p31768480="" p31768481="" p31768482="" p31768483="" p31768484="" p31768485="" p31768486="" p31768487="" p31768488="" p31768489="" p31768490="" p31768491="" p31768492="" p31768493="" p31768494="" p31768495="" p31768496="" p31768497="" p31768498="" p31768499="" p31768500="" p31768501="" p31768502="" p31768503="" p31768504="" p31768505="" p31768506="" p31768507="" p31768508="" p31768509="" p31768510="" p31768511="" p31768512="" p31768513="" p31768514="" p31768515="" p31768516="" p31768517="" p31768518="" p31768519="" p31768520="" p31768521="" p31768522="" p31768523="" p31768524="" p31768525="" p31768526="" p31768527="" p31768528="" p31768529="" p31768530="" p31768531="" p31768532="" p31768533="" p31768534="" p31768535="" p31768536="" p31768537="" p31768538="" p31768539="" p31768540="" p31768541="" p31768542="" p31768543="" p31768544="" p31768545="" p31768546="" p31768547="" p31768548="" p31768549="" p31768550="" p31768551="" p31768552="" p31768553="" p31768554="" p31768555="" p31768556="" p31768557="" p31768558="" p31768559="" p31768560="" p31768561="" p31768562="" p31768563="" p31768564="" p31768565="" p31768566="" p31768567="" p31768568="" p31768569="" p31768570="" p31768571="" p31768572="" p31768573="" p31768574="" p31768575="" p31768576="" p31768577="" p31768578="" p31768579="" p31768580="" p31768581="" p31768582="" p31768583="" p31768584="" p31768585="" p31768586="" p31768587="" p31768588="" p31768589="" p31768590="" p31768591="" p31768592="" p31768593="" p31768594="" p31768595="" p31768596="" p31768597="" p31768598="" p31768599="" p31768600="" p31768601="" p31768602="" p31768603="" p31768604="" p31768605="" p31768606="" p31768607="" p31768608="" p31768609="" p31768610="" p31768611="" p31768612="" p31768613="" p31768614="" p31768615="" p31768616="" p31768617="" p31768618="" p31768619="" p31768620="" p31768621="" p31768622="" p31768623="" p31768624="" p31768625="" p31768626="" p31768627="" p31768628="" p31768629="" p31768630="" p31768631="" p31768632="" p31768633="" p31768634="" p31768635="" p31768636="" p31768637="" p31768638="" p31768639="" p31768640="" p31768641="" p31768642="" p31768643="" p31768644="" p31768645="" p31768646="" p31768647="" p31768648="" p31768649="" p31768650="" p31768651="" p31768652="" p31768653="" p31768654="" p31768655="" p31768656="" p31768657="" p31768658="" p31768659="" p31768660="" p31768661="" p31768662="" p31768663="" p31768664="" p31768665="" p31768666="" p31768667="" p31768668="" p31768669="" p31768670="" p31768671="" p31768672="" p31768673="" p31768674="" p31768675="" p31768676="" p31768677="" p31768678="" p31768679="" p31768680="" p31768681="" p31768682="" p31768683="" p31768684="" p31768685="" p31768686="" p31768687="" p31768688="" p31768689="" p31768690="" p31768691="" p31768692="" p31768693="" p31768694="" p31768695="" p31768696="" p31768697="" p31768698="" p31768699="" p31768700="" p31768701="" p31768702="" p31768703="" p31768704="" p31768705="" p31768706="" p31768707="" p31768708="" p31768709="" p31768710="" p31768711="" p31768712="" p31768713="" p31768714="" p31768715="" p31768716="" p31768717="" p31768718="" p31768719="" p31768720="" p31768721="" p31768722="" p31768723="" p31768724="" p31768725="" p31768726="" p31768727="" p31768728="" p31768729="" p31768730="" p31768731="" p31768732="" p31768733="" p31768734="" p31768735="" p31768736="" p31768737="" p31768738="" p31768739="" p31768740="" p31768741="" p31768742="" p31768743="" p31768744="" p31768745="" p31768746="" p31768747="" p31768748="" p31768749="" p31768750="" p31768751="" p31768752="" p31768753="" p31768754="" p31768755="" p31768756="" p31768757="" p31768758="" p31768759="" p31768760="" p31768761="" p31768762="" p31768763="" p31768764="" p31768765="" p31768766="" p31768767="" p31768768="" p31768769="" p31768770="" p31768771="" p31768772="" p31768773="" p31768774="" p31768775="" p31768776="" p31768777="" p31768778="" p31768779="" p31768780="" p31768781="" p31768782="" p31768783="" p31768784="" p31768785="" p31768786="" p31768787="" p31768788="" p31768789="" p31768790="" p31768791="" p31768792="" p31768793="" p31768794="" p31768795="" p31768796="" p31768797="" p31768798="" p31768799="" p31768800="" p31768801="" p31768802="" p31768803="" p31768804="" p31768805="" p31768806="" p31768807="" p31768808="" p31768809="" p31768810="" p31768811="" p31768812="" p31768813="" p31768814="" p31768815="" p31768816="" p31768817="" p31768818="" p31768819="" p31768820="" p31768821="" p31768822="" p31768823="" p31768824="" p31768825="" p31768826="" p31768827="" p31768828="" p31768829="" p31768830="" p31768831="" p31768832="" p31768833="" p31768834="" p31768835="" p31768836="" p31768837="" p31768838="" p31768839="" p31768840="" p31768841="" p31768842="" p31768843="" p31768844="" p31768845="" p31768846="" p31768847="" p31768848="" p31768849="" p31768850="" p31768851="" p31768852="" p31768853="" p31768854="" p31768855="" p31768856="" p31768857="" p31768858="" p31768859="" p31768860="" p31768861="" p31768862="" p31768863="" p31768864="" p31768865="" p31768866="" p31768867="" p31768868="" p31768869="" p31768870="" p31768871="" p31768872="" p31768873="" p31768874="" p31768875="" p31768876="" p31768877="" p31768878="" p31768879="" p31768880="" p31768881="" p31768882="" p31768883="" p31768884="" p31768885="" p31768886="" p31768887="" p31768888="" p31768889="" p31768890="" p31768891="" p31768892="" p31768893="" p31768894="" p31768895="" p31768896="" p31768897="" p31768898="" p31768899="" p31768900="" p31768901="" p31768902="" p31768903="" p31768904="" p31768905="" p31768906="" p31768907="" p31768908="" p31768909="" p31768910="" p31768911="" p31768912="" p31768913="" p31768914="" p31768915="" p31768916="" p31768917="" p31768918="" p31768919="" p31768920="" p31768921="" p31768922="" p31768923="" p31768924="" p31768925="" p31768926="" p31768927="" p31768928="" p31768929="" p31768930="" p31768931="" p31768932="" p31768933="" p31768934="" p31768935="" p31768936="" p31768937="" p31768938="" p31768939="" p31768940="" p31768941="" p31768942="" p31768943="" p31768944="" p31768945="" p31768946="" p31768947="" p31768948="" p31768949="" p31768950="" p31768951="" p31768952="" p31768953="" p31768954="" p31768955="" p31768956="" p31768957="" p31768958="" p31768959="" p31768960="" p31768961="" p31768962="" p31768963="" p31768964="" p31768965="" p31768966="" p31768967="" p31768968="" p31768969="" p31768970="" p31768971="" p31768972="" p31768973="" p31768974="" p31768975="" p31768976="" p31768977="" p31768978="" p31768979="" p31768980="" p31768981="" p31768982="" p31768983="" p31768984="" p31768985="" p31768986="" p31768987="" p31768988="" p31768989="" p31768990="" p31768991="" p31768992="" p31768993="" p31768994="" p31768995="" p31768996="" p31768997="" p31768998="" p31768999="" p31769000="" p31769001="" p31769002="" p31769003="" p31769004="" p31769005="" p31769006="" p31769007="" p31769008="" p31769009="" p31769010="" p31769011="" p31769012="" p31769013="" p31769014="" p31769015="" p31769016="" p31769017="" p31769018="" p31769019="" p31769020="" p31769021="" p31769022="" p31769023="" p31769024="" p31769025="" p31769026="" p31769027="" p31769028="" p31769029="" p31769030="" p31769031="" p31769032="" p31769033="" p31769034="" p31769035="" p31769036="" p31769037="" p31769038="" p31769039="" p31769040="" p31769041="" p31769042="" p31769043="" p31769044="" p31769045="" p31769046="" p31769047="" p31769048="" p31769049="" p31769050="" p31769051="" p31769052="" p31769053="" p31769054="" p31769055="" p31769056="" p31769057="" p31769058="" p31769059="" p31769060="" p31769061="" p31769062="" p31769063="" p31769064="" p31769065="" p31769066="" p31769067="" p31769068="" p31769069="" p31769070="" p31769071="" p31769072="" p31769073="" p31769074="" p31769075="" p31769076="" p31769077="" p31769078="" p31769079="" p31769080="" p31769081="" p31769082="" p31769083="" p31769084="" p31769085="" p31769086="" p31769087="" p31769088="" p31769089="" p31769090="" p31769091="" p31769092="" p31769093="" p31769094="" p31769095="" p31769096="" p31769097="" p31769098="" p31769099="" p31769100="" p31769101="" p31769102="" p31769103="" p31769104="" p31769105="" p31769106="" p31769107="" p31769108="" p31769109="" p31769110="" p31769111="" p31769112="" p31769113="" p31769114="" p31769115="" p31769116="" p31769117="" p31769118="" p31769119="" p31769120="" p31769121="" p31769122="" p31769123="" p31769124="" p31769125="" p31769126="" p31769127="" p31769128="" p31769129="" p31769130="" p31769131="" p31769132="" p31769133="" p31769134="" p31769135="" p31769136="" p31769137="" p31769138="" p31769139="" p31769140="" p31769141="" p31769142="" p31769143="" p31769144="" p31769145="" p31769146="" p31769147="" p31769148="" p31769149="" p31769150="" p31769151="" p31769152="" p31769153="" p31769154="" p31769155="" p31769156="" p31769157="" p31769158="" p31769159="" p31769160="" p31769161="" p31769162="" p31769163="" p31769164="" p31769165="" p31769166="" p31769167="" p31769168="" p31769169="" p31769170="" p31769171="" p31769172="" p31769173="" p31769174="" p31769175="" p31769176="" p31769177="" p31769178="" p31769179="" p31769180="" p31769181="" p31769182="" p31769183="" p31769184="" p31769185="" p31769186="" p31769187="" p31769188="" p31769189="" p31769190="" p31769191="" p31769192="" p31769193="" p31769194="" p31769195="" p31769196="" p31769197="" p31769198="" p31769199="" p31769200="" p31769201="" p31769202="" p31769203="" p31769204="" p31769205="" p31769206="" p31769207="" p31769208="" p31769209="" p31769210="" p31769211="" p31769212="" p31769213="" p31769214="" p31769215="" p31769216="" p31769217="" p31769218="" p31769219="" p31769220="" p31769221="" p31769222="" p31769223="" p31769224="" p31769225="" p31769226="" p31769227="" p31769228="" p31769229="" p31769230="" p31769231="" p31769232="" p31769233="" p31769234="" p31769235="" p31769236="" p31769237="" p31769238="" p31769239="" p31769240="" p31769241="" p31769242="" p31769243="" p31769244="" p31769245="" p31769246="" p31769247="" p31769248="" p31769249="" p31769250="" p31769251="" p31769252="" p31769253="" p31769254="" p31769255="" p31769256="" p31769257="" p31769258="" p31769259="" p31769260="" p31769261="" p31769262="" p31769263="" p31769264="" p31769265="" p31769266="" p31769267="" p31769268="" p31769269="" p31769270="" p31769271="" p31769272="" p31769273="" p31769274="" p31769275="" p31769276="" p31769277="" p31769278="" p31769279="" p31769280="" p31769281="" p31769282="" p31769283="" p31769284="" p31769285="" p31769286="" p31769287="" p31769288="" p31769289="" p31769290="" p31769291="" p31769292="" p31769293="" p31769294="" p31769295="" p31769296="" p31769297="" p31769298="" p31769299="" p31769300="" p31769301="" p31769302="" p31769303="" p31769304="" p31769305="" p31769306="" p31769307="" p31769308="" p31769309="" p31769310="" p31769311="" p31769312="" p31769313="" p31769314="" p31769315="" p31769316="" p31769317="" p31769318="" p31769319="" p31769320="" p31769321="" p31769322="" p31769323="" p31769324="" p31769325="" p31769326="" p31769327="" p31769328="" p31769329="" p31769330="" p31769331="" p31769332="" p31769333="" p31769334="" p31769335="" p31769336="" p31769337="" p31769338="" p31769339="" p31769340="" p31769341="" p31769342="" p31769343="" p31769344="" p31769345="" p31769346="" p31769347="" p31769348="" p31769349="" p31769350="" p31769351="" p31769352="" p31769353="" p31769354="" p31769355="" p31769356="" p31769357="" p31769358="" p31769359="" p31769360="" p31769361="" p31769362="" p31769363="" p31769364="" p31769365="" p31769366="" p31769367="" p31769368="" p31769369="" p31769370="" p31769371="" p31769372="" p31769373="" p31769374="" p31769375="" p31769376="" p31769377="" p31769378="" p31769379="" p31769380="" p31769381="" p31769382="" p31769383="" p31769384="" p31769385="" p31769386="" p31769387="" p31769388="" p31769389="" p31769390="" p31769391="" p31769392="" p31769393="" p31769394="" p31769395="" p31769396="" p31769397="" p31769398="" p31769399="" p31769400="" p31769401="" p31769402="" p31769403="" p31769404="" p31769405="" p31769406="" p31769407="" p31769408="" p31769409="" p31769410="" p31769411="" p31769412="" p31769413="" p31769414="" p31769415="" p31769416="" p31769417="" p31769418="" p31769419="" p31769420="" p31769421="" p31769422="" p31769423="" p31769424="" p31769425="" p31769426="" p31769427="" p31769428="" p31769429="" p31769430="" p31769431="" p31769432="" p31769433="" p31769434="" p31769435="" p31769436="" p31769437="" p31769438="" p31769439="" p31769440="" p31769441="" p31769442="" p31769443="" p31769444="" p31769445="" p31769446="" p31769447="" p31769448="" p31769449="" p31769450="" p31769451="" p31769452="" p31769453="" p31769454="" p31769455="" p31769456="" p31769457="" p31769458="" p31769459="" p31769460="" p31769461="" p31769462="" p31769463="" p31769464="" p31769465="" p31769466="" p31769467="" p31769468="" p31769469="" p31769470="" p31769471="" p31769472="" p31769473="" p31769474="" p31769475="" p31769476="" p31769477="" p31769478="" p31769479="" p31769480="" p31769481="" p31769482="" p31769483="" p31769484="" p31769485="" p31769486="" p31769487="" p31769488="" p31769489="" p31769490="" p31769491="" p31769492="" p31769493="" p31769494="" p31769495="" p31769496="" p31769497="" p31769498="" p31769499="" p31769500="" p31769501="" p31769502="" p31769503="" p31769504="" p31769505="" p31769506="" p31769507="" p31769508="" p31769509="" p31769510="" p31769511="" p31769512="" p31769513="" p31769514="" p31769515="" p31769516="" p31769517="" p31769518="" p31769519="" p31769520="" p31769521="" p31769522="" p31769523="" p31769524="" p31769525="" p31769526="" p31769527="" p31769528="" p31769529="" p31769530="" p31769531="" p31769532="" p31769533="" p31769534="" p31769535="" p31769536="" p31769537="" p31769538="" p31769539="" p31769540="" p31769541="" p31769542="" p31769543="" p31769544="" p31769545="" p31769546="" p31769547="" p31769548="" p31769549="" p31769550="" p31769551="" p31769552="" p31769553="" p31769554="" p31769555="" p31769556="" p31769557="" p31769558="" p31769559="" p31769560="" p31769561="" p31769562="" p31769563="" p31769564="" p31769565="" p31769566="" p31769567="" p31769568="" p31769569="" p31769570="" p31769571="" p31769572="" p31769573="" p31769574="" p31769575="" p31769576="" p31769577="" p31769578="" p31769579="" p31769580="" p31769581="" p31769582="" p31769583="" p31769584="" p31769585="" p31769586="" p31769587="" p31769588="" p31769589="" p31769590="" p31769591="" p31769592="" p31769593="" p31769594="" p31769595="" p31769596="" p31769597="" p31769598="" p31769599="" p31769600="" p31769601="" p31769602="" p31769603="" p31769604="" p31769605="" p31769606="" p31769607="" p31769608="" p31769609="" p31769610="" p31769611="" p31769612="" p31769613="" p31769614="" p31769615="" p31769616="" p31769617="" p31769618="" p31769619="" p31769620="" p31769621="" p31769622="" p31769623="" p31769624="" p31769625="" p31769626="" p31769627="" p31769628="" p31769629="" p31769630="" p31769631="" p31769632="" p31769633="" p31769634="" p31769635="" p31769636="" p31769637="" p31769638="" p31769639="" p31769640="" p31769641="" p31769642="" p31769643="" p31769644="" p31769645="" p31769646="" p31769647="" p31769648="" p31769649="" p31769650="" p31769651="" p31769652="" p31769653="" p31769654="" p31769655="" p31769656="" p31769657="" p31769658="" p31769659="" p31769660="" p31769661="" p31769662="" p31769663="" p31769664="" p31769665="" p31769666="" p31769667="" p31769668="" p31769669="" p31769670="" p31769671="" p31769672="" p31769673="" p31769674="" p31769675="" p31769676="" p31769677="" p31769678="" p31769679="" p31769680="" p31769681="" p31769682="" p31769683="" p31769684="" p31769685="" p31769686="" p31769687="" p31769688="" p31769689="" p31769690="" p31769691="" p31769692="" p31769693="" p31769694="" p31769695="" p31769696="" p31769697="" p31769698="" p31769699="" p31769700="" p31769701="" p31769702="" p31769703="" p31769704="" p31769705="" p31769706="" p31769707="" p31769708="" p31769709="" p31769710="" p31769711="" p31769712="" p31769713="" p31769714="" p31769715="" p31769716="" p31769717="" p31769718="" p31769719="" p31769720="" p31769721="" p31769722="" p31769723="" p31769724="" p31769725="" p31769726="" p31769727="" p31769728="" p31769729="" p31769730="" p31769731="" p31769732="" p31769733="" p31769734="" p31769735="" p31769736="" p31769737="" p31769738="" p31769739="" p31769740="" p31769741="" p31769742="" p31769743="" p31769744="" p31769745="" p31769746="" p31769747="" p31769748="" p31769749="" p31769750="" p31769751="" p31769752="" p31769753="" p31769754="" p31769755="" p31769756="" p31769757="" p31769758="" p31769759="" p31769760="" p31769761="" p31769762="" p31769763="" p31769764="" p31769765="" p31769766="" p31769767="" p31769768="" p31769769="" p31769770="" p31769771="" p31769772="" p31769773="" p31769774="" p31769775="" p31769776="" p31769777="" p31769778="" p31769779="" p31769780="" p31769781="" p31769782="" p31769783="" p31769784="" p31769785="" p31769786="" p31769787="" p31769788="" p31769789="" p31769790="" p31769791="" p31769792="" p31769793="" p31769794="" p31769795="" p31769796="" p31769797="" p31769798="" p31769799="" p31769800="" p31769801="" p31769802="" p31769803="" p31769804="" p31769805="" p31769806="" p31769807="" p31769808="" p31769809="" p31769810="" p31769811="" p31769812="" p31769813="" p31769814="" p31769815="" p31769816="" p31769817="" p31769818="" p31769819="" p31769820="" p31769821="" p31769822="" p31769823="" p31769824="" p31769825="" p31769826="" p31769827="" p31769828="" p31769829="" p31769830="" p31769831="" p31769832="" p31769833="" p31769834="" p31769835="" p31769836="" p31769837="" p31769838="" p31769839="" p31769840="" p31769841="" p31769842="" p31769843="" p31769844="" p31769845="" p31769846="" p31769847="" p31769848="" p31769849="" p31769850="" p31769851="" p31769852="" p31769853="" p31769854="" p31769855="" p31769856="" p31769857="" p31769858="" p31769859="" p31769860="" p31769861="" p31769862="" p31769863="" p31769864="" p31769865="" p31769866="" p31769867="" p31769868="" p31769869="" p31769870="" p31769871="" p31769872="" p31769873="" p31769874="" p31769875="" p31769876="" p31769877="" p31769878="" p31769879="" p31769880="" p31769881="" p31769882="" p31769883="" p31769884="" p31769885="" p31769886="" p31769887="" p31769888="" p31769889="" p31769890="" p31769891="" p31769892="" p31769893="" p31769894="" p31769895="" p31769896="" p31769897="" p31769898="" p31769899="" p31769900="" p31769901="" p31769902="" p31769903="" p31769904="" p31769905="" p31769906="" p31769907="" p31769908="" p31769909="" p31769910="" p31769911="" p31769912="" p31769913="" p31769914="" p31769915="" p31769916="" p31769917="" p31769918="" p31769919="" p31769920="" p31769921="" p31769922="" p31769923="" p31769924="" p31769925="" p31769926="" p31769927="" p31769928="" p31769929="" p31769930="" p31769931="" p31769932="" p31769933="" p31769934="" p31769935="" p31769936="" p31769937="" p31769938="" p31769939="" p31769940="" p31769941="" p31769942="" p31769943="" p31769944="" p31769945="" p31769946="" p31769947="" p31769948="" p31769949="" p31769950="" p31769951="" p31769952="" p31769953="" p31769954="" p31769955="" p31769956="" p31769957="" p31769958="" p31769959="" p31769960="" p31769961="" p31769962="" p31769963="" p31769964="" p31769965="">While retaining these beneficial features, XML removes many of
+the more complex features of SGML that make the authoring and
+design of suitable software both difficult and costly.</p>
+
+<h2><a name="why" id="why">1.3 Why the need for XHTML?</a></h2>
+
+<p>The benefits of migrating to XHTML 1.0 are described above. Some of the
+benefits of migrating to XHTML in general are:</p>
+
+<ul>
+<li>Document developers and user agent designers are constantly
+discovering new ways to express their ideas through new markup. In XML, it is
+relatively easy to introduce new elements or additional element
+attributes.  The XHTML family is designed to accommodate these extensions
+through XHTML modules and techniques for developing new XHTML-conforming
+modules (described in the forthcoming XHTML Modularization specification).
+These modules will permit the combination of existing and
+new feature sets when developing content and when designing new user
+agents.</li>
+
+<li>Alternate ways of accessing the Internet are constantly being
+introduced.  Some estimates indicate that by the year 2002, 75% of
+Internet document viewing will be carried out on these alternate
+platforms.  The XHTML family is designed with general user agent
+interoperability in mind. Through a new user agent and document profiling
+mechanism, servers, proxies, and user agents will be able to perform
+best effort content transformation. Ultimately, it will be possible to
+develop XHTML-conforming content that is usable by any XHTML-conforming
+user agent.</li>
+
+</ul>
+<!--OddPage-->
+<h1><a name="defs" id="defs">2. Definitions</a></h1>
+
+<h2><a name="terms" id="terms">2.1 Terminology</a></h2>
+
+<p>The following terms are used in this specification. These
+terms extend the definitions in <a href="#ref-rfc2119">
+[RFC2119]</a> in ways based upon similar definitions in ISO/<abbr
+title="International Electro-technical Commission">IEC</abbr>
+9945-1:1990 <a href="#ref-posix">[POSIX.1]</a>:</p>
+
+<dl>
+<dt>Implementation-defined</dt>
+
+<dd>A value or behavior is implementation-defined when it is left
+to the implementation to define [and document] the corresponding
+requirements for correct document construction.</dd>
+
+<dt>May</dt>
+
+<dd>With respect to implementations, the word "may" is to be
+interpreted as an optional feature that is not required in this
+specification but can be provided. With respect to <a href= 
+"#docconf">Document Conformance</a>, the word "may" means that
+the optional feature must not be used. The term "optional" has
+the same definition as "may".</dd>
+
+<dt>Must</dt>
+
+<dd>In this specification, the word "must" is to be interpreted
+as a mandatory requirement on the implementation or on Strictly
+Conforming XHTML Documents, depending upon the context. The term
+"shall" has the same definition as "must".</dd>
+
+<dt>Reserved</dt>
+
+<dd>A value or behavior is unspecified, but it is not allowed to
+be used by Conforming Documents nor to be supported by a
+Conforming User Agents.</dd>
+
+<dt>Should</dt>
+
+<dd>With respect to implementations, the word "should" is to be
+interpreted as an implementation recommendation, but not a
+requirement. With respect to documents, the word "should" is to
+be interpreted as recommended programming practice for documents
+and a requirement for Strictly Conforming XHTML Documents.</dd>
+
+<dt>Supported</dt>
+
+<dd>Certain facilities in this specification are optional. If a
+facility is supported, it behaves as specified by this
+specification.</dd>
+
+<dt>Unspecified</dt>
+
+<dd>When a value or behavior is unspecified, the specification
+defines no portability requirements for a facility on an
+implementation even when faced with a document that uses the
+facility. A document that requires specific behavior in such an
+instance, rather than tolerating any behavior when using that
+facility, is not a Strictly Conforming XHTML Document.</dd>
+</dl>
+
+<h2><a name="general" id="general">2.2 General Terms</a></h2>
+
+<dl>
+<dt>Attribute</dt>
+
+<dd>An attribute is a parameter to an element declared in the
+DTD. An attribute's type and value range, including a possible
+default value, are defined in the DTD.</dd>
+
+<dt>DTD</dt>
+
+<dd>A DTD, or document type definition, is a collection of XML
+declarations that, as a collection, defines the legal structure,
+<span class="term">elements</span>, and <span class="term">
+attributes</span> that are available for use in a document that
+complies to the DTD.</dd>
+
+<dt>Document</dt>
+
+<dd>A document is a stream of data that, after being combined
+with any other streams it references, is structured such that it
+holds information contained within <span class="term">
+elements</span> that are organized as defined in the associated
+<span class="term">DTD</span>. See <a href="#docconf">Document
+Conformance</a> for more information.</dd>
+
+<dt>Element</dt>
+
+<dd>An element is a document structuring unit declared in the
+<span class="term">DTD</span>. The element's content model is
+defined in the <span class="term">DTD</span>, and additional
+semantics may be defined in the prose description of the
+element.</dd>
+
+<dt><a name="facilities" id="facilities">Facilities</a></dt>
+
+<dd>Functionality includes <span class="term">elements</span>,
+<span class="term">attributes</span>, and the semantics
+associated with those <span class="term">elements</span> and
+<span class="term">attributes</span>. An implementation
+supporting that functionality is said to provide the necessary
+facilities.</dd>
+
+<dt>Implementation</dt>
+
+<dd>An implementation is a system that provides collection of
+<span class="term">facilities</span> and services that supports
+this specification. See <a href="#uaconf">User Agent
+Conformance</a> for more information.</dd>
+
+<dt>Parsing</dt>
+
+<dd>Parsing is the act whereby a <span class="term">
+document</span> is scanned, and the information contained within
+the <span class="term">document</span> is filtered into the
+context of the <span class="term">elements</span> in which the
+information is structured.</dd>
+
+<dt>Rendering</dt>
+
+<dd>Rendering is the act whereby the information in a <span
+class="term">document</span> is presented. This presentation is
+done in the form most appropriate to the environment (e.g.
+aurally, visually, in print).</dd>
+
+<dt>User Agent</dt>
+
+<dd>A user agent is an <span class="term">implementation</span>
+that retrieves and processes XHTML documents. See <a href=
+"#uaconf">User Agent Conformance</a> for more information.</dd>
+
+<dt>Validation</dt>
+
+<dd>Validation is a process whereby <span class="term">
+documents</span> are verified against the associated <span class= 
+"term">DTD</span>, ensuring that the structure, use of <span
+class="term">elements</span>, and use of <span class="term">
+attributes</span> are consistent with the definitions in the
+<span class="term">DTD</span>.</dd>
+
+<dt><a name="wellformed" id="wellformed">Well-formed</a></dt>
+
+<dd>A <span class="term">document</span> is well-formed when it
+is structured according to the rules defined in <a href= 
+"http://www.w3.org/TR/REC-xml#sec-well-formed">Section 2.1</a> of
+the XML 1.0 Recommendation <a href="#ref-xml">[XML]</a>.
+Basically, this definition states that elements, delimited by
+their start and end tags, are nested properly within one
+another.</dd>
+</dl>
+
+<!--OddPage-->
+<h1><a name="normative" id="normative">3. Normative Definition of
+XHTML 1.0</a></h1>
+
+<h2><a name="docconf" id="docconf">3.1 Document
+Conformance</a></h2>
+
+<p>This version of XHTML provides a definition of strictly
+conforming XHTML documents, which are restricted to tags and
+attributes from the XHTML namespace. See <a href=
+"#well-formed">Section 3.1.2</a> for information on using XHTML
+with other namespaces, for instance, to include metadata
+expressed in <abbr title="Resource Description Format">RDF</abbr> within XHTML documents.</p>
+
+<h3><a name="strict" id="strict">3.1.1 Strictly Conforming
+Documents</a></h3>
+
+<p>A Strictly Conforming XHTML Document is a document that
+requires only the facilities described as mandatory in this
+specification. Such a document must meet all of the following
+criteria:</p>
+
+<ol>
+<li>
+<p>It must validate against one of the three DTDs found in <a
+href="#dtds">Appendix&#160;A</a>.</p>
+</li>
+
+<li>
+<p>The root element of the document must be <code>
+&lt;html&gt;</code>.</p>
+</li>
+
+<li>
+<p>The root element of the document must designate the XHTML
+namespace using the <code>xmlns</code> attribute <a href= 
+"#ref-xmlns">[XMLNAMES]</a>. The namespace for XHTML is
+defined to be 
+<code>http://www.w3.org/1999/xhtml</code>.</p>
+</li>
+
+<li>
+<p>There must be a DOCTYPE declaration in the document prior to
+the root element. The public identifier included in
+the DOCTYPE declaration must reference one of the three DTDs
+found in <a href="#dtds">Appendix&#160;A</a> using the respective
+Formal Public Identifier. The system identifier may be changed to reflect
+local system conventions.</p>
+
+<pre>
+&lt;!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/1999/PR-xhtml1-19991210/DTD/xhtml1-strict.dtd&gt;
+
+&lt;!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/1999/PR-xhtml1-19991210/DTD/xhtml1-transitional.dtd&gt;
+
+&lt;!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
+     "http://www.w3.org/TR/1999/PR-xhtml1-19991210/DTD/xhtml1-frameset.dtd&gt;
+</pre>
+</li>
+</ol>
+
+<p>Here is an example of a minimal XHTML document.</p>
+
+<div class="good">
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/1999/PR-xhtml1-19991210/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Virtual Library&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Moved to &lt;a href="http://vlib.org/"&gt;vlib.org&lt;/a&gt;.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+</div>
+
+<p>Note that in this example, the XML declaration is included. An XML
+declaration like the one above is
+not required in all XML documents. XHTML document authors are strongly encouraged to use XML declarations in all their documents. Such a declaration is required
+when the character encoding of the document is other than the default UTF-8 or
+UTF-16.</p>
+
+<h3><a name="well-formed" id="well-formed">3.1.2 Using XHTML with
+other namespaces</a></h3>
+
+<p>The XHTML namespace may be used with other XML namespaces
+as per <a href="#ref-xmlns">[XMLNAMES]</a>, although such
+documents are not strictly conforming XHTML 1.0 documents as
+defined above. Future work by W3C will address ways to specify
+conformance for documents involving multiple namespaces.</p>
+
+<p>The following example shows the way in which XHTML 1.0 could
+be used in conjunction with the MathML Recommendation:</p>
+
+<div class="good">
+<pre>
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;A Math Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;The following is MathML markup:&lt;/p&gt;
+    &lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;
+      &lt;apply&gt; &lt;log/&gt;
+        &lt;logbase&gt;
+          &lt;cn&gt; 3 &lt;/cn&gt;
+        &lt;/logbase&gt;
+        &lt;ci&gt; x &lt;/ci&gt;
+      &lt;/apply&gt;
+    &lt;/math&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<p>The following example shows the way in which XHTML 1.0 markup
+could be incorporated into another XML namespace:</p>
+
+<div class="good">
+<pre>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!-- initially, the default namespace is "books" --&gt;
+&lt;book xmlns='urn:loc.gov:books'
+    xmlns:isbn='urn:ISBN:0-395-36341-6' xml:lang="en" lang="en"&gt;
+  &lt;title&gt;Cheaper by the Dozen&lt;/title&gt;
+  &lt;isbn:number&gt;1568491379&lt;/isbn:number&gt;
+  &lt;notes&gt;
+    &lt;!-- make HTML the default namespace for a hypertext commentary --&gt;
+    &lt;p xmlns='http://www.w3.org/1999/xhtml'&gt;
+        This is also available &lt;a href="http://www.w3.org/"&gt;online&lt;/a&gt;.
+    &lt;/p&gt;
+  &lt;/notes&gt;
+&lt;/book&gt;
+</pre>
+</div>
+
+<h2><a name="uaconf" id="uaconf">3.2 User Agent
+Conformance</a></h2>
+
+<p>A conforming user agent must meet all of the following
+criteria:</p>
+
+<ol>
+<li>In order to be consistent with the XML 1.0 Recommendation <a
+href="#ref-xml">[XML]</a>, the user agent must parse and evaluate
+an XHTML document for well-formedness. If the user agent claims
+to be a validating user agent, it must also validate documents
+against their referenced DTDs according to <a href="#ref-xml">
+[XML]</a>.</li>
+
+<li>When the user agent claims to support <a href="#facilities">
+facilities</a> defined within this specification or required by
+this specification through normative reference, it must do so in
+ways consistent with the facilities' definition.</li>
+
+<li>When a user agent processes an XHTML document as generic XML,
+it shall only recognize attributes of type
+<code>ID</code> (e.g. the <code>id</code> attribute on most XHTML elements)
+as fragment identifiers.</li>
+
+<li>If a user agent encounters an element it does not recognize,
+it must render the element's content.</li>
+
+<li>If a user agent encounters an attribute it does not
+recognize, it must ignore the entire attribute specification
+(i.e., the attribute and its value).</li>
+
+<li>If a user agent encounters an attribute value it doesn't
+recognize, it must use the default attribute value.</li>
+
+<li>If it encounters an entity reference (other than one
+of the predefined entities) for which the User Agent has 
+processed no declaration (which could happen if the declaration
+is in the external subset which the User Agent hasn't read), the entity 
+reference should be rendered as the characters (starting
+with the ampersand and ending with the semi-colon) that
+make up the entity reference.</li>
+
+<li>When rendering content, User Agents that encounter 
+characters or character entity references that are recognized but not renderable should display the document in such a way that it is obvious to the user that normal rendering has not taken place.</li>
+
+<li>
+The following characters are defined in [XML] as whitespace characters:
+
+<ul>
+<li>Space (&amp;#x0020;)</li>
+<li>Tab (&amp;#x0009;)</li>
+<li>Carriage return (&amp;#x000D;)</li>
+<li>Line feed (&amp;#x000A;)</li>
+</ul>
+
+<p>
+The XML processor normalizes different system's line end codes into one
+single line-feed character, that is passed up to the application. The XHTML
+user agent in addition, must treat the following characters as whitespace:
+</p>
+
+<ul>
+<li>Form feed (&amp;#x000C;)</li>
+<li>Zero-width space (&amp;#x200B;)</li>
+</ul>
+
+<p>
+In elements where the 'xml:space' attribute is set to 'preserve', the user
+agent must leave all whitespace characters intact (with the exception of
+leading and trailing whitespace characters, which should be removed).
+Otherwise, whitespace
+is handled according to the following rules:
+</p>
+
+<ul>
+<li>
+All whitespace surrounding block elements should be removed.
+</li>
+<li>
+Comments are removed entirely and do not affect whitespace handling. One
+whitespace character on either side of a comment is treated as two white
+space characters.
+</li>
+<li>
+Leading and trailing whitespace inside a block element must be removed.
+</li>
+<li>Line feed characters within a block element must be converted into a
+space (except when the 'xml:space' attribute is set to 'preserve').
+</li>
+<li>
+A sequence of white space characters must be reduced to a single space
+character (except when the 'xml:space' attribute is set to 'preserve').
+</li>
+<li>
+With regard to rendition,
+the User Agent should render the content in a
+manner appropriate to the language in which the content is written.
+In languages whose primary script is Latinate, the ASCII space
+character is typically used to encode both grammatical word boundaries and
+typographic whitespace; in languages whose script is related to Nagari
+(e.g., Sanskrit, Thai, etc.), grammatical boundaries may be encoded using
+the ZW 'space' character, but will not typically be represented by
+typographic whitespace in rendered output; languages using Arabiform scripts
+may encode typographic whitespace using a space character, but may also use
+the ZW space character to delimit 'internal' grammatical boundaries (what
+look like words in Arabic to an English eye frequently encode several words,
+e.g. 'kitAbuhum' = 'kitAbu-hum' = 'book them' == their book); and languages
+in the Chinese script tradition typically neither encode such delimiters nor
+use typographic whitespace in this way. 
+</li>
+</ul>
+
+<p>Whitespace in attribute values is processed according to <a
+href="#ref-xml">[XML]</a>.</p>
+</li>
+</ol>
+
+<!--OddPage-->
+<h1><a name="diffs" id="diffs">4. Differences with HTML
+4.0</a></h1>
+
+<p>Due to the fact that XHTML is an XML application, certain
+practices that were perfectly legal in SGML-based HTML 4.0 <a
+href="#ref-html4">[HTML]</a> must be changed.</p>
+
+<h2><a name="h-4.1" id="h-4.1">4.1 Documents must be
+well-formed</a></h2>
+
+<p><a href="#wellformed">Well-formedness</a> is a new concept
+introduced by <a href="#ref-xml">[XML]</a>. Essentially this
+means that all elements must either have closing tags or be
+written in a special form (as described below), and that all the
+elements must nest.</p>
+
+<p>Although overlapping is illegal in SGML, it was widely
+tolerated in existing browsers.</p>
+
+<div class="good">
+<p><strong><em>CORRECT: nested elements.</em></strong></p>
+
+<p>&lt;p&gt;here is an emphasized
+&lt;em&gt;paragraph&lt;/em&gt;.&lt;/p&gt;</p>
+</div>
+
+<div class="bad">
+<p><strong><em>INCORRECT: overlapping elements</em></strong></p>
+
+<p>&lt;p&gt;here is an emphasized
+&lt;em&gt;paragraph.&lt;/p&gt;&lt;/em&gt;</p>
+</div>
+
+<h2><a name="h-4.2" id="h-4.2">4.2 Element and attribute
+names must be in lower case</a></h2>
+
+<p>XHTML documents must use lower case for all HTML element and
+attribute names. This difference is necessary because XML is
+case-sensitive e.g. &lt;li&gt; and &lt;LI&gt; are different
+tags.</p>
+
+<h2><a name="h-4.3" id="h-4.3">4.3 For non-empty elements,
+end tags are required</a></h2>
+
+<p>In SGML-based HTML 4.0 certain elements were permitted to omit
+the end tag; with the elements that followed implying closure.
+This omission is not permitted in XML-based XHTML. All elements
+other than those declared in the DTD as <code>EMPTY</code> must
+have an end tag.</p>
+
+<div class="good">
+<p><strong><em>CORRECT: terminated elements</em></strong></p>
+
+<p>&lt;p&gt;here is a paragraph.&lt;/p&gt;&lt;p&gt;here is
+another paragraph.&lt;/p&gt;</p>
+</div>
+
+<div class="bad">
+<p><strong><em>INCORRECT: unterminated elements</em></strong></p>
+
+<p>&lt;p&gt;here is a paragraph.&lt;p&gt;here is another
+paragraph.</p>
+</div>
+
+<h2><a name="h-4.4" id="h-4.4">4.4 Attribute values must
+always be quoted</a></h2>
+
+<p>All attribute values must be quoted, even those which appear
+to be numeric.</p>
+
+<div class="good">
+<p><strong><em>CORRECT: quoted attribute values</em></strong></p>
+
+<p>&lt;table rows="3"&gt;</p>
+</div>
+
+<div class="bad">
+<p><strong><em>INCORRECT: unquoted attribute values</em></strong></p>
+
+<p>&lt;table rows=3&gt;</p>
+</div>
+
+<h2><a name="h-4.5" id="h-4.5">4.5 Attribute
+Minimization</a></h2>
+
+<p>XML does not support attribute minimization. Attribute-value
+pairs must be written in full. Attribute names such as <code>
+compact</code> and <code>checked</code> cannot occur in elements
+without their value being specified.</p>
+
+<div class="good">
+<p><strong><em>CORRECT: unminimized attributes</em></strong></p>
+
+<p>&lt;dl compact="compact"&gt;</p>
+</div>
+
+<div class="bad">
+<p><strong><em>INCORRECT: minimized attributes</em></strong></p>
+
+<p>&lt;dl compact&gt;</p>
+</div>
+
+<h2><a name="h-4.6" id="h-4.6">4.6 Empty Elements</a></h2>
+
+<p>Empty elements must either have an end tag or the start tag must end with <code>/&gt;</code>. For instance,
+<code>&lt;br/&gt;</code> or <code>&lt;hr&gt;&lt;/hr&gt;</code>. See <a
+href="#guidelines">HTML Compatibility Guidelines</a> for information on ways to
+ensure this is backward compatible with HTML 4.0 user agents.</p>
+
+<div class="good">
+<p><strong><em>CORRECT: terminated empty tags</em></strong></p>
+
+<p>&lt;br/&gt;&lt;hr/&gt;</p>
+</div>
+
+<div class="bad">
+<p><strong><em>INCORRECT: unterminated empty tags</em></strong></p>
+
+<p>&lt;br&gt;&lt;hr&gt;</p>
+</div>
+
+<h2><a name="h-4.7" id="h-4.7">4.7 Whitespace handling in
+attribute values</a></h2>
+
+<p>In attribute values, user agents will strip leading and
+trailing whitespace from attribute values and map sequences
+of one or more whitespace characters (including line breaks) to
+a single inter-word space (an ASCII space character for western
+scripts). See <a href="http://www.w3.org/TR/REC-xml#AVNormalize">
+Section 3.3.3</a> of <a href="#ref-xml">[XML]</a>.</p>
+
+<h2><a name="h-4.8" id="h-4.8">4.8 Script and Style
+elements</a></h2>
+
+<p>In XHTML, the script and style elements are declared as having
+<code>#PCDATA</code> content. As a result, <code>&lt;</code> and
+<code>&amp;</code> will be treated as the start of markup, and
+entities such as <code>&amp;lt;</code> and <code>&amp;amp;</code>
+will be recognized as entity references by the XML processor to
+<code>&lt;</code> and <code>&amp;</code> respectively. Wrapping
+the content of the script or style element within a <code>
+CDATA</code> marked section avoids the expansion of these
+entities.</p>
+
+<div class="good">
+<pre>
+&lt;script&gt;
+ &lt;![CDATA[
+ ... unescaped script content ...
+ ]]&gt;
+ &lt;/script&gt;
+</pre>
+</div>
+
+<p><code>CDATA</code> sections are recognized by the XML
+processor and appear as nodes in the Document Object Model, see
+<a href= 
+"http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#ID-E067D597">
+Section 1.3</a> of the DOM Level 1 Recommendation <a href= 
+"#ref-dom">[DOM]</a>.</p>
+
+<p>An alternative is to use external script and style
+documents.</p>
+
+<h2><a name="h-4.9" id="h-4.9">4.9 SGML exclusions</a></h2>
+
+<p>SGML gives the writer of a DTD the ability to exclude specific
+elements from being contained within an element. Such
+prohibitions (called "exclusions") are not possible in XML.</p>
+
+<p>For example, the HTML 4.0 Strict DTD forbids the nesting of an
+'<code>a</code>' element within another '<code>a</code>' element
+to any descendant depth. It is not possible to spell out such
+prohibitions in XML. Even though these prohibitions cannot be
+defined in the DTD, certain elements should not be nested. A
+summary of such elements and the elements that should not be
+nested in them is found in the normative <a href="#prohibitions">
+Appendix&#160;B</a>.</p>
+
+<h2><a name="h-4.10" id="h-4.10">4.10 The elements with 'id' and 'name'
+attributes</a></h2>
+
+<p>HTML 4.0 defined the <code>name</code> attribute for the elements
+<code>a</code>,
+<code>applet</code>, <code>frame</code>,
+<code>iframe</code>, <code>img</code>, and <code>map</code>.
+HTML 4.0 also introduced
+the <code>id</code> attribute. Both of these attributes are designed to be
+used as fragment identifiers.</p>
+<p>In XML, fragment identifiers are of type <code>ID</code>, and
+there can only be a single attribute of type <code>ID</code> per element.
+Therefore, in XHTML 1.0 the <code>id</code>
+attribute is defined to be of type <code>ID</code>. In order to
+ensure that XHTML 1.0 documents are well-structured XML documents, XHTML 1.0
+documents MUST use the <code>id</code> attribute when defining fragment
+identifiers, even on elements that historically have also had a
+<code>name</code> attribute.
+See the <a href="#guidelines">HTML Compatibility
+Guidelines</a> for information on ensuring such anchors are backwards
+compatible when serving XHTML documents as media type <code>text/html</code>.
+</p>
+<p>Note that in XHTML 1.0, the <code>name</code> attribute of these
+elements is formally deprecated, and will be removed in a
+subsequent version of XHTML.</p>
+
+<!--OddPage-->
+<h1><a name="issues" id="issues">5. Compatibility Issues</a></h1>
+
+<p>Although there is no requirement for XHTML 1.0 documents to be
+compatible with existing user agents, in practice this is easy to
+accomplish. Guidelines for creating compatible documents can be
+found in <a href="#guidelines">Appendix&#160;C</a>.</p>
+
+<h2><a name="media" id="media">5.1 Internet Media Type</a></h2>
+<p>As of the publication of this recommendation, the general
+recommended MIME labeling for XML-based applications
+has yet to be resolved.</p>
+
+<p>However, XHTML Documents which follow the guidelines set forth
+in <a href="#guidelines">Appendix C</a>, "HTML Compatibility Guidelines" may be
+labeled with the Internet Media Type "text/html", as they
+are compatible with most HTML browsers. This document
+makes no recommendation about MIME labeling of other
+XHTML documents.</p>
+
+<!--OddPage-->
+<h1><a name="future" id="future">6. Future Directions</a></h1>
+
+<p>XHTML 1.0 provides the basis for a family of document types
+that will extend and subset XHTML, in order to support a wide
+range of new devices and applications, by defining modules and
+specifying a mechanism for combining these modules. This
+mechanism will enable the extension and sub-setting of XHTML 1.0
+in a uniform way through the definition of new modules.</p>
+
+<h2><a name="mods" id="mods">6.1 Modularizing HTML</a></h2>
+
+<p>As the use of XHTML moves from the traditional desktop user
+agents to other platforms, it is clear that not all of the XHTML
+elements will be required on all platforms. For example a hand
+held device or a cell-phone may only support a subset of XHTML
+elements.</p>
+
+<p>The process of modularization breaks XHTML up into a series of
+smaller element sets. These elements can then be recombined to
+meet the needs of different communities.</p>
+
+<p>These modules will be defined in a later W3C document.</p>
+
+<h2><a name="extensions" id="extensions">6.2 Subsets and
+Extensibility</a></h2>
+
+<p>Modularization brings with it several advantages:</p>
+
+<ul>
+<li>
+<p>It provides a formal mechanism for sub-setting XHTML.</p>
+</li>
+
+<li>
+<p>It provides a formal mechanism for extending XHTML.</p>
+</li>
+
+<li>
+<p>It simplifies the transformation between document types.</p>
+</li>
+
+<li>
+<p>It promotes the reuse of modules in new document types.</p>
+</li>
+</ul>
+
+<h2><a name="profiles" id="profiles">6.3 Document
+Profiles</a></h2>
+
+<p>A document profile specifies the syntax and semantics of a set
+of documents. Conformance to a document profile provides a basis
+for interoperability guarantees. The document profile specifies
+the facilities required to process documents of that type, e.g.
+which image formats can be used, levels of scripting, style sheet
+support, and so on.</p>
+
+<p>For product designers this enables various groups to define
+their own standard profile.</p>
+
+<p>For authors this will obviate the need to write several
+different versions of documents for different clients.</p>
+
+<p>For special groups such as chemists, medical doctors, or
+mathematicians this allows a special profile to be built using
+standard HTML elements plus a group of elements geared to the
+specialist's needs.</p>
+
+<!--OddPage-->
+<h1><a name="appendices" id="appendices"></a>
+<a name="dtds" id="dtds">Appendix A. DTDs</a></h1>
+
+<p><b>This appendix is normative.</b></p>
+
+<p>These DTDs and entity sets form a normative part of this
+specification. The complete set of DTD files together with an XML
+declaration and SGML Open Catalog is included in the <a href= 
+"xhtml1.zip">zip file</a> for this specification.</p>
+
+<h2><a name="h-A1" id="h-A1">A.1 Document Type
+Definitions</a></h2>
+
+<p>These DTDs approximate the HTML 4.0 DTDs. It is likely that
+when the DTDs are modularized, a method of DTD construction will
+be employed that corresponds more closely to HTML 4.0.</p>
+
+<ul>
+<li>
+<p><a href="DTD/xhtml1-strict.dtd" type="text/plain">
+XHTML-1.0-Strict</a></p>
+</li>
+
+<li>
+<p><a href="DTD/xhtml1-transitional.dtd" type="text/plain">
+XHTML-1.0-Transitional</a></p>
+</li>
+
+<li>
+<p><a href="DTD/xhtml1-frameset.dtd" type="text/plain">
+XHTML-1.0-Frameset</a></p>
+</li>
+</ul>
+
+<h2><a name="h-A2" id="h-A2">A.2 Entity Sets</a></h2>
+
+<p>The XHTML entity sets are the same as for HTML 4.0, but have
+been modified to be valid XML 1.0 entity declarations. Note the
+entity for the Euro currency sign (<code>&amp;euro;</code> or
+<code>&amp;#8364;</code> or <code>&amp;#x20AC;</code>) is defined
+as part of the special characters.</p>
+
+<ul>
+<li>
+<p><a href="DTD/xhtml-lat1.ent">Latin-1 characters</a></p>
+</li>
+
+<li>
+<p><a href="DTD/xhtml-special.ent">Special characters</a></p>
+</li>
+
+<li>
+<p><a href="DTD/xhtml-symbol.ent">Symbols</a></p>
+</li>
+</ul>
+
+<!--OddPage-->
+<h1><a name="prohibitions" id="prohibitions">Appendix B. Element
+Prohibitions</a></h1>
+
+<p><b>This appendix is normative.</b></p>
+
+<p>The following elements have prohibitions on which elements
+they can contain (see <a href="#h-4.9">Section 4.9</a>). This
+prohibition applies to all depths of nesting, i.e. it contains
+all the descendant elements.</p>
+
+<dl><dt><code class="tag">a</code></dt>
+<dd>
+cannot contain other <code>a</code> elements.</dd>
+<dt><code class="tag">pre</code></dt>
+<dd>cannot contain the <code>img</code>, <code>object</code>,
+<code>big</code>, <code>small</code>, <code>sub</code>, or <code>
+sup</code> elements.</dd>
+
+<dt><code class="tag">button</code></dt>
+<dd>cannot contain the <code>input</code>, <code>select</code>,
+<code>textarea</code>, <code>label</code>, <code>button</code>,
+<code>form</code>, <code>fieldset</code>, <code>iframe</code> or
+<code>isindex</code> elements.</dd>
+<dt><code class="tag">label</code></dt>
+<dd>cannot contain other <code class="tag">label</code> elements.</dd>
+<dt><code class="tag">form</code></dt>
+<dd>cannot contain other <code>form</code> elements.</dd>
+</dl>
+
+<!--OddPage-->
+<h1><a name="guidelines" id="guidelines">Appendix C.
+HTML Compatibility Guidelines</a></h1>
+
+<p><b>This appendix is informative.</b></p>
+
+<p>This appendix summarizes design guidelines for authors who
+wish their XHTML documents to render on existing HTML user
+agents.</p>
+
+<h2>C.1 Processing Instructions</h2>
+<p>Be aware that processing instructions are rendered on some
+user agents. However, also note that when the XML declaration is not included
+in a document, the document can only use the default character encodings UTF-8
+or UTF-16.</p>
+
+<h2>C.2 Empty Elements</h2>
+<p>Include a space before the trailing <code>/</code> and <code>
+&gt;</code> of empty elements, e.g. <code class="greenmono">
+&lt;br&#160;/&gt;</code>, <code class="greenmono">
+&lt;hr&#160;/&gt;</code> and <code class="greenmono">&lt;img
+src="karen.jpg" alt="Karen"&#160;/&gt;</code>. Also, use the
+minimized tag syntax for empty elements, e.g. <code class= 
+"greenmono">&lt;br /&gt;</code>, as the alternative syntax <code
+class="greenmono">&lt;br&gt;&lt;/br&gt;</code> allowed by XML
+gives uncertain results in many existing user agents.</p>
+
+<h2>C.3 Element Minimization and Empty Element Content</h2>
+<p>Given an empty instance of an element whose content model is
+not <code>EMPTY</code> (for example, an empty title or paragraph)
+do not use the minimized form (e.g. use <code class="greenmono">
+&lt;p&gt; &lt;/p&gt;</code> and not <code class="greenmono">
+&lt;p&#160;/&gt;</code>).</p>
+
+<h2>C.4 Embedded Style Sheets and Scripts</h2>
+<p>Use external style sheets if your style sheet uses <code>
+&lt;</code> or <code>&amp;</code> or <code>]]&gt;</code> or <code>--</code>. Use
+external scripts if your script uses <code>&lt;</code> or <code>
+&amp;</code> or <code>]]&gt;</code> or <code>--</code>. Note that XML parsers
+are permitted to silently remove the contents of comments. Therefore, the historical
+practice of "hiding" scripts and style sheets within comments to make the
+documents backward compatible is likely to not work as expected in XML-based
+implementations.</p>
+
+<h2>C.5 Line Breaks within Attribute Values</h2>
+<p>Avoid line breaks and multiple whitespace characters within
+attribute values. These are handled inconsistently by user
+agents.</p>
+
+<h2>C.6 Isindex</h2>
+<p>Don't include more than one <code>isindex</code> element in
+the document <code>head</code>. The <code>isindex</code> element
+is deprecated in favor of the <code>input</code> element.</p>
+
+<h2>C.7 The <code>lang</code> and <code>xml:lang</code> Attributes</h2>
+<p>Use both the <code>lang</code> and <code>xml:lang</code>
+attributes when specifying the language of an element. The value
+of the <code>xml:lang</code> attribute takes precedence.</p>
+
+<h2>C.8 Fragment Identifiers</h2>
+<p>In XML, <abbr title="Uniform Resource Identifiers">URIs</abbr> [<a href="#ref-rfc2396">RFC2396</a>] that end with fragment identifiers of the form
+<code>"#foo"</code> do not refer to elements with an attribute
+<code>name="foo"</code>; rather, they refer to elements with an
+attribute defined to be of type <code>ID</code>, e.g., the <code>
+id</code> attribute in HTML 4.0. Many existing HTML clients don't
+support the use of <code>ID</code>-type attributes in this way,
+so identical values may be supplied for both of these attributes to ensure
+maximum forward and backward compatibility (e.g., <code class= 
+"greenmono">&lt;a id="foo" name="foo"&gt;...&lt;/a&gt;</code>).</p>
+
+<p>Further, since the set of
+legal values for attributes of type <code>ID</code> is much smaller than
+for those of type <code>CDATA</code>, the type of the <code>name</code>
+attribute has been changed to <code>NMTOKEN</code>. This attribute is 
+constrained such that it can only have the same values as type
+<code>ID</code>, or as the <code>Name</code> production in XML 1.0 Section
+2.5, production 5. Unfortunately, this constraint cannot be expressed in the
+XHTML 1.0 DTDs.  Because of this change, care must be taken when
+converting existing HTML documents. The values of these attributes
+must be unique within the document, valid, and any references to these 
+fragment identifiers (both
+internal and external) must be updated should the values be changed during
+conversion.</p>
+<p>Finally, note that XHTML 1.0 has deprecated the
+<code>name</code> attribute of the <code>a</code>, <code>applet</code>, <code>frame</code>, <code>iframe</code>, <code>img</code>, and <code>map</code>
+elements, and it will be
+removed from XHTML in subsequent versions.</p>
+
+<h2>C.9 Character Encoding</h2>
+<p>To specify a character encoding in the document, use both the
+encoding attribute specification on the xml declaration (e.g.
+<code class="greenmono">&lt;?xml version="1.0"
+encoding="EUC-JP"?&gt;</code>) and a meta http-equiv statement
+(e.g. <code class="greenmono">&lt;meta http-equiv="Content-type"
+content='text/html; charset="EUC-JP"'&#160;/&gt;</code>). The
+value of the encoding attribute of the xml processing instruction
+takes precedence.</p>
+
+<h2>C.10 Boolean Attributes</h2>
+<p>Some HTML user agents are unable to interpret boolean
+attributes when these appear in their full (non-minimized) form,
+as required by XML 1.0. Note this problem doesn't effect user
+agents compliant with HTML 4.0. The following attributes are
+involved: <code>compact</code>, <code>nowrap</code>, <code>
+ismap</code>, <code>declare</code>, <code>noshade</code>, <code p63302886="" p63302887="" p63302888="" p63302889="" p63302890="" p63302891="" p63302892="" p63302893="" p63302894="" p63302895="" p63302896="" p63302897="" p63302898="" p63302899="" p63302900="" p63302901="" p63302902="" p63302903="" p63302904="" p63302905="" p63302906="" p63302907="" p63302908="" p63302909="" p63302910="" p63302911="" p63302912="" p63302913="" p63302914="" p63302915="" p63302916="" p63302917="" p63302918="" p63302919="" p63302920="" p63302921="" p63302922="" p63302923="" p63302924="" p63302925="" p63302926="" p63302927="" p63302928="" p63302929="" p63302930="" p63302931="" p63302932="" p63302933="" p63302934="" p63302935="" p63302936="" p63302937="" p63302938="" p63302939="" p63302940="" p63302941="" p63302942="" p63302943="" p63302944="" p63302945="" p63302946="" p63302947="" p63302948="" p63302949="" p63302950="" p63302951="" p63302952="" p63302953="" p63302954="" p63302955="" p63302956="" p63302957="" p63302958="" p63302959="" p63302960="" p63302961="" p63302962="" p63302963="" p63302964="" p63302965="" p63302966="" p63302967="" p63302968="" p63302969="" p63302970="" p63302971="" p63302972="" p63302973="" p63302974="" p63302975="" p63302976="" p63302977="" p63302978="" p63302979="" p63302980="" p63302981="" p63302982="" p63302983="" p63302984="" p63302985="" p63302986="" p63302987="" p63302988="" p63302989="" p63302990="" p63302991="" p63302992="" p63302993="" p63302994="" p63302995="" p63302996="" p63302997="" p63302998="" p63302999="" p63303000="" p63303001="" p63303002="" p63303003="" p63303004="" p63303005="" p63303006="" p63303007="" p63303008="" p63303009="" p63303010="" p63303011="" p63303012="" p63303013="" p63303014="" p63303015="" p63303016="" p63303017="" p63303018="" p63303019="" p63303020="" p63303021="" p63303022="" p63303023="" p63303024="" p63303025="" p63303026="" p63303027="" p63303028="" p63303029="" p63303030="" p63303031="" p63303032="" p63303033="" p63303034="" p63303035="" p63303036="" p63303037="" p63303038="" p63303039="" p63303040="" p63303041="" p63303042="" p63303043="" p63303044="" p63303045="" p63303046="" p63303047="" p63303048="" p63303049="" p63303050="" p63303051="" p63303052="" p63303053="" p63303054="" p63303055="" p63303056="" p63303057="" p63303058="" p63303059="" p63303060="" p63303061="" p63303062="" p63303063="" p63303064="" p63303065="" p63303066="" p63303067="" p63303068="" p63303069="" p63303070="" p63303071="" p63303072="" p63303073="" p63303074="" p63303075="" p63303076="" p63303077="" p63303078="" p63303079="" p63303080="" p63303081="" p63303082="" p63303083="" p63303084="" p63303085="" p63303086="" p63303087="" p63303088="" p63303089="" p63303090="" p63303091="" p63303092="" p63303093="" p63303094="" p63303095="" p63303096="" p63303097="" p63303098="" p63303099="" p63303100="" p63303101="" p63303102="" p63303103="" p63303104="" p63303105="" p63303106="" p63303107="" p63303108="" p63303109="" p63303110="" p63303111="" p63303112="" p63303113="" p63303114="" p63303115="" p63303116="" p63303117="" p63303118="" p63303119="" p63303120="" p63303121="" p63303122="" p63303123="" p63303124="" p63303125="" p63303126="" p63303127="" p63303128="" p63303129="" p63303130="" p63303131="" p63303132="" p63303133="" p63303134="" p63303135="" p63303136="" p63303137="" p63303138="" p63303139="" p63303140="" p63303141="" p63303142="" p63303143="" p63303144="" p63303145="" p63303146="" p63303147="" p63303148="" p63303149="" p63303150="" p63303151="" p63303152="" p63303153="" p63303154="" p63303155="" p63303156="" p63303157="" p63303158="" p63303159="" p63303160="" p63303161="" p63303162="" p63303163="" p63303164="" p63303165="" p63303166="" p63303167="" p63303168="" p63303169="" p63303170="" p63303171="" p63303172="" p63303173="" p63303174="" p63303175="" p63303176="" p63303177="" p63303178="" p63303179="" p63303180="" p63303181="" p63303182="" p63303183="" p63303184="" p63303185="" p63303186="" p63303187="" p63303188="" p63303189="" p63303190="" p63303191="" p63303192="" p63303193="" p63303194="" p63303195="" p63303196="" p63303197="" p63303198="" p63303199="" p63303200="" p63303201="" p63303202="" p63303203="" p63303204="" p63303205="" p63303206="" p63303207="" p63303208="" p63303209="" p63303210="" p63303211="" p63303212="" p63303213="" p63303214="" p63303215="" p63303216="" p63303217="" p63303218="" p63303219="" p63303220="" p63303221="" p63303222="" p63303223="" p63303224="" p63303225="" p63303226="" p63303227="" p63303228="" p63303229="" p63303230="" p63303231="" p63303232="" p63303233="" p63303234="" p63303235="" p63303236="" p63303237="" p63303238="" p63303239="" p63303240="" p63303241="" p63303242="" p63303243="" p63303244="" p63303245="" p63303246="" p63303247="" p63303248="" p63303249="" p63303250="" p63303251="" p63303252="" p63303253="" p63303254="" p63303255="" p63303256="" p63303257="" p63303258="" p63303259="" p63303260="" p63303261="" p63303262="" p63303263="" p63303264="" p63303265="" p63303266="" p63303267="" p63303268="" p63303269="" p63303270="" p63303271="" p63303272="" p63303273="" p63303274="" p63303275="" p63303276="" p63303277="" p63303278="" p63303279="" p63303280="" p63303281="" p63303282="" p63303283="" p63303284="" p63303285="" p63303286="" p63303287="" p63303288="" p63303289="" p63303290="" p63303291="" p63303292="" p63303293="" p63303294="" p63303295="" p63303296="" p63303297="" p63303298="" p63303299="" p63303300="" p63303301="" p63303302="" p63303303="" p63303304="" p63303305="" p63303306="" p63303307="" p63303308="" p63303309="" p63303310="" p63303311="" p63303312="" p63303313="" p63303314="" p63303315="" p63303316="" p63303317="" p63303318="" p63303319="" p63303320="" p63303321="" p63303322="" p63303323="" p63303324="" p63303325="" p63303326="" p63303327="" p63303328="" p63303329="" p63303330="" p63303331="" p63303332="" p63303333="" p63303334="" p63303335="" p63303336="" p63303337="" p63303338="" p63303339="" p63303340="" p63303341="" p63303342="" p63303343="" p63303344="" p63303345="" p63303346="" p63303347="" p63303348="" p63303349="" p63303350="" p63303351="" p63303352="" p63303353="" p63303354="" p63303355="" p63303356="" p63303357="" p63303358="" p63303359="" p63303360="" p63303361="" p63303362="" p63303363="" p63303364="" p63303365="" p63303366="" p63303367="" p63303368="" p63303369="" p63303370="" p63303371="" p63303372="" p63303373="" p63303374="" p63303375="" p63303376="" p63303377="" p63303378="" p63303379="" p63303380="" p63303381="" p63303382="" p63303383="" p63303384="" p63303385="" p63303386="" p63303387="" p63303388="" p63303389="" p63303390="" p63303391="" p63303392="" p63303393="" p63303394="" p63303395="" p63303396="" p63303397="" p63303398="" p63303399="" p63303400="" p63303401="" p63303402="" p63303403="" p63303404="" p63303405="" p63303406="" p63303407="" p63303408="" p63303409="" p63303410="" p63303411="" p63303412="" p63303413="" p63303414="" p63303415="" p63303416="" p63303417="" p63303418="" p63303419="" p63303420="" p63303421="" p63303422="" p63303423="" p63303424="" p63303425="" p63303426="" p63303427="" p63303428="" p63303429="" p63303430="" p63303431="" p63303432="" p63303433="" p63303434="" p63303435="" p63303436="" p63303437="" p63303438="" p63303439="" p63303440="" p63303441="" p63303442="" p63303443="" p63303444="" p63303445="" p63303446="" p63303447="" p63303448="" p63303449="" p63303450="" p63303451="" p63303452="" p63303453="" p63303454="" p63303455="" p63303456="" p63303457="" p63303458="" p63303459="" p63303460="" p63303461="" p63303462="" p63303463="" p63303464="" p63303465="" p63303466="" p63303467="" p63303468="" p63303469="" p63303470="" p63303471="" p63303472="" p63303473="" p63303474="" p63303475="" p63303476="" p63303477="" p63303478="" p63303479="" p63303480="" p63303481="" p63303482="" p63303483="" p63303484="" p63303485="" p63303486="" p63303487="" p63303488="" p63303489="" p63303490="" p63303491="" p63303492="" p63303493="" p63303494="" p63303495="" p63303496="" p63303497="" p63303498="" p63303499="" p63303500="" p63303501="" p63303502="" p63303503="" p63303504="" p63303505="" p63303506="" p63303507="" p63303508="" p63303509="" p63303510="" p63303511="" p63303512="" p63303513="" p63303514="" p63303515="" p63303516="" p63303517="" p63303518="" p63303519="" p63303520="" p63303521="" p63303522="" p63303523="" p63303524="" p63303525="" p63303526="" p63303527="" p63303528="" p63303529="" p63303530="" p63303531="" p63303532="" p63303533="" p63303534="" p63303535="" p63303536="" p63303537="" p63303538="" p63303539="" p63303540="" p63303541="" p63303542="" p63303543="" p63303544="" p63303545="" p63303546="" p63303547="" p63303548="" p63303549="" p63303550="" p63303551="" p63303552="" p63303553="" p63303554="" p63303555="" p63303556="" p63303557="" p63303558="" p63303559="" p63303560="" p63303561="" p63303562="" p63303563="" p63303564="" p63303565="" p63303566="" p63303567="" p63303568="" p63303569="" p63303570="" p63303571="" p63303572="" p63303573="" p63303574="" p63303575="" p63303576="" p63303577="" p63303578="" p63303579="" p63303580="" p63303581="" p63303582="" p63303583="" p63303584="" p63303585="" p63303586="" p63303587="" p63303588="" p63303589="" p63303590="" p63303591="" p63303592="" p63303593="" p63303594="" p63303595="" p63303596="" p63303597="" p63303598="" p63303599="" p63303600="" p63303601="" p63303602="" p63303603="" p63303604="" p63303605="" p63303606="" p63303607="" p63303608="" p63303609="" p63303610="" p63303611="" p63303612="" p63303613="" p63303614="" p63303615="" p63303616="" p63303617="" p63303618="" p63303619="" p63303620="" p63303621="" p63303622="" p63303623="" p63303624="" p63303625="" p63303626="" p63303627="" p63303628="" p63303629="" p63303630="" p63303631="" p63303632="" p63303633="" p63303634="" p63303635="" p63303636="" p63303637="" p63303638="" p63303639="" p63303640="" p63303641="" p63303642="" p63303643="" p63303644="" p63303645="" p63303646="" p63303647="" p63303648="" p63303649="" p63303650="" p63303651="" p63303652="" p63303653="" p63303654="" p63303655="" p63303656="" p63303657="" p63303658="" p63303659="" p63303660="" p63303661="" p63303662="" p63303663="" p63303664="" p63303665="" p63303666="" p63303667="" p63303668="" p63303669="" p63303670="" p63303671="" p63303672="" p63303673="" p63303674="" p63303675="" p63303676="" p63303677="" p63303678="" p63303679="" p63303680="" p63303681="" p63303682="" p63303683="" p63303684="" p63303685="" p63303686="" p63303687="" p63303688="" p63303689="" p63303690="" p63303691="" p63303692="" p63303693="" p63303694="" p63303695="" p63303696="" p63303697="" p63303698="" p63303699="" p63303700="" p63303701="" p63303702="" p63303703="" p63303704="" p63303705="" p63303706="" p63303707="" p63303708="" p63303709="" p63303710="" p63303711="" p63303712="" p63303713="" p63303714="" p63303715="" p63303716="" p63303717="" p63303718="" p63303719="" p63303720="" p63303721="" p63303722="" p63303723="" p63303724="" p63303725="" p63303726="" p63303727="" p63303728="" p63303729="" p63303730="" p63303731="" p63303732="" p63303733="" p63303734="" p63303735="" p63303736="" p63303737="" p63303738="" p63303739="" p63303740="" p63303741="" p63303742="" p63303743="" p63303744="" p63303745="" p63303746="" p63303747="" p63303748="" p63303749="" p63303750="" p63303751="" p63303752="" p63303753="" p63303754="" p63303755="" p63303756="" p63303757="" p63303758="" p63303759="" p63303760="" p63303761="" p63303762="" p63303763="" p63303764="" p63303765="" p63303766="" p63303767="" p63303768="" p63303769="" p63303770="" p63303771="" p63303772="" p63303773="" p63303774="" p63303775="" p63303776="" p63303777="" p63303778="" p63303779="" p63303780="" p63303781="" p63303782="" p63303783="" p63303784="" p63303785="" p63303786="" p63303787="" p63303788="" p63303789="" p63303790="" p63303791="" p63303792="" p63303793="" p63303794="" p63303795="" p63303796="" p63303797="" p63303798="" p63303799="" p63303800="" p63303801="" p63303802="" p63303803="" p63303804="" p63303805="" p63303806="" p63303807="" p63303808="" p63303809="" p63303810="" p63303811="" p63303812="" p63303813="" p63303814="" p63303815="" p63303816="" p63303817="" p63303818="" p63303819="" p63303820="" p63303821="" p63303822="" p63303823="" p63303824="" p63303825="" p63303826="" p63303827="" p63303828="" p63303829="" p63303830="" p63303831="" p63303832="" p63303833="" p63303834="" p63303835="" p63303836="" p63303837="" p63303838="" p63303839="" p63303840="" p63303841="" p63303842="" p63303843="" p63303844="" p63303845="" p63303846="" p63303847="" p63303848="" p63303849="" p63303850="" p63303851="" p63303852="" p63303853="" p63303854="" p63303855="" p63303856="" p63303857="" p63303858="" p63303859="" p63303860="" p63303861="" p63303862="" p63303863="" p63303864="" p63303865="" p63303866="" p63303867="" p63303868="" p63303869="" p63303870="" p63303871="" p63303872="" p63303873="" p63303874="" p63303875="" p63303876="" p63303877="" p63303878="" p63303879="" p63303880="" p63303881="" p63303882="" p63303883="" p63303884="" p63303885="" p63303886="" p63303887="" p63303888="" p63303889="" p63303890="" p63303891="" p63303892="" p63303893="" p63303894="" p63303895="" p63303896="" p63303897="" p63303898="" p63303899="" p63303900="" p63303901="" p63303902="" p63303903="" p63303904="" p63303905="" p63303906="" p63303907="" p63303908="" p63303909="" p63303910="" p63303911="" p63303912="" p63303913="" p63303914="" p63303915="" p63303916="" p63303917="" p63303918="" p63303919="" p63303920="" p63303921="" p63303922="" p63303923="" p63303924="" p63303925="" p63303926="" p63303927="" p63303928="" p63303929="" p63303930="" p63303931="" p63303932="" p63303933="" p63303934="" p63303935="" p63303936="" p63303937="" p63303938="" p63303939="" p63303940="" p63303941="" p63303942="" p63303943="" p63303944="" p63303945="" p63303946="" p63303947="" p63303948="" p63303949="" p63303950="" p63303951="" p63303952="" p63303953="" p63303954="" p63303955="" p63303956="" p63303957="" p63303958="" p63303959="" p63303960="" p63303961="" p63303962="" p63303963="" p63303964="" p63303965="" p63303966="" p63303967="" p63303968="" p63303969="" p63303970="" p63303971="" p63303972="" p63303973="" p63303974="" p63303975="" p63303976="" p63303977="" p63303978="" p63303979="" p63303980="" p63303981="" p63303982="" p63303983="" p63303984="" p63303985="" p63303986="" p63303987="" p63303988="" p63303989="" p63303990="" p63303991="" p63303992="" p63303993="" p63303994="" p63303995="" p63303996="" p63303997="" p63303998="" p63303999="" p63304000="" p63304001="" p63304002="" p63304003="" p63304004="" p63304005="" p63304006="" p63304007="" p63304008="" p63304009="" p63304010="" p63304011="" p63304012="" p63304013="" p63304014="" p63304015="" p63304016="" p63304017="" p63304018="" p63304019="" p63304020="" p63304021="" p63304022="" p63304023="" p63304024="" p63304025="" p63304026="" p63304027="" p63304028="" p63304029="" p63304030="" p63304031="" p63304032="" p63304033="" p63304034="" p63304035="" p63304036="" p63304037="" p63304038="" p63304039="" p63304040="" p63304041="" p63304042="" p63304043="" p63304044="" p63304045="" p63304046="" p63304047="" p63304048="" p63304049="" p63304050="" p63304051="" p63304052="" p63304053="" p63304054="" p63304055="" p63304056="" p63304057="" p63304058="" p63304059="" p63304060="" p63304061="" p63304062="" p63304063="" p63304064="" p63304065="" p63304066="" p63304067="" p63304068="" p63304069="" p63304070="" p63304071="" p63304072="" p63304073="" p63304074="" p63304075="" p63304076="" p63304077="" p63304078="" p63304079="" p63304080="" p63304081="" p63304082="" p63304083="" p63304084="" p63304085="" p63304086="" p63304087="" p63304088="" p63304089="" p63304090="" p63304091="" p63304092="" p63304093="" p63304094="" p63304095="" p63304096="" p63304097="" p63304098="" p63304099="" p63304100="" p63304101="" p63304102="" p63304103="" p63304104="" p63304105="" p63304106="" p63304107="" p63304108="" p63304109="" p63304110="" p63304111="" p63304112="" p63304113="" p63304114="" p63304115="" p63304116="" p63304117="" p63304118="" p63304119="" p63304120="" p63304121="" p63304122="" p63304123="" p63304124="" p63304125="" p63304126="" p63304127="" p63304128="" p63304129="" p63304130="" p63304131="" p63304132="" p63304133="" p63304134="" p63304135="" p63304136="" p63304137="" p63304138="" p63304139="" p63304140="" p63304141="" p63304142="" p63304143="" p63304144="" p63304145="" p63304146="" p63304147="" p63304148="" p63304149="" p63304150="" p63304151="" p63304152="" p63304153="" p63304154="" p63304155="" p63304156="" p63304157="" p63304158="" p63304159="" p63304160="" p63304161="" p63304162="" p63304163="" p63304164="" p63304165="" p63304166="" p63304167="" p63304168="" p63304169="" p63304170="" p63304171="" p63304172="" p63304173="" p63304174="" p63304175="" p63304176="" p63304177="" p63304178="" p63304179="" p63304180="" p63304181="" p63304182="" p63304183="" p63304184="" p63304185="" p63304186="" p63304187="" p63304188="" p63304189="" p63304190="" p63304191="" p63304192="" p63304193="" p63304194="" p63304195="" p63304196="" p63304197="" p63304198="" p63304199="" p63304200="" p63304201="" p63304202="" p63304203="" p63304204="" p63304205="" p63304206="" p63304207="" p63304208="" p63304209="" p63304210="" p63304211="" p63304212="" p63304213="" p63304214="" p63304215="" p63304216="" p63304217="" p63304218="" p63304219="" p63304220="" p63304221="" p63304222="" p63304223="" p63304224="" p63304225="" p63304226="" p63304227="" p63304228="" p63304229="" p63304230="" p63304231="" p63304232="" p63304233="" p63304234="" p63304235="" p63304236="" p63304237="" p63304238="" p63304239="" p63304240="" p63304241="" p63304242="" p63304243="" p63304244="" p63304245="" p63304246="" p63304247="" p63304248="" p63304249="" p63304250="" p63304251="" p63304252="" p63304253="" p63304254="" p63304255="" p63304256="" p63304257="" p63304258="" p63304259="" p63304260="" p63304261="" p63304262="" p63304263="" p63304264="" p63304265="" p63304266="" p63304267="" p63304268="" p63304269="" p63304270="" p63304271="" p63304272="" p63304273="" p63304274="" p63304275="" p63304276="" p63304277="" p63304278="" p63304279="" p63304280="" p63304281="" p63304282="" p63304283="" p63304284="" p63304285="" p63304286="" p63304287="" p63304288="" p63304289="" p63304290="" p63304291="" p63304292="" p63304293="" p63304294="" p63304295="" p63304296="" p63304297="" p63304298="" p63304299="" p63304300="" p63304301="" p63304302="" p63304303="" p63304304="" p63304305="" p63304306="" p63304307="" p63304308="" p63304309="" p63304310="" p63304311="" p63304312="" p63304313="" p63304314="" p63304315="" p63304316="" p63304317="" p63304318="" p63304319="" p63304320="" p63304321="" p63304322="" p63304323="" p63304324="" p63304325="" p63304326="" p63304327="" p63304328="" p63304329="" p63304330="" p63304331="" p63304332="" p63304333="" p63304334="" p63304335="" p63304336="" p63304337="" p63304338="" p63304339="" p63304340="" p63304341="" p63304342="" p63304343="" p63304344="" p63304345="" p63304346="" p63304347="" p63304348="" p63304349="" p63304350="" p63304351="" p63304352="" p63304353="" p63304354="" p63304355="" p63304356="" p63304357="" p63304358="" p63304359="" p63304360="" p63304361="" p63304362="" p63304363="" p63304364="" p63304365="" p63304366="" p63304367="" p63304368="" p63304369="" p63304370="" p63304371="" p63304372="" p63304373="" p63304374="" p63304375="" p63304376="" p63304377="" p63304378="" p63304379="" p63304380="" p63304381="" p63304382="" p63304383="" p63304384="" p63304385="" p63304386="" p63304387="" p63304388="" p63304389="" p63304390="" p63304391="" p63304392="" p63304393="" p63304394="" p63304395="" p63304396="" p63304397="" p63304398="" p63304399="" p63304400="" p63304401="" p63304402="" p63304403="" p63304404="" p63304405="" p63304406="" p63304407="" p63304408="" p63304409="" p63304410="" p63304411="" p63304412="" p63304413="" p63304414="" p63304415="" p63304416="" p63304417="" p63304418="" p63304419="" p63304420="" p63304421="" p63304422="" p63304423="" p63304424="" p63304425="" p63304426="" p63304427="" p63304428="" p63304429="" p63304430="" p63304431="" p63304432="" p63304433="" p63304434="" p63304435="" p63304436="" p63304437="" p63304438="" p63304439="" p63304440="" p63304441="" p63304442="" p63304443="" p63304444="" p63304445="" p63304446="" p63304447="" p63304448="" p63304449="" p63304450="" p63304451="" p63304452="" p63304453="" p63304454="" p63304455="" p63304456="" p63304457="" p63304458="" p63304459="" p63304460="" p63304461="" p63304462="" p63304463="" p63304464="" p63304465="" p63304466="" p63304467="" p63304468="" p63304469="" p63304470="" p63304471="" p63304472="" p63304473="" p63304474="" p63304475="" p63304476="" p63304477="" p63304478="" p63304479="" p63304480="" p63304481="" p63304482="" p63304483="" p63304484="" p63304485="" p63304486="" p63304487="" p63304488="" p63304489="" p63304490="" p63304491="" p63304492="" p63304493="" p63304494="" p63304495="" p63304496="" p63304497="" p63304498="" p63304499="" p63304500="" p63304501="" p63304502="" p63304503="" p63304504="" p63304505="" p63304506="" p63304507="" p63304508="" p63304509="" p63304510="" p63304511="" p63304512="" p63304513="" p63304514="" p63304515="" p63304516="" p63304517="" p63304518="" p63304519="" p63304520="" p63304521="" p63304522="" p63304523="" p63304524="" p63304525="" p63304526="" p63304527="" p63304528="" p63304529="" p63304530="" p63304531="" p63304532="" p63304533="" p63304534="" p63304535="" p63304536="" p63304537="" p63304538="" p63304539="" p63304540="" p63304541="" p63304542="" p63304543="" p63304544="" p63304545="" p63304546="" p63304547="" p63304548="" p63304549="" p63304550="" p63304551="" p63304552="" p63304553="" p63304554="" p63304555="" p63304556="" p63304557="" p63304558="" p63304559="" p63304560="" p63304561="" p63304562="" p63304563="" p63304564="" p63304565="" p63304566="" p63304567="" p63304568="" p63304569="" p63304570="" p63304571="" p63304572="" p63304573="" p63304574="" p63304575="" p63304576="" p63304577="" p63304578="" p63304579="" p63304580="" p63304581="" p63304582="" p63304583="" p63304584="" p63304585="" p63304586="" p63304587="" p63304588="" p63304589="" p63304590="" p63304591="" p63304592="" p63304593="" p63304594="" p63304595="" p63304596="" p63304597="" p63304598="" p63304599="" p63304600="" p63304601="" p63304602="" p63304603="" p63304604="" p63304605="" p63304606="" p63304607="" p63304608="" p63304609="" p63304610="" p63304611="" p63304612="" p63304613="" p63304614="" p63304615="" p63304616="" p63304617="" p63304618="" p63304619="" p63304620="" p63304621="" p63304622="" p63304623="" p63304624="" p63304625="" p63304626="" p63304627="" p63304628="" p63304629="" p63304630="" p63304631="" p63304632="" p63304633="" p63304634="" p63304635="" p63304636="" p63304637="" p63304638="" p63304639="" p63304640="" p63304641="" p63304642="" p63304643="" p63304644="" p63304645="" p63304646="" p63304647="" p63304648="" p63304649="" p63304650="" p63304651="" p63304652="" p63304653="" p63304654="" p63304655="" p63304656="" p63304657="" p63304658="" p63304659="" p63304660="" p63304661="" p63304662="" p63304663="" p63304664="" p63304665="" p63304666="" p63304667="" p63304668="" p63304669="" p63304670="" p63304671="" p63304672="" p63304673="" p63304674="" p63304675="" p63304676="" p63304677="" p63304678="" p63304679="" p63304680="" p63304681="" p63304682="" p63304683="" p63304684="" p63304685="" p63304686="" p63304687="" p63304688="" p63304689="" p63304690="" p63304691="" p63304692="" p63304693="" p63304694="" p63304695="" p63304696="" p63304697="" p63304698="" p63304699="" p63304700="" p63304701="" p63304702="" p63304703="" p63304704="" p63304705="" p63304706="" p63304707="" p63304708="" p63304709="" p63304710="" p63304711="" p63304712="" p63304713="" p63304714="" p63304715="" p63304716="" p63304717="" p63304718="" p63304719="" p63304720="" p63304721="" p63304722="" p63304723="" p63304724="" p63304725="" p63304726="" p63304727="" p63304728="" p63304729="" p63304730="" p63304731="" p63304732="" p63304733="" p63304734="" p63304735="" p63304736="" p63304737="" p63304738="" p63304739="" p63304740="" p63304741="" p63304742="" p63304743="" p63304744="" p63304745="" p63304746="" p63304747="" p63304748="" p63304749="" p63304750="" p63304751="" p63304752="" p63304753="" p63304754="" p63304755="" p63304756="" p63304757="" p63304758="" p63304759="" p63304760="" p63304761="" p63304762="" p63304763="" p63304764="" p63304765="" p63304766="" p63304767="" p63304768="" p63304769="" p63304770="" p63304771="" p63304772="" p63304773="" p63304774="" p63304775="" p63304776="" p63304777="" p63304778="" p63304779="" p63304780="" p63304781="" p63304782="" p63304783="" p63304784="" p63304785="" p63304786="" p63304787="" p63304788="" p63304789="" p63304790="" p63304791="" p63304792="" p63304793="" p63304794="" p63304795="" p63304796="" p63304797="" p63304798="" p63304799="" p63304800="" p63304801="" p63304802="" p63304803="" p63304804="" p63304805="" p63304806="" p63304807="" p63304808="" p63304809="" p63304810="" p63304811="" p63304812="" p63304813="" p63304814="" p63304815="" p63304816="" p63304817="" p63304818="" p63304819="" p63304820="" p63304821="" p63304822="" p63304823="" p63304824="" p63304825="" p63304826="" p63304827="" p63304828="" p63304829="" p63304830="" p63304831="" p63304832="" p63304833="" p63304834="" p63304835="" p63304836="" p63304837="" p63304838="" p63304839="" p63304840="" p63304841="" p63304842="" p63304843="" p63304844="" p63304845="" p63304846="" p63304847="" p63304848="" p63304849="" p63304850="" p63304851="" p63304852="" p63304853="" p63304854="" p63304855="" p63304856="" p63304857="" p63304858="" p63304859="" p63304860="" p63304861="" p63304862="" p63304863="" p63304864="" p63304865="" p63304866="" p63304867="" p63304868="" p63304869="" p63304870="" p63304871="" p63304872="" p63304873="" p63304874="" p63304875="" p63304876="" p63304877="" p63304878="" p63304879="" p63304880="" p63304881="" p63304882="" p63304883="" p63304884="" p63304885="" p63304886="" p63304887="" p63304888="" p63304889="" p63304890="" p63304891="" p63304892="" p63304893="" p63304894="" p63304895="" p63304896="" p63304897="" p63304898="" p63304899="" p63304900="" p63304901="" p63304902="" p63304903="" p63304904="" p63304905="" p63304906="" p63304907="" p63304908="" p63304909="" p63304910="" p63304911="" p63304912="" p63304913="" p63304914="" p63304915="" p63304916="" p63304917="" p63304918="" p63304919="" p63304920="" p63304921="" p63304922="" p63304923="" p63304924="" p63304925="" p63304926="" p63304927="" p63304928="" p63304929="" p63304930="" p63304931="" p63304932="" p63304933="" p63304934="" p63304935="" p63304936="" p63304937="" p63304938="" p63304939="" p63304940="" p63304941="" p63304942="" p63304943="" p63304944="" p63304945="" p63304946="" p63304947="" p63304948="" p63304949="" p63304950="" p63304951="" p63304952="" p63304953="" p63304954="" p63304955="" p63304956="" p63304957="" p63304958="" p63304959="" p63304960="" p63304961="" p63304962="" p63304963="" p63304964="" p63304965="" p63304966="" p63304967="" p63304968="" p63304969="" p63304970="" p63304971="" p63304972="" p63304973="" p63304974="" p63304975="" p63304976="" p63304977="" p63304978="" p63304979="" p63304980="" p63304981="" p63304982="" p63304983="" p63304984="" p63304985="" p63304986="" p63304987="" p63304988="" p63304989="" p63304990="" p63304991="" p63304992="" p63304993="" p63304994="" p63304995="" p63304996="" p63304997="" p63304998="" p63304999="" p63305000="" p63305001="" p63305002="" p63305003="" p63305004="" p63305005="" p63305006="" p63305007="" p63305008="" p63305009="" p63305010="" p63305011="" p63305012="" p63305013="" p63305014="" p63305015="" p63305016="" p63305017="" p63305018="" p63305019="" p63305020="" p63305021="" p63305022="" p63305023="" p63305024="" p63305025="" p63305026="" p63305027="" p63305028="" p63305029="" p63305030="" p63305031="" p63305032="" p63305033="" p63305034="" p63305035="" p63305036="" p63305037="" p63305038="" p63305039="" p63305040="" p63305041="" p63305042="" p63305043="" p63305044="" p63305045="" p63305046="" p63305047="" p63305048="" p63305049="" p63305050="" p63305051="" p63305052="" p63305053="" p63305054="" p63305055="" p63305056="" p63305057="" p63305058="" p63305059="" p63305060="" p63305061="" p63305062="" p63305063="" p63305064="" p63305065="" p63305066="" p63305067="" p63305068="" p63305069="" p63305070="" p63305071="" p63305072="" p63305073="" p63305074="" p63305075="" p63305076="" p63305077="" p63305078="" p63305079="" p63305080="" p63305081="" p63305082="" p63305083="" p63305084="" p63305085="" p63305086="" p63305087="" p63305088="" p63305089="" p63305090="" p63305091="" p63305092="" p63305093="" p63305094="" p63305095="" p63305096="" p63305097="" p63305098="" p63305099="" p63305100="" p63305101="" p63305102="" p63305103="" p63305104="" p63305105="" p63305106="" p63305107="" p63305108="" p63305109="" p63305110="" p63305111="" p63305112="" p63305113="" p63305114="" p63305115="" p63305116="" p63305117="" p63305118="" p63305119="" p63305120="" p63305121="" p63305122="" p63305123="" p63305124="" p63305125="" p63305126="" p63305127="" p63305128="" p63305129="" p63305130="" p63305131="" p63305132="" p63305133="" p63305134="" p63305135="" p63305136="" p63305137="" p63305138="" p63305139="" p63305140="" p63305141="" p63305142="" p63305143="" p63305144="" p63305145="" p63305146="" p63305147="" p63305148="" p63305149="" p63305150="" p63305151="" p63305152="" p63305153="" p63305154="" p63305155="" p63305156="" p63305157="" p63305158="" p63305159="" p63305160="" p63305161="" p63305162="" p63305163="" p63305164="" p63305165="" p63305166="" p63305167="" p63305168="" p63305169="" p63305170="" p63305171="" p63305172="" p63305173="" p63305174="" p63305175="" p63305176="" p63305177="" p63305178="" p63305179="" p63305180="" p63305181="" p63305182="" p63305183="" p63305184="" p63305185="" p63305186="" p63305187="" p63305188="" p63305189="" p63305190="" p63305191="" p63305192="" p63305193="" p63305194="" p63305195="" p63305196="" p63305197="" p63305198="" p63305199="" p63305200="" p63305201="" p63305202="" p63305203="" p63305204="" p63305205="" p63305206="" p63305207="" p63305208="" p63305209="" p63305210="" p63305211="" p63305212="" p63305213="" p63305214="" p63305215="" p63305216="" p63305217="" p63305218="" p63305219="" p63305220="" p63305221="" p63305222="" p63305223="" p63305224="" p63305225="" p63305226="" p63305227="" p63305228="" p63305229="" p63305230="" p63305231="" p63305232="" p63305233="" p63305234="" p63305235="" p63305236="" p63305237="" p63305238="" p63305239="" p63305240="" p63305241="" p63305242="" p63305243="" p63305244="" p63305245="" p63305246="" p63305247="" p63305248="" p63305249="" p63305250="" p63305251="" p63305252="" p63305253="" p63305254="" p63305255="" p63305256="" p63305257="" p63305258="" p63305259="" p63305260="" p63305261="" p63305262="" p63305263="" p63305264="" p63305265="" p63305266="" p63305267="" p63305268="" p63305269="" p63305270="" p63305271="" p63305272="" p63305273="" p63305274="" p63305275="" p63305276="" p63305277="" p63305278="" p63305279="" p63305280="" p63305281="" p63305282="" p63305283="" p63305284="" p63305285="" p63305286="" p63305287="" p63305288="" p63305289="" p63305290="" p63305291="" p63305292="" p63305293="" p63305294="" p63305295="" p63305296="" p63305297="" p63305298="" p63305299="" p63305300="" p63305301="" p63305302="" p63305303="" p63305304="" p63305305="" p63305306="" p63305307="" p63305308="" p63305309="" p63305310="" p63305311="" p63305312="" p63305313="" p63305314="" p63305315="" p63305316="" p63305317="" p63305318="" p63305319="" p63305320="" p63305321="" p63305322="" p63305323="" p63305324="" p63305325="" p63305326="" p63305327="" p63305328="" p63305329="" p63305330="" p63305331="" p63305332="" p63305333="" p63305334="" p63305335="" p63305336="" p63305337="" p63305338="" p63305339="" p63305340="" p63305341="" p63305342="" p63305343="" p63305344="" p63305345="" p63305346="" p63305347="" p63305348="" p63305349="" p63305350="" p63305351="" p63305352="" p63305353="" p63305354="" p63305355="" p63305356="" p63305357="" p63305358="" p63305359="" p63305360="" p63305361="" p63305362="" p63305363="" p63305364="" p63305365="" p63305366="" p63305367="" p63305368="" p63305369="" p63305370="" p63305371="" p63305372="" p63305373="" p63305374="" p63305375="" p63305376="" p63305377="" p63305378="" p63305379="" p63305380="" p63305381="" p63305382="" p63305383="" p63305384="" p63305385="" p63305386="" p63305387="" p63305388="" p63305389="" p63305390="" p63305391="" p63305392="" p63305393="" p63305394="" p63305395="" p63305396="" p63305397="" p63305398="" p63305399="" p63305400="" p63305401="" p63305402="" p63305403="" p63305404="" p63305405="" p63305406="" p63305407="" p63305408="" p63305409="" p63305410="" p63305411="" p63305412="" p63305413="" p63305414="" p63305415="" p63305416="" p63305417="" p63305418="" p63305419="" p63305420="" p63305421="" p63305422="" p63305423="" p63305424="" p63305425="" p63305426="" p63305427="" p63305428="" p63305429="" p63305430="" p63305431="" p63305432="" p63305433="" p63305434="" p63305435="" p63305436="" p63305437="" p63305438="" p63305439="" p63305440="" p63305441="" p63305442="" p63305443="" p63305444="" p63305445="" p63305446="" p63305447="" p63305448="" p63305449="" p63305450="" p63305451="" p63305452="" p63305453="" p63305454="" p63305455="" p63305456="" p63305457="" p63305458="" p63305459="" p63305460="" p63305461="" p63305462="" p63305463="" p63305464="" p63305465="" p63305466="" p63305467="" p63305468="" p63305469="" p63305470="" p63305471="" p63305472="" p63305473="" p63305474="" p63305475="" p63305476="" p63305477="" p63305478="" p63305479="" p63305480="" p63305481="" p63305482="" p63305483="" p63305484="" p63305485="" p63305486="" p63305487="" p63305488="" p63305489="" p63305490="" p63305491="" p63305492="" p63305493="" p63305494="" p63305495="" p63305496="" p63305497="" p63305498="" p63305499="" p63305500="" p63305501="" p63305502="" p63305503="" p63305504="" p63305505="" p63305506="" p63305507="" p63305508="" p63305509="" p63305510="" p63305511="" p63305512="" p63305513="" p63305514="" p63305515="" p63305516="" p63305517="" p63305518="" p63305519="" p63305520="" p63305521="" p63305522="" p63305523="" p63305524="" p63305525="" p63305526="" p63305527="" p63305528="" p63305529="" p63305530="" p63305531="" p63305532="" p63305533="" p63305534="" p63305535="" p63305536="" p63305537="" p63305538="" p63305539="" p63305540="" p63305541="" p63305542="" p63305543="" p63305544="" p63305545="" p63305546="" p63305547="" p63305548="" p63305549="" p63305550="" p63305551="" p63305552="" p63305553="" p63305554="" p63305555="" p63305556="" p63305557="" p63305558="" p63305559="" p63305560="" p63305561="" p63305562="" p63305563="" p63305564="" p63305565="" p63305566="" p63305567="" p63305568="" p63305569="" p63305570="" p63305571="" p63305572="" p63305573="" p63305574="" p63305575="" p63305576="" p63305577="" p63305578="" p63305579="" p63305580="" p63305581="" p63305582="" p63305583="" p63305584="" p63305585="" p63305586="" p63305587="" p63305588="" p63305589="" p63305590="" p63305591="" p63305592="" p63305593="" p63305594="" p63305595="" p63305596="" p63305597="" p63305598="" p63305599="" p63305600="" p63305601="" p63305602="" p63305603="" p63305604="" p63305605="" p63305606="" p63305607="" p63305608="" p63305609="" p63305610="" p63305611="" p63305612="" p63305613="" p63305614="" p63305615="" p63305616="" p63305617="" p63305618="" p63305619="" p63305620="" p63305621="" p63305622="" p63305623="" p63305624="" p63305625="" p63305626="" p63305627="" p63305628="" p63305629="" p63305630="" p63305631="" p63305632="" p63305633="" p63305634="" p63305635="" p63305636="" p63305637="" p63305638="" p63305639="" p63305640="" p63305641="" p63305642="" p63305643="" p63305644="" p63305645="" p63305646="" p63305647="" p63305648="" p63305649="" p63305650="" p63305651="" p63305652="" p63305653="" p63305654="" p63305655="" p63305656="" p63305657="" p63305658="" p63305659="" p63305660="" p63305661="" p63305662="" p63305663="" p63305664="" p63305665="" p63305666="" p63305667="" p63305668="" p63305669="" p63305670="" p63305671="" p63305672="" p63305673="" p63305674="" p63305675="" p63305676="" p63305677="" p63305678="" p63305679="" p63305680="" p63305681="" p63305682="" p63305683="" p63305684="" p63305685="" p63305686="" p63305687="" p63305688="" p63305689="" p63305690="" p63305691="" p63305692="" p63305693="" p63305694="" p63305695="" p63305696="" p63305697="" p63305698="" p63305699="" p63305700="" p63305701="" p63305702="" p63305703="" p63305704="" p63305705="" p63305706="" p63305707="" p63305708="" p63305709="" p63305710="" p63305711="" p63305712="" p63305713="" p63305714="" p63305715="" p63305716="" p63305717="" p63305718="" p63305719="" p63305720="" p63305721="" p63305722="" p63305723="" p63305724="" p63305725="" p63305726="" p63305727="" p63305728="" p63305729="" p63305730="" p63305731="" p63305732="" p63305733="" p63305734="" p63305735="" p63305736="" p63305737="" p63305738="" p63305739="" p63305740="" p63305741="" p63305742="" p63305743="" p63305744="" p63305745="" p63305746="" p63305747="" p63305748="" p63305749="" p63305750="" p63305751="" p63305752="" p63305753="" p63305754="" p63305755="" p63305756="" p63305757="" p63305758="" p63305759="" p63305760="" p63305761="" p63305762="" p63305763="" p63305764="" p63305765="" p63305766="" p63305767="" p63305768="" p63305769="" p63305770="" p63305771="" p63305772="" p63305773="" p63305774="" p63305775="" p63305776="" p63305777="" p63305778="" p63305779="" p63305780="" p63305781="" p63305782="" p63305783="" p63305784="" p63305785="" p63305786="" p63305787="" p63305788="" p63305789="" p63305790="" p63305791="" p63305792="" p63305793="" p63305794="" p63305795="" p63305796="" p63305797="" p63305798="" p63305799="" p63305800="" p63305801="" p63305802="" p63305803="" p63305804="" p63305805="" p63305806="" p63305807="" p63305808="" p63305809="" p63305810="" p63305811="" p63305812="" p63305813="" p63305814="" p63305815="" p63305816="" p63305817="" p63305818="" p63305819="" p63305820="" p63305821="" p63305822="" p63305823="" p63305824="" p63305825="" p63305826="" p63305827="" p63305828="" p63305829="" p63305830="" p63305831="" p63305832="" p63305833="" p63305834="" p63305835="" p63305836="" p63305837="" p63305838="" p63305839="" p63305840="" p63305841="" p63305842="" p63305843="" p63305844="" p63305845="" p63305846="" p63305847="" p63305848="" p63305849="" p63305850="" p63305851="" p63305852="" p63305853="" p63305854="" p63305855="" p63305856="" p63305857="" p63305858="" p63305859="" p63305860="" p63305861="" p63305862="" p63305863="" p63305864="" p63305865="" p63305866="" p63305867="" p63305868="" p63305869="" p63305870="" p63305871="" p63305872="" p63305873="" p63305874="" p63305875="" p63305876="" p63305877="" p63305878="" p63305879="" p63305880="" p63305881="" p63305882="" p63305883="" p63305884="" p63305885="" p63305886="" p63305887="" p63305888="" p63305889="" p63305890="" p63305891="" p63305892="" p63305893="" p63305894="" p63305895="" p63305896="" p63305897="" p63305898="" p63305899="" p63305900="" p63305901="" p63305902="" p63305903="" p63305904="" p63305905="" p63305906="" p63305907="" p63305908="" p63305909="" p63305910="" p63305911="" p63305912="" p63305913="" p63305914="" p63305915="" p63305916="" p63305917="" p63305918="" p63305919="" p63305920="" p63305921="" p63305922="" p63305923="" p63305924="" p63305925="" p63305926="" p63305927="" p63305928="" p63305929="" p63305930="" p63305931="" p63305932="" p63305933="" p63305934="" p63305935="" p63305936="" p63305937="" p63305938="" p63305939="" p63305940="" p63305941="" p63305942="" p63305943="" p63305944="" p63305945="" p63305946="" p63305947="" p63305948="" p63305949="" p63305950="" p63305951="" p63305952="" p63305953="" p63305954="" p63305955="" p63305956="" p63305957="" p63305958="" p63305959="" p63305960="" p63305961="" p63305962="" p63305963="" p63305964="" p63305965="" p63305966="" p63305967="" p63305968="" p63305969="" p63305970="" p63305971="" p63305972="" p63305973="" p63305974="" p63305975="" p63305976="" p63305977="" p63305978="" p63305979="" p63305980="" p63305981="" p63305982="" p63305983="" p63305984="" p63305985="" p63305986="" p63305987="" p63305988="" p63305989="" p63305990="" p63305991="" p63305992="" p63305993="" p63305994="" p63305995="" p63305996="" p63305997="" p63305998="" p63305999="" p63306000="" p63306001="" p63306002="" p63306003="" p63306004="" p63306005="" p63306006="" p63306007="" p63306008="" p63306009="" p63306010="" p63306011="" p63306012="" p63306013="" p63306014="" p63306015="" p63306016="" p63306017="" p63306018="" p63306019="" p63306020="" p63306021="" p63306022="" p63306023="" p63306024="" p63306025="" p63306026="" p63306027="" p63306028="" p63306029="" p63306030="" p63306031="" p63306032="" p63306033="" p63306034="" p63306035="" p63306036="" p63306037="" p63306038="" p63306039="" p63306040="" p63306041="" p63306042="" p63306043="" p63306044="" p63306045="" p63306046="" p63306047="" p63306048="" p63306049="" p63306050="" p63306051="" p63306052="" p63306053="" p63306054="" p63306055="" p63306056="" p63306057="" p63306058="" p63306059="" p63306060="" p63306061="" p63306062="" p63306063="" p63306064="" p63306065="" p63306066="" p63306067="" p63306068="" p63306069="" p63306070="" p63306071="" p63306072="" p63306073="" p63306074="" p63306075="" p63306076="" p63306077="" p63306078="" p63306079="" p63306080="" p63306081="" p63306082="" p63306083="" p63306084="" p63306085="" p63306086="" p63306087="" p63306088="" p63306089="" p63306090="" p63306091="" p63306092="" p63306093="" p63306094="" p63306095="" p63306096="" p63306097="" p63306098="" p63306099="" p63306100="" p63306101="" p63306102="" p63306103="" p63306104="" p63306105="" p63306106="" p63306107="" p63306108="" p63306109="" p63306110="" p63306111="" p63306112="" p63306113="" p63306114="" p63306115="" p63306116="" p63306117="" p63306118="" p63306119="" p63306120="" p63306121="" p63306122="" p63306123="" p63306124="" p63306125="" p63306126="" p63306127="" p63306128="" p63306129="" p63306130="" p63306131="" p63306132="" p63306133="" p63306134="" p63306135="" p63306136="" p63306137="" p63306138="" p63306139="" p63306140="" p63306141="" p63306142="" p63306143="" p63306144="" p63306145="" p63306146="" p63306147="" p63306148="" p63306149="" p63306150="" p63306151="" p63306152="" p63306153="" p63306154="" p63306155="" p63306156="" p63306157="" p63306158="" p63306159="" p63306160="" p63306161="" p63306162="" p63306163="" p63306164="" p63306165="" p63306166="" p63306167="" p63306168="" p63306169="" p63306170="" p63306171="" p63306172="" p63306173="" p63306174="" p63306175="" p63306176="" p63306177="" p63306178="" p63306179="" p63306180="" p63306181="" p63306182="" p63306183="" p63306184="" p63306185="" p63306186="" p63306187="" p63306188="" p63306189="" p63306190="" p63306191="" p63306192="" p63306193="" p63306194="" p63306195="" p63306196="" p63306197="" p63306198="" p63306199="" p63306200="" p63306201="" p63306202="" p63306203="" p63306204="" p63306205="" p63306206="" p63306207="" p63306208="" p63306209="" p63306210="" p63306211="" p63306212="" p63306213="" p63306214="" p63306215="" p63306216="" p63306217="" p63306218="" p63306219="" p63306220="" p63306221="" p63306222="" p63306223="" p63306224="" p63306225="" p63306226="" p63306227="" p63306228="" p63306229="" p63306230="" p63306231="" p63306232="" p63306233="" p63306234="" p63306235="" p63306236="" p63306237="" p63306238="" p63306239="" p63306240="" p63306241="" p63306242="" p63306243="" p63306244="" p63306245="" p63306246="" p63306247="" p63306248="" p63306249="" p63306250="" p63306251="" p63306252="" p63306253="" p63306254="" p63306255="" p63306256="" p63306257="" p63306258="" p63306259="" p63306260="" p63306261="" p63306262="" p63306263="" p63306264="" p63306265="" p63306266="" p63306267="" p63306268="" p63306269="" p63306270="" p63306271="" p63306272="" p63306273="" p63306274="" p63306275="" p63306276="" p63306277="" p63306278="" p63306279="" p63306280="" p63306281="" p63306282="" p63306283="" p63306284="" p63306285="" p63306286="" p63306287="" p63306288="" p63306289="" p63306290="" p63306291="" p63306292="" p63306293="" p63306294="" p63306295="" p63306296="" p63306297="" p63306298="" p63306299="" p63306300="" p63306301="" p63306302="" p63306303="" p63306304="" p63306305="" p63306306="" p63306307="" p63306308="" p63306309="" p63306310="" p63306311="" p63306312="" p63306313="" p63306314="" p63306315="" p63306316="" p63306317="" p63306318="" p63306319="" p63306320="" p63306321="" p63306322="" p63306323="" p63306324="" p63306325="" p63306326="" p63306327="" p63306328="" p63306329="" p63306330="" p63306331="" p63306332="" p63306333="" p63306334="" p63306335="" p63306336="" p63306337="" p63306338="" p63306339="" p63306340="" p63306341="" p63306342="" p63306343="" p63306344="" p63306345="" p63306346="" p63306347="" p63306348="" p63306349="" p63306350="" p63306351="" p63306352="" p63306353="" p63306354="" p63306355="" p63306356="" p63306357="" p63306358="" p63306359="" p63306360="" p63306361="" p63306362="" p63306363="" p63306364="" p63306365="" p63306366="" p63306367="" p63306368="" p63306369="" p63306370="" p63306371="" p63306372="" p63306373="" p63306374="" p63306375="" p63306376="" p63306377="" p63306378="" p63306379="" p63306380="" p63306381="" p63306382="" p63306383="" p63306384="" p63306385="" p63306386="" p63306387="" p63306388="" p63306389="" p63306390="" p63306391="" p63306392="" p63306393="" p63306394="" p63306395="" p63306396="" p63306397="" p63306398="" p63306399="" p63306400="" p63306401="" p63306402="" p63306403="" p63306404="" p63306405="" p63306406="" p63306407="" p63306408="" p63306409="" p63306410="" p63306411="" p63306412="" p63306413="" p63306414="" p63306415="" p63306416="" p63306417="" p63306418="" p63306419="" p63306420="" p63306421="" p63306422="" p63306423="" p63306424="" p63306425="" p63306426="" p63306427="" p63306428="" p63306429="" p63306430="" p63306431="" p63306432="" p63306433="" p63306434="" p63306435="" p63306436="" p63306437="" p63306438="" p63306439="" p63306440="" p63306441="" p63306442="" p63306443="" p63306444="" p63306445="" p63306446="" p63306447="" p63306448="" p63306449="" p63306450="" p63306451="" p63306452="" p63306453="" p63306454="" p63306455="" p63306456="" p63306457="" p63306458="" p63306459="" p63306460="" p63306461="" p63306462="" p63306463="" p63306464="" p63306465="" p63306466="" p63306467="" p63306468="" p63306469="" p63306470="" p63306471="" p63306472="" p63306473="" p63306474="" p63306475="" p63306476="" p63306477="" p63306478="" p63306479="" p63306480="" p63306481="" p63306482="" p63306483="" p63306484="" p63306485="" p63306486="" p63306487="" p63306488="" p63306489="" p63306490="" p63306491="" p63306492="" p63306493="" p63306494="" p63306495="" p63306496="" p63306497="" p63306498="" p63306499="" p63306500="" p63306501="" p63306502="" p63306503="" p63306504="" p63306505="" p63306506="" p63306507="" p63306508="" p63306509="" p63306510="" p63306511="" p63306512="" p63306513="" p63306514="" p63306515="" p63306516="" p63306517="" p63306518="" p63306519="" p63306520="" p63306521="" p63306522="" p63306523="" p63306524="" p63306525="" p63306526="" p63306527="" p63306528="" p63306529="" p63306530="" p63306531="" p63306532="" p63306533="" p63306534="" p63306535="" p63306536="" p63306537="" p63306538="" p63306539="" p63306540="" p63306541="" p63306542="" p63306543="" p63306544="" p63306545="" p63306546="" p63306547="" p63306548="" p63306549="" p63306550="" p63306551="" p63306552="" p63306553="" p63306554="" p63306555="" p63306556="" p63306557="" p63306558="" p63306559="" p63306560="" p63306561="" p63306562="" p63306563="" p63306564="" p63306565="" p63306566="" p63306567="" p63306568="" p63306569="" p63306570="" p63306571="" p63306572="" p63306573="" p63306574="" p63306575="" p63306576="" p63306577="" p63306578="" p63306579="" p63306580="" p63306581="" p63306582="" p63306583="" p63306584="" p63306585="" p63306586="" p63306587="" p63306588="" p63306589="" p63306590="" p63306591="" p63306592="" p63306593="" p63306594="" p63306595="" p63306596="" p63306597="" p63306598="" p63306599="" p63306600="" p63306601="" p63306602="" p63306603="" p63306604="" p63306605="" p63306606="" p63306607="" p63306608="" p63306609="" p63306610="" p63306611="" p63306612="" p63306613="" p63306614="" p63306615="" p63306616="" p63306617="" p63306618="" p63306619="" p63306620="" p63306621="" p63306622="" p63306623="" p63306624="" p63306625="" p63306626="" p63306627="" p63306628="" p63306629="" p63306630="" p63306631="" p63306632="" p63306633="" p63306634="" p63306635="" p63306636="" p63306637="" p63306638="" p63306639="" p63306640="" p63306641="" p63306642="" p63306643="" p63306644="" p63306645="" p63306646="" p63306647="" p63306648="" p63306649="" p63306650="" p63306651="" p63306652="" p63306653="" p63306654="" p63306655="" p63306656="" p63306657="" p63306658="" p63306659="" p63306660="" p63306661="" p63306662="" p63306663="" p63306664="" p63306665="" p63306666="" p63306667="" p63306668="" p63306669="" p63306670="" p63306671="" p63306672="" p63306673="" p63306674="" p63306675="" p63306676="" p63306677="" p63306678="" p63306679="" p63306680="" p63306681="" p63306682="" p63306683="" p63306684="" p63306685="" p63306686="" p63306687="" p63306688="" p63306689="" p63306690="" p63306691="" p63306692="" p63306693="" p63306694="" p63306695="" p63306696="" p63306697="" p63306698="" p63306699="" p63306700="" p63306701="" p63306702="" p63306703="" p63306704="" p63306705="" p63306706="" p63306707="" p63306708="" p63306709="" p63306710="" p63306711="" p63306712="" p63306713="" p63306714="" p63306715="" p63306716="" p63306717="" p63306718="" p63306719="" p63306720="" p63306721="" p63306722="" p63306723="" p63306724="" p63306725="" p63306726="" p63306727="" p63306728="" p63306729="" p63306730="" p63306731="" p63306732="" p63306733="" p63306734="" p63306735="" p63306736="" p63306737="" p63306738="" p63306739="" p63306740="" p63306741="" p63306742="" p63306743="" p63306744="" p63306745="" p63306746="" p63306747="" p63306748="" p63306749="" p63306750="" p63306751="" p63306752="" p63306753="" p63306754="" p63306755="" p63306756="" p63306757="" p63306758="" p63306759="" p63306760="" p63306761="" p63306762="" p63306763="" p63306764="" p63306765="" p63306766="" p63306767="" p63306768="" p63306769="" p63306770="" p63306771="" p63306772="" p63306773="" p63306774="" p63306775="" p63306776="" p63306777="" p63306778="" p63306779="" p63306780="" p63306781="" p63306782="" p63306783="" p63306784="" p63306785="" p63306786="" p63306787="" p63306788="" p63306789="" p63306790="" p63306791="" p63306792="" p63306793="" p63306794="" p63306795="" p63306796="" p63306797="" p63306798="" p63306799="" p63306800="" p63306801="" p63306802="" p63306803="" p63306804="" p63306805="" p63306806="" p63306807="" p63306808="" p63306809="" p63306810="" p63306811="" p63306812="" p63306813="" p63306814="" p63306815="" p63306816="" p63306817="" p63306818="" p63306819="" p63306820="" p63306821="" p63306822="" p63306823="" p63306824="" p63306825="" p63306826="" p63306827="" p63306828="" p63306829="" p63306830="" p63306831="" p63306832="" p63306833="" p63306834="" p63306835="" p63306836="" p63306837="" p63306838="" p63306839="" p63306840="" p63306841="" p63306842="" p63306843="" p63306844="" p63306845="" p63306846="" p63306847="" p63306848="" p63306849="" p63306850="" p63306851="" p63306852="" p63306853="" p63306854="" p63306855="" p63306856="" p63306857="" p63306858="" p63306859="" p63306860="" p63306861="" p63306862="" p63306863="" p63306864="" p63306865="" p63306866="" p63306867="" p63306868="" p63306869="" p63306870="" p63306871="" p63306872="" p63306873="" p63306874="" p63306875="" p63306876="" p63306877="" p63306878="" p63306879="" p63306880="" p63306881="" p63306882="" p63306883="" p63306884="" p63306885="" p63306886="" p63306887="" p63306888="" p63306889="" p63306890="" p63306891="" p63306892="" p63306893="" p63306894="" p63306895="" p63306896="" p63306897="" p63306898="" p63306899="" p63306900="" p63306901="" p63306902="" p63306903="" p63306904="" p63306905="" p63306906="" p63306907="" p63306908="" p63306909="" p63306910="" p63306911="" p63306912="" p63306913="" p63306914="" p63306915="" p63306916="" p63306917="" p63306918="" p63306919="" p63306920="" p63306921="" p63306922="" p63306923="" p63306924="" p63306925="" p63306926="" p63306927="" p63306928="" p63306929="" p63306930="" p63306931="" p63306932="" p63306933="" p63306934="" p63306935="" p63306936="" p63306937="" p63306938="" p63306939="" p63306940="" p63306941="" p63306942="" p63306943="" p63306944="" p63306945="" p63306946="" p63306947="" p63306948="" p63306949="" p63306950="" p63306951="" p63306952="" p63306953="" p63306954="" p63306955="" p63306956="" p63306957="" p63306958="" p63306959="" p63306960="" p63306961="" p63306962="" p63306963="" p63306964="" p63306965="" p63306966="" p63306967="" p63306968="" p63306969="" p63306970="" p63306971="" p63306972="" p63306973="" p63306974="" p63306975="" p63306976="" p63306977="" p63306978="" p63306979="" p63306980="" p63306981="">
+checked</code>, <code>disabled</code>, <code>readonly</code>,
+<code>multiple</code>, <code>selected</code>, <code>
+noresize</code>, <code>defer</code>.</p>
+
+<h2>C.11 Document Object Model and XHTML</h2>
+<p>
+The Document Object Model level 1 Recommendation [<a href="#ref-dom">DOM</a>]
+defines document object model interfaces for XML and HTML 4.0. The HTML 4.0
+document object model specifies that HTML element and attribute names are
+returned in upper-case. The XML document object model specifies that 
+element and attribute names are returned in the case they are specified. In
+XHTML 1.0, elements and attributes are specified in lower-case. This apparent difference can be
+addressed in two ways:
+</p>
+<ol>
+<li>Applications that access XHTML documents served as Internet media type
+<code>text/html</code>
+via the <abbr title="Document Object Model">DOM</abbr> can use the HTML DOM,
+and can rely upon element and attribute names being returned in
+upper-case from those interfaces.</li>
+<li>Applications that access XHTML documents served as Internet media types
+<code>text/xml</code> or <code>application/xml</code>
+can also use the XML DOM. Elements and attributes will be returned in lower-case.
+Also, some XHTML elements may or may
+not appear
+in the object tree because they are optional in the content model
+(e.g. the <code>tbody</code> element within
+<code>table</code>).  This occurs because in HTML 4.0 some elements were
+permitted to be minimized such that their start and end tags are both omitted
+(an SGML feature).
+This is not possible in XML. Rather than require document authors to insert
+extraneous elements, XHTML has made the elements optional. 
+Applications need to adapt to this
+accordingly.</li>
+</ol>
+
+<h2>C.12 Using Ampersands in Attribute Values</h2>
+<p>
+When an attribute value contains an ampersand, it must be expressed as a character
+entity reference
+(e.g. "<code>&amp;amp;</code>"). For example, when the
+<code>href</code> attribute
+of the <code>a</code> element refers to a
+CGI script that takes parameters, it must be expressed as
+<code>http://my.site.dom/cgi-bin/myscript.pl?class=guest&amp;amp;name=user</code>
+rather than as
+<code>http://my.site.dom/cgi-bin/myscript.pl?class=guest&amp;name=user</code>.
+</p>
+
+<h2>C.13 Cascading Style Sheets (CSS) and XHTML</h2>
+
+<p>The Cascading Style Sheets level 2 Recommendation [<a href="#ref-css2">CSS2</a>] defines style
+properties which are applied to the parse tree of the HTML or XML
+document.  Differences in parsing will produce different visual or
+aural results, depending on the selectors used. The following hints
+will reduce this effect for documents which are served without
+modification as both media types:</p>
+
+<ol>
+<li>
+CSS style sheets for XHTML should use lower case element and
+attribute names.</li>
+
+
+<li>In tables, the tbody element will be inferred by the parser of an
+HTML user agent, but not by the parser of an XML user agent. Therefore
+you should always explicitely add a tbody element if it is referred to
+in a CSS selector.</li>
+
+<li>Within the XHTML name space, user agents are expected to
+recognize the "id" attribute as an attribute of type ID.
+Therefore, style sheets should be able to continue using the
+shorthand "#" selector syntax even if the user agent does not read
+the DTD.</li>
+
+<li>Within the XHTML name space, user agents are expected to
+recognize the "class" attribute. Therefore, style sheets should be
+able to continue using the shorthand "." selector syntax.</li>
+
+<li>
+CSS defines different conformance rules for HTML and XML documents;
+be aware that the HTML rules apply to XHTML documents delivered as
+HTML and the XML rules apply to XHTML documents delivered as XML.</li>
+</ol>
+<!--OddPage-->
+<h1><a name="acks" id="acks">Appendix D.
+Acknowledgements</a></h1>
+
+<p><b>This appendix is informative.</b></p>
+
+<p>This specification was written with the participation of the
+members of the W3C HTML working group:</p>
+
+<dl p13972814="" p13972815="" p13972816="" p13972817="" p13972818="" p13972819="" p13972820="" p13972821="" p13972822="" p13972823="" p13972824="" p13972825="" p13972826="" p13972827="" p13972828="" p13972829="" p13972830="" p13972831="" p13972832="" p13972833="" p13972834="" p13972835="" p13972836="" p13972837="" p13972838="" p13972839="" p13972840="" p13972841="" p13972842="" p13972843="" p13972844="" p13972845="" p13972846="" p13972847="" p13972848="" p13972849="" p13972850="" p13972851="" p13972852="" p13972853="" p13972854="" p13972855="" p13972856="" p13972857="" p13972858="" p13972859="" p13972860="" p13972861="" p13972862="" p13972863="" p13972864="" p13972865="" p13972866="" p13972867="" p13972868="" p13972869="" p13972870="" p13972871="" p13972872="" p13972873="" p13972874="" p13972875="" p13972876="" p13972877="" p13972878="" p13972879="" p13972880="" p13972881="" p13972882="" p13972883="" p13972884="" p13972885="" p13972886="" p13972887="" p13972888="" p13972889="" p13972890="" p13972891="" p13972892="" p13972893="" p13972894="" p13972895="" p13972896="" p13972897="" p13972898="" p13972899="" p13972900="" p13972901="" p13972902="" p13972903="" p13972904="" p13972905="" p13972906="" p13972907="" p13972908="" p13972909="" p13972910="" p13972911="" p13972912="" p13972913="" p13972914="" p13972915="" p13972916="" p13972917="" p13972918="" p13972919="" p13972920="" p13972921="" p13972922="" p13972923="" p13972924="" p13972925="" p13972926="" p13972927="" p13972928="" p13972929="" p13972930="" p13972931="" p13972932="" p13972933="" p13972934="" p13972935="" p13972936="" p13972937="" p13972938="" p13972939="" p13972940="" p13972941="" p13972942="" p13972943="" p13972944="" p13972945="" p13972946="" p13972947="" p13972948="" p13972949="" p13972950="" p13972951="" p13972952="" p13972953="" p13972954="" p13972955="" p13972956="" p13972957="" p13972958="" p13972959="" p13972960="" p13972961="" p13972962="" p13972963="" p13972964="" p13972965="" p13972966="" p13972967="" p13972968="" p13972969="" p13972970="" p13972971="" p13972972="" p13972973="" p13972974="" p13972975="" p13972976="" p13972977="" p13972978="" p13972979="" p13972980="" p13972981="" p13972982="" p13972983="" p13972984="" p13972985="" p13972986="" p13972987="" p13972988="" p13972989="" p13972990="" p13972991="" p13972992="" p13972993="" p13972994="" p13972995="" p13972996="" p13972997="" p13972998="" p13972999="" p13973000="" p13973001="" p13973002="" p13973003="" p13973004="" p13973005="" p13973006="" p13973007="" p13973008="" p13973009="" p13973010="" p13973011="" p13973012="" p13973013="" p13973014="" p13973015="" p13973016="" p13973017="" p13973018="" p13973019="" p13973020="" p13973021="" p13973022="" p13973023="" p13973024="" p13973025="" p13973026="" p13973027="" p13973028="" p13973029="" p13973030="" p13973031="" p13973032="" p13973033="" p13973034="" p13973035="" p13973036="" p13973037="" p13973038="" p13973039="" p13973040="" p13973041="" p13973042="" p13973043="" p13973044="" p13973045="" p13973046="" p13973047="" p13973048="" p13973049="" p13973050="" p13973051="" p13973052="" p13973053="" p13973054="" p13973055="" p13973056="" p13973057="" p13973058="" p13973059="" p13973060="" p13973061="" p13973062="" p13973063="" p13973064="" p13973065="" p13973066="" p13973067="" p13973068="" p13973069="" p13973070="" p13973071="" p13973072="" p13973073="" p13973074="" p13973075="" p13973076="" p13973077="" p13973078="" p13973079="" p13973080="" p13973081="" p13973082="" p13973083="" p13973084="" p13973085="" p13973086="" p13973087="" p13973088="" p13973089="" p13973090="" p13973091="" p13973092="" p13973093="" p13973094="" p13973095="" p13973096="" p13973097="" p13973098="" p13973099="" p13973100="" p13973101="" p13973102="" p13973103="" p13973104="" p13973105="" p13973106="" p13973107="" p13973108="" p13973109="" p13973110="" p13973111="" p13973112="" p13973113="" p13973114="" p13973115="" p13973116="" p13973117="" p13973118="" p13973119="" p13973120="" p13973121="" p13973122="" p13973123="" p13973124="" p13973125="" p13973126="" p13973127="" p13973128="" p13973129="" p13973130="" p13973131="" p13973132="" p13973133="" p13973134="" p13973135="" p13973136="" p13973137="" p13973138="" p13973139="" p13973140="" p13973141="" p13973142="" p13973143="" p13973144="" p13973145="" p13973146="" p13973147="" p13973148="" p13973149="" p13973150="" p13973151="" p13973152="" p13973153="" p13973154="" p13973155="" p13973156="" p13973157="" p13973158="" p13973159="" p13973160="" p13973161="" p13973162="" p13973163="" p13973164="" p13973165="" p13973166="" p13973167="" p13973168="" p13973169="" p13973170="" p13973171="" p13973172="" p13973173="" p13973174="" p13973175="" p13973176="" p13973177="" p13973178="" p13973179="" p13973180="" p13973181="" p13973182="" p13973183="" p13973184="" p13973185="" p13973186="" p13973187="" p13973188="" p13973189="" p13973190="" p13973191="" p13973192="" p13973193="" p13973194="" p13973195="" p13973196="" p13973197="" p13973198="" p13973199="" p13973200="" p13973201="" p13973202="" p13973203="" p13973204="" p13973205="" p13973206="" p13973207="" p13973208="" p13973209="" p13973210="" p13973211="" p13973212="" p13973213="" p13973214="" p13973215="" p13973216="" p13973217="" p13973218="" p13973219="" p13973220="" p13973221="" p13973222="" p13973223="" p13973224="" p13973225="" p13973226="" p13973227="" p13973228="" p13973229="" p13973230="" p13973231="" p13973232="" p13973233="" p13973234="" p13973235="" p13973236="" p13973237="" p13973238="" p13973239="" p13973240="" p13973241="" p13973242="" p13973243="" p13973244="" p13973245="" p13973246="" p13973247="" p13973248="" p13973249="" p13973250="" p13973251="" p13973252="" p13973253="" p13973254="" p13973255="" p13973256="" p13973257="" p13973258="" p13973259="" p13973260="" p13973261="" p13973262="" p13973263="" p13973264="" p13973265="" p13973266="" p13973267="" p13973268="" p13973269="" p13973270="" p13973271="" p13973272="" p13973273="" p13973274="" p13973275="" p13973276="" p13973277="" p13973278="" p13973279="" p13973280="" p13973281="" p13973282="" p13973283="" p13973284="" p13973285="" p13973286="" p13973287="" p13973288="" p13973289="" p13973290="" p13973291="" p13973292="" p13973293="" p13973294="" p13973295="" p13973296="" p13973297="" p13973298="" p13973299="" p13973300="" p13973301="" p13973302="" p13973303="" p13973304="" p13973305="" p13973306="" p13973307="" p13973308="" p13973309="" p13973310="" p13973311="" p13973312="" p13973313="" p13973314="" p13973315="" p13973316="" p13973317="" p13973318="" p13973319="" p13973320="" p13973321="" p13973322="" p13973323="" p13973324="" p13973325="" p13973326="" p13973327="" p13973328="" p13973329="" p13973330="" p13973331="" p13973332="" p13973333="" p13973334="" p13973335="" p13973336="" p13973337="" p13973338="" p13973339="" p13973340="" p13973341="" p13973342="" p13973343="" p13973344="" p13973345="" p13973346="" p13973347="" p13973348="" p13973349="" p13973350="" p13973351="" p13973352="" p13973353="" p13973354="" p13973355="" p13973356="" p13973357="" p13973358="" p13973359="" p13973360="" p13973361="" p13973362="" p13973363="" p13973364="" p13973365="" p13973366="" p13973367="" p13973368="" p13973369="" p13973370="" p13973371="" p13973372="" p13973373="" p13973374="" p13973375="" p13973376="" p13973377="" p13973378="" p13973379="" p13973380="" p13973381="" p13973382="" p13973383="" p13973384="" p13973385="" p13973386="" p13973387="" p13973388="" p13973389="" p13973390="" p13973391="" p13973392="" p13973393="" p13973394="" p13973395="" p13973396="" p13973397="" p13973398="" p13973399="" p13973400="" p13973401="" p13973402="" p13973403="" p13973404="" p13973405="" p13973406="" p13973407="" p13973408="" p13973409="" p13973410="" p13973411="" p13973412="" p13973413="" p13973414="" p13973415="" p13973416="" p13973417="" p13973418="" p13973419="" p13973420="" p13973421="" p13973422="" p13973423="" p13973424="" p13973425="" p13973426="" p13973427="" p13973428="" p13973429="" p13973430="" p13973431="" p13973432="" p13973433="" p13973434="" p13973435="" p13973436="" p13973437="" p13973438="" p13973439="" p13973440="" p13973441="" p13973442="" p13973443="" p13973444="" p13973445="" p13973446="" p13973447="" p13973448="" p13973449="" p13973450="" p13973451="" p13973452="" p13973453="" p13973454="" p13973455="" p13973456="" p13973457="" p13973458="" p13973459="" p13973460="" p13973461="" p13973462="" p13973463="" p13973464="" p13973465="" p13973466="" p13973467="" p13973468="" p13973469="" p13973470="" p13973471="" p13973472="" p13973473="" p13973474="" p13973475="" p13973476="" p13973477="" p13973478="" p13973479="" p13973480="" p13973481="" p13973482="" p13973483="" p13973484="" p13973485="" p13973486="" p13973487="" p13973488="" p13973489="" p13973490="" p13973491="" p13973492="" p13973493="" p13973494="" p13973495="" p13973496="" p13973497="" p13973498="" p13973499="" p13973500="" p13973501="">
+<dd>Steven Pemberton, CWI (HTML Working Group Chair)<br />
+Murray Altheim, Sun Microsystems<br />
+Daniel Austin, CNET: The Computer Network<br />
+Frank Boumphrey, HTML Writers Guild<br />
+John Burger, Mitre<br />
+Andrew W. Donoho, IBM<br />
+Sam Dooley, IBM<br />
+Klaus Hofrichter, GMD<br />
+Philipp Hoschka, W3C<br />
+Masayasu Ishikawa, W3C<br />
+Warner ten Kate, Philips Electronics<br />
+Peter King, Phone.com<br />
+Paula Klante, JetForm<br />
+Shin'ichi Matsui, W3C/Panasonic<br />
+Shane McCarron, Applied Testing and Technology (The Open Group through August
+1999)<br />
+Ann Navarro, HTML Writers Guild<br />
+Zach Nies, Quark<br />
+Dave Raggett, W3C/HP (W3C lead for HTML)<br />
+Patrick Schmitz, Microsoft<br />
+Sebastian Schnitzenbaumer, Stack Overflow<br />
+Chris Wilson, Microsoft<br />
+Ted Wugofski, Gateway 2000<br />
+Dan Zigmond, WebTV Networks</dd>
+</dl>
+
+<!--OddPage-->
+<h1><a name="refs" id="refs">Appendix E. References</a></h1>
+
+<p><b>This appendix is informative.</b></p>
+
+<dl>
+
+<dt><a name="ref-css2" id="ref-css2"><b>[CSS2]</b></a></dt>
+
+<dd><a href="http://www.w3.org/TR/REC-CSS2">"Cascading Style Sheets, level 2 (CSS2) Specification"</a>, B.
+Bos, H. W. Lie, C. Lilley, I. Jacobs, 12 May 1998.<br />
+Available at: <a href="http://www.w3.org/TR/REC-CSS2">
+http://www.w3.org/TR/REC-CSS2</a></dd>
+
+<dt><a name="ref-dom" id="ref-dom"><b>[DOM]</b></a></dt>
+
+<dd><a href="http://www.w3.org/TR/REC-DOM-Level-1">"Document Object Model (DOM) Level 1 Specification"</a>, Lauren
+Wood <i>et al.</i>, 1 October 1998.<br />
+Available at: <a href="http://www.w3.org/TR/REC-DOM-Level-1">
+http://www.w3.org/TR/REC-DOM-Level-1</a></dd>
+
+<dt><a name="ref-html4" id="ref-html4"><b>[HTML]</b></a></dt>
+
+<dd><a href="http://www.w3.org/TR/1999/PR-html40-19990824">"HTML 4.01 Specification"</a>, D. Raggett, A. Le&#160;Hors, I.
+Jacobs, 24 August 1999.<br />
+Available at: <a href="http://www.w3.org/TR/1999/PR-html40-19990824">
+http://www.w3.org/TR/1999/PR-html40-19990824</a></dd>
+
+<dt><a name="ref-posix" id="ref-posix"><b>[POSIX.1]</b></a></dt>
+
+<dd>"ISO/IEC 9945-1:1990 Information Technology - Portable
+Operating System Interface (POSIX) - Part 1: System Application
+Program Interface (API) [C Language]", Institute of Electrical
+and Electronics Engineers, Inc, 1990.</dd>
+
+<dt><a name="ref-rfc2046" id="ref-rfc2046"><b>
+[RFC2046]</b></a></dt>
+
+<dd><a href="http://www.ietf.org/rfc/rfc2046.txt">"RFC2046: Multipurpose Internet Mail Extensions (MIME) Part
+Two: Media Types"</a>, N. Freed and N. Borenstein, November
+1996.<br p25179655="" p25179656="" p25179657="" p25179658="" p25179659="" p25179660="" p25179661="" p25179662="" p25179663="" p25179664="" p25179665="" p25179666="" p25179667="" p25179668="" p25179669="" p25179670="" p25179671="" p25179672="" p25179673="" p25179674="" p25179675="" p25179676="" p25179677="" p25179678="" p25179679="" p25179680="" p25179681="" p25179682="" p25179683="" p25179684="" p25179685="" p25179686="" p25179687="" p25179688="" p25179689="" p25179690="" p25179691="" p25179692="" p25179693="" p25179694="" p25179695="" p25179696="" p25179697="" p25179698="" p25179699="" p25179700="" p25179701="" p25179702="" p25179703="" p25179704="" p25179705="" p25179706="" p25179707="" p25179708="" p25179709="" p25179710="" p25179711="" p25179712="" p25179713="" p25179714="" p25179715="" p25179716="" p25179717="" p25179718="" p25179719="" p25179720="" p25179721="" p25179722="" p25179723="" p25179724="" p25179725="" p25179726="" p25179727="" p25179728="" p25179729="" p25179730="" p25179731="" p25179732="" p25179733="" p25179734="" p25179735="" p25179736="" p25179737="" p25179738="" p25179739="" p25179740="" p25179741="" p25179742="" p25179743="" p25179744="" p25179745="" p25179746="" p25179747="" p25179748="" p25179749="" p25179750="" p25179751="" p25179752="" p25179753="" p25179754="" p25179755="" p25179756="" p25179757="" p25179758="" p25179759="" p25179760="" p25179761="" p25179762="" p25179763="" p25179764="" p25179765="" p25179766="" p25179767="" p25179768="" p25179769="" p25179770="" p25179771="" p25179772="" p25179773="" p25179774="" p25179775="" p25179776="" p25179777="" p25179778="" p25179779="" p25179780="" p25179781="" p25179782="" p25179783="" p25179784="" p25179785="" p25179786="" p25179787="" p25179788="" p25179789="" p25179790="" p25179791="" p25179792="" p25179793="" p25179794="" p25179795="" p25179796="" p25179797="" p25179798="" p25179799="" p25179800="" p25179801="" p25179802="" p25179803="" p25179804="" p25179805="" p25179806="" p25179807="" p25179808="" p25179809="" p25179810="" p25179811="" p25179812="" p25179813="" p25179814="" p25179815="" p25179816="" p25179817="" p25179818="" p25179819="" p25179820="" p25179821="" p25179822="" p25179823="" p25179824="" p25179825="" p25179826="" p25179827="" p25179828="" p25179829="" p25179830="" p25179831="" p25179832="" p25179833="" p25179834="" p25179835="" p25179836="" p25179837="" p25179838="" p25179839="" p25179840="" p25179841="" p25179842="" p25179843="" p25179844="" p25179845="" p25179846="" p25179847="" p25179848="" p25179849="" p25179850="" p25179851="" p25179852="" p25179853="" p25179854="" p25179855="" p25179856="" p25179857="" p25179858="" p25179859="" p25179860="" p25179861="" p25179862="" p25179863="" p25179864="" p25179865="" p25179866="" p25179867="" p25179868="" p25179869="" p25179870="" p25179871="" p25179872="" p25179873="" p25179874="" p25179875="" p25179876="" p25179877="" p25179878="" p25179879="" p25179880="" p25179881="" p25179882="" p25179883="" p25179884="" p25179885="" p25179886="" p25179887="" p25179888="" p25179889="" p25179890="" p25179891="" p25179892="" p25179893="" p25179894="" p25179895="" p25179896="" p25179897="" p25179898="" p25179899="" p25179900="" p25179901="" p25179902="" p25179903="" p25179904="" p25179905="" p25179906="" p25179907="" p25179908="" p25179909="" p25179910="" p25179911="" p25179912="" p25179913="" p25179914="" p25179915="" p25179916="" p25179917="" p25179918="" p25179919="" p25179920="" p25179921="" p25179922="" p25179923="" p25179924="" p25179925="" p25179926="" p25179927="" p25179928="" p25179929="" p25179930="" p25179931="" p25179932="" p25179933="" p25179934="" p25179935="" p25179936="" p25179937="" p25179938="" p25179939="" p25179940="" p25179941="" p25179942="" p25179943="" p25179944="" p25179945="" p25179946="" p25179947="" p25179948="" p25179949="" p25179950="" p25179951="" p25179952="" p25179953="" p25179954="" p25179955="" p25179956="" p25179957="" p25179958="" p25179959="" p25179960="" p25179961="" p25179962="" p25179963="" p25179964="" p25179965="" p25179966="" p25179967="" p25179968="" p25179969="" p25179970="" p25179971="" p25179972="" p25179973="" p25179974="" p25179975="" p25179976="" p25179977="" p25179978="" p25179979="" p25179980="" p25179981="" p25179982="" p25179983="" p25179984="" p25179985="" p25179986="" p25179987="" p25179988="" p25179989="" p25179990="" p25179991="" p25179992="" p25179993="" p25179994="" p25179995="" p25179996="" p25179997="" p25179998="" p25179999="" p25180000="" p25180001="" p25180002="" p25180003="" p25180004="" p25180005="" p25180006="" p25180007="" p25180008="" p25180009="" p25180010="" p25180011="" p25180012="" p25180013="" p25180014="" p25180015="" p25180016="" p25180017="" p25180018="" p25180019="" p25180020="" p25180021="" p25180022="" p25180023="" p25180024="" p25180025="" p25180026="" p25180027="" p25180028="" p25180029="" p25180030="" p25180031="" p25180032="" p25180033="" p25180034="" p25180035="" p25180036="" p25180037="" p25180038="" p25180039="" p25180040="" p25180041="" p25180042="" p25180043="" p25180044="" p25180045="" p25180046="" p25180047="" p25180048="" p25180049="" p25180050="" p25180051="" p25180052="" p25180053="" p25180054="" p25180055="" p25180056="" p25180057="" p25180058="" p25180059="" p25180060="" p25180061="" p25180062="" p25180063="" p25180064="" p25180065="" p25180066="" p25180067="" p25180068="" p25180069="" p25180070="" p25180071="" p25180072="" p25180073="" p25180074="" p25180075="" p25180076="" p25180077="" p25180078="" p25180079="" p25180080="" p25180081="" p25180082="" p25180083="" p25180084="" p25180085="" p25180086="" p25180087="" p25180088="" p25180089="" p25180090="" p25180091="" p25180092="" p25180093="" p25180094="" p25180095="" p25180096="" p25180097="" p25180098="" p25180099="" p25180100="" p25180101="" p25180102="" p25180103="" p25180104="" p25180105="" p25180106="" p25180107="" p25180108="" p25180109="" p25180110="" p25180111="" p25180112="" p25180113="" p25180114="" p25180115="" p25180116="" p25180117="" p25180118="" p25180119="" p25180120="" p25180121="" p25180122="" p25180123="" p25180124="" p25180125="" p25180126="" p25180127="" p25180128="" p25180129="" p25180130="" p25180131="" p25180132="" p25180133="" p25180134="" p25180135="" p25180136="" p25180137="" p25180138="" p25180139="" p25180140="" p25180141="" p25180142="" p25180143="" p25180144="" p25180145="" p25180146="" p25180147="" p25180148="" p25180149="" p25180150="" p25180151="" p25180152="" p25180153="" p25180154="" p25180155="" p25180156="" p25180157="" p25180158="" p25180159="" p25180160="" p25180161="" p25180162="" p25180163="" p25180164="" p25180165="" p25180166="" p25180167="" p25180168="" p25180169="" p25180170="" p25180171="" p25180172="" p25180173="" p25180174="" p25180175="" p25180176="" p25180177="" p25180178="" p25180179="" p25180180="" p25180181="" p25180182="" p25180183="" p25180184="" p25180185="" p25180186="" p25180187="" p25180188="" p25180189="" p25180190="" p25180191="" p25180192="" p25180193="" p25180194="" p25180195="" p25180196="" p25180197="" p25180198="" p25180199="" p25180200="" p25180201="" p25180202="" p25180203="" p25180204="" p25180205="" p25180206="" p25180207="" p25180208="" p25180209="" p25180210="" p25180211="" p25180212="" p25180213="" p25180214="" p25180215="" p25180216="" p25180217="" p25180218="" p25180219="" p25180220="" p25180221="" p25180222="" p25180223="" p25180224="" p25180225="" p25180226="" p25180227="" p25180228="" p25180229="" p25180230="" p25180231="" p25180232="" p25180233="" p25180234="" p25180235="" p25180236="" p25180237="" p25180238="" p25180239="" p25180240="" p25180241="" p25180242="" p25180243="" p25180244="" p25180245="" p25180246="" p25180247="" p25180248="" p25180249="" p25180250="" p25180251="" p25180252="" p25180253="" p25180254="" p25180255="" p25180256="" p25180257="" p25180258="" p25180259="" p25180260="" p25180261="" p25180262="" p25180263="" p25180264="" p25180265="" p25180266="" p25180267="" p25180268="" p25180269="" p25180270="" p25180271="" p25180272="" p25180273="" p25180274="" p25180275="" p25180276="" p25180277="" p25180278="" p25180279="" p25180280="" p25180281="" p25180282="" p25180283="" p25180284="" p25180285="" p25180286="" p25180287="" p25180288="" p25180289="" p25180290="" p25180291="" p25180292="" p25180293="" p25180294="" p25180295="" p25180296="" p25180297="" p25180298="" p25180299="" p25180300="" p25180301="" p25180302="" p25180303="" p25180304="" p25180305="" p25180306="" p25180307="" p25180308="" p25180309="" p25180310="" p25180311="" p25180312="" p25180313="" p25180314="" p25180315="" p25180316="" p25180317="" p25180318="" p25180319="" p25180320="" p25180321="" p25180322="" p25180323="" p25180324="" p25180325="" p25180326="" p25180327="" p25180328="" p25180329="" p25180330="" p25180331="" p25180332="" p25180333="" p25180334="" p25180335="" p25180336="" p25180337="" p25180338="" p25180339="" p25180340="" p25180341="" p25180342="" p25180343="" p25180344="" p25180345="" p25180346="" p25180347="" p25180348="" p25180349="" p25180350="" p25180351="" p25180352="" p25180353="" p25180354="" p25180355="" p25180356="" p25180357="" p25180358="" p25180359="" p25180360="" p25180361="" p25180362="" p25180363="" p25180364="" p25180365="" p25180366="" p25180367="" p25180368="" p25180369="" p25180370="" p25180371="" p25180372="" p25180373="" p25180374="" p25180375="" p25180376="" p25180377="" p25180378="" p25180379="" p25180380="" p25180381="" p25180382="" p25180383="" p25180384="" p25180385="" p25180386="" p25180387="" p25180388="" p25180389="" p25180390="" p25180391="" p25180392="" p25180393="" p25180394="" p25180395="" p25180396="" p25180397="" p25180398="" p25180399="" p25180400="" p25180401="" p25180402="" p25180403="" p25180404="" p25180405="" p25180406="" p25180407="" p25180408="" p25180409="" p25180410="" p25180411="" p25180412="" p25180413="" p25180414="" p25180415="" p25180416="" p25180417="" p25180418="" p25180419="" p25180420="" p25180421="" p25180422="" p25180423="" p25180424="" p25180425="" p25180426="" p25180427="" p25180428="" p25180429="" p25180430="" p25180431="" p25180432="" p25180433="" p25180434="" p25180435="" p25180436="" p25180437="" p25180438="" p25180439="" p25180440="" p25180441="" p25180442="" p25180443="" p25180444="" p25180445="" p25180446="" p25180447="" p25180448="" p25180449="" p25180450="" p25180451="" p25180452="" p25180453="" p25180454="" p25180455="" p25180456="" p25180457="" p25180458="" p25180459="" p25180460="" p25180461="" p25180462="" p25180463="" p25180464="" p25180465="" p25180466="" p25180467="" p25180468="" p25180469="" p25180470="" p25180471="" p25180472="" p25180473="" p25180474="" p25180475="" p25180476="" p25180477="" p25180478="" p25180479="" p25180480="" p25180481="" p25180482="" p25180483="" p25180484="" p25180485="" p25180486="" p25180487="" p25180488="" p25180489="" p25180490="" p25180491="" p25180492="" p25180493="" p25180494="" p25180495="" p25180496="" p25180497="" p25180498="" p25180499="" p25180500="" p25180501="" p25180502="" p25180503="" p25180504="" p25180505="" p25180506="" p25180507="" p25180508="" p25180509="" p25180510="" p25180511="" p25180512="" p25180513="" p25180514="" p25180515="" p25180516="" p25180517="" p25180518="" p25180519="" p25180520="" p25180521="" p25180522="" p25180523="" p25180524="" p25180525="" p25180526="" p25180527="" p25180528="" p25180529="" p25180530="" p25180531="" p25180532="" p25180533="" p25180534="" p25180535="" p25180536="" p25180537="" p25180538="" p25180539="" p25180540="" p25180541="" p25180542="" p25180543="" p25180544="" p25180545="" p25180546="" p25180547="" p25180548="" p25180549="" p25180550="" p25180551="" p25180552="" p25180553="" p25180554="" p25180555="" p25180556="" p25180557="" p25180558="" p25180559="" p25180560="" p25180561="" p25180562="" p25180563="" p25180564="" p25180565="" p25180566="" p25180567="" p25180568="" p25180569="" p25180570="" p25180571="" p25180572="" p25180573="" p25180574="" p25180575="" p25180576="" p25180577="" p25180578="" p25180579="" p25180580="" p25180581="" p25180582="" p25180583="" p25180584="" p25180585="" p25180586="" p25180587="" p25180588="" p25180589="" p25180590="" p25180591="" p25180592="" p25180593="" p25180594="" p25180595="" p25180596="" p25180597="" p25180598="" p25180599="" p25180600="" p25180601="" p25180602="" p25180603="" p25180604="" p25180605="" p25180606="" p25180607="" p25180608="" p25180609="" p25180610="" p25180611="" p25180612="" p25180613="" p25180614="" p25180615="" p25180616="" p25180617="" p25180618="" p25180619="" p25180620="" p25180621="" p25180622="" p25180623="" p25180624="" p25180625="" p25180626="" p25180627="" p25180628="" p25180629="" p25180630="" p25180631="" p25180632="" p25180633="" p25180634="" p25180635="" p25180636="" p25180637="" p25180638="" p25180639="" p25180640="" p25180641="" p25180642="" p25180643="" p25180644="" p25180645="" p25180646="" p25180647="" p25180648="" p25180649="" p25180650="" p25180651="" p25180652="" p25180653="" p25180654="" p25180655="" p25180656="" p25180657="" p25180658="" p25180659="" p25180660="" p25180661="" p25180662="" p25180663="" p25180664="" p25180665="" p25180666="" p25180667="" p25180668="" p25180669="" p25180670="" p25180671="" p25180672="" p25180673="" p25180674="" p25180675="" p25180676="" p25180677="" p25180678="" p25180679="" p25180680="" p25180681="" p25180682="" p25180683="" p25180684="" p25180685="" p25180686="" p25180687="" p25180688="" p25180689="" p25180690="" p25180691="" p25180692="" p25180693="" p25180694="" p25180695="" p25180696="" p25180697="" p25180698="" p25180699="" p25180700="" p25180701="" p25180702="" p25180703="" p25180704="" p25180705="" p25180706="" p25180707="" p25180708="" p25180709="" p25180710="" p25180711="" p25180712="" p25180713="" p25180714="" p25180715="" p25180716="" p25180717="" p25180718="" p25180719="" p25180720="" p25180721="" p25180722="" p25180723="" p25180724="" p25180725="" p25180726="" p25180727="" p25180728="" p25180729="" p25180730="" p25180731="" p25180732="" p25180733="" p25180734="" p25180735="" p25180736="" p25180737="" p25180738="" p25180739="" p25180740="" p25180741="" p25180742="" p25180743="" p25180744="" p25180745="" p25180746="" p25180747="" p25180748="" p25180749="" p25180750="" p25180751="" p25180752="" p25180753="" p25180754="" p25180755="" p25180756="" p25180757="" p25180758="" p25180759="" p25180760="" p25180761="" p25180762="" p25180763="" p25180764="" p25180765="" p25180766="" p25180767="" p25180768="" p25180769="" p25180770="" p25180771="" p25180772="" p25180773="" p25180774="" p25180775="" p25180776="" p25180777="" p25180778="" p25180779="" p25180780="" p25180781="" p25180782="" p25180783="" p25180784="" p25180785="" p25180786="" p25180787="" p25180788="" p25180789="" p25180790="" p25180791="" p25180792="" p25180793="" p25180794="" p25180795="" p25180796="" p25180797="" p25180798="" p25180799="" p25180800="" p25180801="" p25180802="" p25180803="" p25180804="" p25180805="" p25180806="" p25180807="" p25180808="" p25180809="" p25180810="" p25180811="" p25180812="" p25180813="" p25180814="" p25180815="" p25180816="" p25180817="" p25180818="" p25180819="" p25180820="" p25180821="" p25180822="" p25180823="" p25180824="" p25180825="" p25180826="" p25180827="" p25180828="" p25180829="" p25180830="" p25180831="" p25180832="" p25180833="" p25180834="" p25180835="" p25180836="" p25180837="" p25180838="" p25180839="" p25180840="" p25180841="" p25180842="" p25180843="" p25180844="" p25180845="" p25180846="" p25180847="" p25180848="" p25180849="" p25180850="" p25180851="" p25180852="" p25180853="" p25180854="" p25180855="" p25180856="" p25180857="" p25180858="" p25180859="" p25180860="" p25180861="" p25180862="" p25180863="" p25180864="" p25180865="" p25180866="" p25180867="" p25180868="" p25180869="" p25180870="" p25180871="" p25180872="" p25180873="" p25180874="" p25180875="" p25180876="" p25180877="" p25180878="" p25180879="" p25180880="" p25180881="" p25180882="" p25180883="" p25180884="" p25180885="" p25180886="" p25180887="" p25180888="" p25180889="" p25180890="" p25180891="" p25180892="" p25180893="" p25180894="" p25180895="" p25180896="" p25180897="" p25180898="" p25180899="" p25180900="" p25180901="" p25180902="" p25180903="" p25180904="" p25180905="" p25180906="" p25180907="" p25180908="" p25180909="" p25180910="" p25180911="" p25180912="" p25180913="" p25180914="" p25180915="" p25180916="" p25180917="" p25180918="" p25180919="" p25180920="" p25180921="" p25180922="" p25180923="" p25180924="" p25180925="" p25180926="" p25180927="" p25180928="" p25180929="" p25180930="" p25180931="" p25180932="" p25180933="" p25180934="" p25180935="" p25180936="" p25180937="" p25180938="" p25180939="" p25180940="" p25180941="" p25180942="" p25180943="" p25180944="" p25180945="" p25180946="" p25180947="" p25180948="" p25180949="" p25180950="" p25180951="" p25180952="" p25180953="" p25180954="" p25180955="" p25180956="" p25180957="" p25180958="" p25180959="" p25180960="" p25180961="" p25180962="" p25180963="" p25180964="" p25180965="" p25180966="" p25180967="" p25180968="" p25180969="" p25180970="" p25180971="" p25180972="" p25180973="" p25180974="" p25180975="" p25180976="" p25180977="" p25180978="" p25180979="" p25180980="" p25180981="" p25180982="" p25180983="" p25180984="" p25180985="" p25180986="" p25180987="" p25180988="" p25180989="" p25180990="" p25180991="" p25180992="" p25180993="" p25180994="" p25180995="" p25180996="" p25180997="" p25180998="" p25180999="" p25181000="" p25181001="" p25181002="" p25181003="" p25181004="" p25181005="" p25181006="" p25181007="" p25181008="" p25181009="" p25181010="" p25181011="" p25181012="" p25181013="" p25181014="" p25181015="" p25181016="" p25181017="" p25181018="" p25181019="" p25181020="" p25181021="" p25181022="" p25181023="" p25181024="" p25181025="" p25181026="" p25181027="" p25181028="" p25181029="" p25181030="" />
+Available at <a href="http://www.ietf.org/rfc/rfc2046.txt">
+http://www.ietf.org/rfc/rfc2046.txt</a>. Note that this RFC
+obsoletes RFC1521, RFC1522, and RFC1590.</dd>
+
+<dt><a name="ref-rfc2119" id="ref-rfc2119"><b>
+[RFC2119]</b></a></dt>
+
+<dd><a href="http://www.ietf.org/rfc/rfc2119.txt">"RFC2119: Key words for use in RFCs to Indicate Requirement
+Levels"</a>, S. Bradner, March 1997.<br />
+Available at: <a href="http://www.ietf.org/rfc/rfc2119.txt">
+http://www.ietf.org/rfc/rfc2119.txt</a></dd>
+
+<dt><a name="ref-rfc2376" id="ref-rfc2376"><b>
+[RFC2376]</b></a></dt>
+
+<dd><a href="http://www.ietf.org/rfc/rfc2376.txt">"RFC2376: XML Media Types"</a>, E. Whitehead, M. Murata, July
+1998.<br />
+Available at: <a href="http://www.ietf.org/rfc/rfc2376.txt">
+http://www.ietf.org/rfc/rfc2376.txt</a></dd>
+
+<dt><a name="ref-rfc2396" id="ref-rfc2396"><b>
+[RFC2396]</b></a></dt>
+
+<dd><a href="http://www.ietf.org/rfc/rfc2396.txt">"RFC2396: Uniform Resource Identifiers (URI): Generic
+Syntax"</a>, T. Berners-Lee, R. Fielding, L. Masinter, August
+1998.<br />
+This document updates RFC1738 and RFC1808.<br />
+Available at: <a href="http://www.ietf.org/rfc/rfc2396.txt">
+http://www.ietf.org/rfc/rfc2396.txt</a></dd>
+
+<dt><a name="ref-xml" id="ref-xml"><b>[XML]</b></a></dt>
+
+<dd><a href="http://www.w3.org/TR/REC-xml">"Extensible Markup Language (XML) 1.0 Specification"</a>, T.
+Bray, J. Paoli, C. M. Sperberg-McQueen, 10 February 1998.<br p8179834="" p8179835="" p8179836="" p8179837="" p8179838="" p8179839="" p8179840="" p8179841="" p8179842="" p8179843="" p8179844="" p8179845="" p8179846="" p8179847="" p8179848="" p8179849="" p8179850="" p8179851="" p8179852="" p8179853="" p8179854="" p8179855="" p8179856="" p8179857="" p8179858="" p8179859="" p8179860="" p8179861="" p8179862="" p8179863="" p8179864="" p8179865="" p8179866="" p8179867="" p8179868="" p8179869="" p8179870="" p8179871="" p8179872="" p8179873="" p8179874="" p8179875="" p8179876="" p8179877="" p8179878="" p8179879="" p8179880="" p8179881="" p8179882="" p8179883="" p8179884="" p8179885="" p8179886="" p8179887="" p8179888="" p8179889="" p8179890="" p8179891="" p8179892="" p8179893="" p8179894="" p8179895="" p8179896="" p8179897="" p8179898="" p8179899="" p8179900="" p8179901="" p8179902="" p8179903="" p8179904="" p8179905="" p8179906="" p8179907="" p8179908="" p8179909="" p8179910="" p8179911="" p8179912="" p8179913="" p8179914="" p8179915="" p8179916="" p8179917="" p8179918="" p8179919="" p8179920="" p8179921="" p8179922="" p8179923="" p8179924="" p8179925="" p8179926="" p8179927="" p8179928="" p8179929="" p8179930="" p8179931="" p8179932="" p8179933="" p8179934="" p8179935="" p8179936="" p8179937="" p8179938="" p8179939="" p8179940="" p8179941="" p8179942="" p8179943="" p8179944="" p8179945="" p8179946="" p8179947="" p8179948="" p8179949="" p8179950="" p8179951="" p8179952="" p8179953="" p8179954="" p8179955="" p8179956="" p8179957="" p8179958="" p8179959="" p8179960="" p8179961="" p8179962="" p8179963="" p8179964="" p8179965="" p8179966="" p8179967="" p8179968="" p8179969="" p8179970="" p8179971="" p8179972="" p8179973="" p8179974="" p8179975="" p8179976="" p8179977="" p8179978="" p8179979="" p8179980="" p8179981="" p8179982="" p8179983="" p8179984="" p8179985="" p8179986="" p8179987="" p8179988="" p8179989="" p8179990="" p8179991="" p8179992="" p8179993="" p8179994="" p8179995="" p8179996="" p8179997="" p8179998="" p8179999="" p8180000="" p8180001="" p8180002="" p8180003="" p8180004="" p8180005="" p8180006="" p8180007="" p8180008="" p8180009="" p8180010="" p8180011="" p8180012="" p8180013="" p8180014="" p8180015="" p8180016="" p8180017="" p8180018="" p8180019="" p8180020="" p8180021="" p8180022="" p8180023="" p8180024="" p8180025="" p8180026="" p8180027="" p8180028="" p8180029="" p8180030="" p8180031="" p8180032="" p8180033="" p8180034="" p8180035="" p8180036="" p8180037="" p8180038="" p8180039="" p8180040="" p8180041="" p8180042="" p8180043="" p8180044="" p8180045="" p8180046="" p8180047="" p8180048="" p8180049="" p8180050="" p8180051="" p8180052="" p8180053="" p8180054="" p8180055="" p8180056="" p8180057="" p8180058="" p8180059="" p8180060="" p8180061="" p8180062="" p8180063="" p8180064="" p8180065="" p8180066="" p8180067="" p8180068="" p8180069="" p8180070="" p8180071="" p8180072="" p8180073="" p8180074="" p8180075="" p8180076="" p8180077="" p8180078="" p8180079="" p8180080="" p8180081="" p8180082="" p8180083="" p8180084="" p8180085="" p8180086="" p8180087="" p8180088="" p8180089="" p8180090="" p8180091="" p8180092="" p8180093="" p8180094="" p8180095="" p8180096="" p8180097="" p8180098="" p8180099="" p8180100="" p8180101="" p8180102="" p8180103="" p8180104="" p8180105="" p8180106="" p8180107="" p8180108="" p8180109="" p8180110="" p8180111="" p8180112="" p8180113="" p8180114="" p8180115="" p8180116="" p8180117="" p8180118="" p8180119="" p8180120="" p8180121="" p8180122="" p8180123="" p8180124="" p8180125="" p8180126="" p8180127="" p8180128="" p8180129="" p8180130="" p8180131="" p8180132="" p8180133="" p8180134="" p8180135="" p8180136="" p8180137="" p8180138="" p8180139="" p8180140="" p8180141="" p8180142="" p8180143="" p8180144="" p8180145="" p8180146="" p8180147="" p8180148="" p8180149="" p8180150="" p8180151="" p8180152="" p8180153="" p8180154="" p8180155="" p8180156="" p8180157="" p8180158="" p8180159="" p8180160="" p8180161="" p8180162="" p8180163="" p8180164="" p8180165="" p8180166="" p8180167="" p8180168="" p8180169="" p8180170="" p8180171="" p8180172="" p8180173="" p8180174="" p8180175="" p8180176="" p8180177="" />
+Available at: <a href="http://www.w3.org/TR/REC-xml">
+http://www.w3.org/TR/REC-xml</a></dd>
+
+<dt><a name="ref-xmlns" id="ref-xmlns"><b>[XMLNAMES]</b></a></dt>
+
+<dd><a href="http://www.w3.org/TR/REC-xml-names">"Namespaces in XML"</a>, T. Bray, D. Hollander, A. Layman, 14
+January 1999.<br />
+XML namespaces provide a simple method for qualifying names used
+in XML documents by associating them with namespaces identified
+by URI.<br />
+Available at: <a href="http://www.w3.org/TR/REC-xml-names">
+http://www.w3.org/TR/REC-xml-names</a></dd>
+
+</dl>
+<p><a href="http://www.w3.org/WAI/WCAG1AAA-Conformance"
+title="Explanation of Level Triple-A Conformance">
+<img height="32" width="88" 
+src="wcag1AAA.gif"
+alt="Level Triple-A conformance icon, W3C-WAI Web Content Accessibility Guidelines 1.0" /></a></p>
+<div class="navbar">
+  <hr />
+  <a href="#toc">table of contents</a> 
+</div>
+</body>
+</html>
+
