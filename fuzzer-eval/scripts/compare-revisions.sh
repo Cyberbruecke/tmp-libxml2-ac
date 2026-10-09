@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Show that the sinks behave identically across libxml2 revisions.
+# Compare the sinks' operation counts across libxml2 revisions.
 #
 #   scripts/compare-revisions.sh v2.15.0 c6324894 latest
 #

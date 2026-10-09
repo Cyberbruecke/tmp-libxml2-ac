@@ -1,4 +1,4 @@
-/* Report exact C1 scan iterations for a file — used to score fuzzer corpora. */
+/* measure_c2.c: report inclusive C14N1D3 scan iterations for one input file. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <libxml/parser.h>

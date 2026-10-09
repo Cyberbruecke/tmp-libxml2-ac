@@ -1,77 +1,39 @@
 /*
- * mut_xml_suite.c — a GENERIC XML diversity-operator suite. One mutator, no per-sink tuning.
+ * mut_xml_suite.c: a generic XML mutation suite, used unchanged against every sink.
  *
- * WHY THIS EXISTS
- * ---------------
- * The per-sink operators (mut_c1_fresh_ns, mut_c2_two_axis, mut_c5_fresh_attr, mut_c7_deepen)
- * each attack one construct, and choosing which one to point at which sink is itself knowledge
- * derived from having analysed the sink. A supervisor review identified that as circular: the
- * operator finds the bug because we built it knowing where the bug was.
+ * The per-sink operators (mut_c*_*.c) each target one construct, and choosing which
+ * to point at which sink requires knowing where the bug is. This suite does not: it
+ * draws uniformly from XML's name-bearing and structural constructs,
  *
- * This file removes that. It offers a MENU over XML's name-bearing and structural constructs,
- * picks uniformly at random, and is pointed at every sink unchanged. Nothing here encodes which
- * construct matters for which sink -- that is precisely what the experiment is meant to find
- * out.
- *
- * THE OPERATIONS, and why these
- * -----------------------------
- * XML has a small, enumerable set of places a name can appear and a document can grow:
  *   OP_NS     fresh namespace declarations on a start-tag
  *   OP_ATTR   fresh attributes on an element
  *   OP_CHILD  additional child elements
  *   OP_NEST   deeper nesting
- *   OP_XPATH  a fresh XPath location path        (split-input harnesses only, see below)
- * A competent engineer writing an XML mutator suite, with no knowledge of libxml2, would
- * enumerate roughly this list from the XML and XPath specifications alone.
+ *   OP_XPATH  a fresh XPath location path (split-input harnesses only)
  *
- * OP_XPATH AND SPLIT INPUTS. Some harnesses take TWO attacker-controlled halves rather than one:
- * an XML Signature XPath transform carries the expression inside the signed document, so the
- * verifier evaluates an attacker expression against an attacker document. Our C3 harness models
- * that with the input format `expression \n document`. Built with -DSUITE_SPLIT_LINE1 the suite
- * understands that format: OP_XPATH replaces line 1 and leaves the document untouched, and every
- * other operation mutates the document and copies line 1 through verbatim.
+ * which is roughly the list one would derive from the XML and XPath specifications
+ * without knowing libxml2.
  *
- * Knowing that a harness reads two fields is INTERFACE knowledge -- the same thing every
- * structure-aware fuzzer is given when it is handed a grammar or a protocol description. It is
- * not knowledge of which axis is expensive. The generator draws uniformly over all THIRTEEN axes
- * named in XPath 1.0 REC-xpath-19991116 section 2.2, in the order the specification lists them,
- * with no weighting. If preceding-sibling is found to be superlinear, the search found it.
+ * Split inputs. An XML Signature XPath transform carries its expression inside the
+ * document, and the XPlode harness models that as `expression \n document`. Built
+ * with -DSUITE_SPLIT_LINE1, OP_XPATH replaces line 1 and the other operations mutate
+ * only the document. Knowing the input has two fields is interface knowledge, like
+ * a grammar given to any structure-aware fuzzer; it says nothing about which axis is
+ * expensive. OP_XPATH draws uniformly from all thirteen axes of XPath 1.0 (section
+ * 2.2), unweighted.
  *
- * WHAT IS DELIBERATELY ABSENT
- * ---------------------------
- * Each per-sink operator carried one bug-derived refinement, measured by us after analysing
- * the sink. None of them appear here:
- *   - attributes are added to a RANDOMLY CHOSEN element, not concentrated on one. (Concentration
- *     came from our measurement that dilution destroys the per-element quadratic.)
- *   - namespaces and children are weighted EQUALLY, not 2:1. (The weighting came from knowing
- *     C2's cost is K*N^2, so the N axis is worth quadratically more.)
- *   - no axis, node test or predicate form is preferred over any other in OP_XPATH.
+ * Compared with the per-sink operators, the suite does not concentrate attributes on
+ * one element, weights namespaces and children equally, and prefers no XPath axis,
+ * node test or predicate. The one structural rule it keeps is declare-and-use (see
+ * OP_NS), which comes from the XML and C14N specifications.
  *
- * The ONE construct that is deliberately PRESENT is declare-and-use: a namespace declaration is
- * emitted together with a reference to it. That is a property of real XML documents and is
- * normative in RFC 3741's definition of a "visibly utilized" declaration, so it is domain
- * knowledge rather than knowledge of libxml2 -- see the longer note at OP_NS.
+ * Selection is uniform and does not adapt, so the suite cannot learn which operation
+ * pays off on a given sink.
  *
- * SELECTION IS UNIFORM AND NON-ADAPTIVE, on purpose. An operator that noticed which operation
- * was paying off and shifted toward it would re-acquire the knowledge through the side door,
- * and the experiment would be circular again by a subtler route.
+ * -DSUITE_DIV=n sets the batch size to the existing construct count divided by n.
+ * The default, 1, doubles the structure on each application.
  *
- * WHAT IT COSTS. Roughly 1/4 of mutations are relevant to any given sink, so expect ~4x more
- * executions than a targeted operator. Measured context: the targeted operator reached the
- * reference payload in ~260,000 executions, so ~4x is ~1M -- still 60x less than the 62M the
- * no-operator arms consumed without finding anything. Quantifying that penalty IS a result: it
- * says ignorance costs a small constant factor, not infinity.
- *
- * BATCH GROWTH. -DSUITE_DIV=n divides the existing-construct count to size each batch.
- * Default 1 ("double the structure") is the naive choice and the easiest to defend; 4 grows
- * cost ~1.56x per application instead of ~4x, trading speed for finer granularity near the
- * execution-time ceiling. Run both if the constant is questioned.
- *
- * Build:
- *   cc -O2 -shared -fPIC -I ~/github/xml/AFLplusplus/include \
- *      mut_xml_suite.c -o mut_xml_suite.so
- *   cc -O2 -shared -fPIC -DSUITE_SPLIT_LINE1 -I ~/github/xml/AFLplusplus/include \
- *      mut_xml_suite.c -o mut_xml_suite_split.so      # for the C3 `expr \n doc` harness
+ * scripts/build-engines.sh builds it for each engine.
  */
 #define _GNU_SOURCE
 #include <stdio.h>
@@ -96,43 +58,9 @@ typedef struct { uint8_t *out; uint8_t *out2; unsigned long ctr; int last_tag; }
 
 #ifdef SUITE_ADAPTIVE
 /* ---------------------------------------------------------------------------------------------
- * -DSUITE_ADAPTIVE: let the FUZZER'S OWN FEEDBACK choose among this suite's parameters, instead
- * of drawing them uniformly.
- *
- * WHY THIS IS NOT CIRCULAR. The forbidden thing is knowledge WE hold from having analysed the
- * sinks by hand. Knowledge the mutator acquires AT RUNTIME, from the target under test, is what
- * every feedback-driven fuzzer already does -- AFL keeps the inputs that scored and re-mutates
- * them. So an operator that learns "this construct pays off on this target" is learning from the
- * target, not being told the answer by us.
- *
- * WHICH PARAMETERS, AND WHY THESE THREE. Not our choice: they are the axes AFL's OWN havoc
- * already parameterises, lifted from byte level to structure level.
- *
- *   AFL havoc (src/afl-fuzz-one.c)                    this suite
- *   ---------------------------------------------     ----------------------------------
- *   WHICH operator  `mutation_array[r]`      :2442     which structural operation
- *   HOW MANY edits  `use_stacking = 1 + ...` :2385     batch size
- *   WHERE in buffer `rand_below(temp_len)`   :2451     which element to target
- *
- * MOpt adapts only the first of the three. Taking the decomposition from the reference
- * implementation rather than from our own judgement is what keeps the axis list defensible: each
- * axis is present because AFL has it, not because we know which one a particular sink needs.
- *
- * REWARD. afl_custom_queue_new_entry fires when an input reaches the queue. Under
- * AFL_CUSTOM_MUTATOR_ONLY=1 this suite is the ONLY generator, so the parameters used on the
- * preceding call are the ones responsible. And because the cputime waypoint writes cost
- * monotonically into the coverage bitmap, "new queue entry" is largely "new cost bucket" -- a
- * coverage signal doubles as a cost signal here. It is NOISY: some entries are genuinely new
- * edges rather than new cost, so the credit assignment is approximate. Stated, not hidden.
- *
- * ALGORITHM. Independent epsilon-greedy per axis: with probability EPS draw uniformly, otherwise
- * take the arm with the highest observed reward rate (finds+1)/(tries+1). Laplace-smoothed so an
- * untried arm is not permanently starved, and EPS never decays, so exploration has a floor and
- * the search cannot lock onto one arm after an early fluke. EPS = 15 is a round number and is
- * NOT tuned -- tuning it against these sinks would reintroduce exactly the circularity this
- * variant exists to avoid.
- *
- * PRIORS ARE UNIFORM AND IDENTICAL FOR ALL FIVE SINKS. One binary, no per-sink initialisation.
+ * -DSUITE_ADAPTIVE: choose the operation, target element and batch size by
+ * epsilon-greedy bandit on queue feedback instead of uniformly. Not used by this
+ * artifact; every build here is uniform.
  * ------------------------------------------------------------------------------------------- */
 #include <stdio.h>
 
@@ -176,7 +104,7 @@ static int bandit_pick(int cp) {
     return best;
 }
 
-/* AFL calls this after an input we produced is added to the queue: credit the parameters that
+/* AFL calls this after an input this suite produced is added to the queue: credit the parameters that
  * produced it. Returns 0 = file contents unchanged. */
 uint8_t afl_custom_queue_new_entry(void *data, const uint8_t *fn_new, const uint8_t *fn_orig) {
     (void) data; (void) fn_new; (void) fn_orig;
@@ -185,9 +113,7 @@ uint8_t afl_custom_queue_new_entry(void *data, const uint8_t *fn_new, const uint
     return 0;
 }
 
-/* What it learned, so the campaign can REPORT the weights rather than only the outcome. If the
- * per-sink weights end up resembling the hand-derived refinements, that resemblance is the
- * result -- it would show the knowledge was recoverable at runtime. */
+/* Print the learned weights (SUITE_ADAPTIVE only). */
 static void bandit_log(void) {
     const char *path = getenv("SUITE_ADAPTIVE_LOG");
     if (!path) return;
@@ -222,10 +148,9 @@ void *afl_custom_init(void *afl, unsigned int seed) {
     return d;
 }
 
-/* How many of `needle` are already present -> batch size. Keeps the RELATIVE gain per
- * application constant; a fixed batch against a super-linear cost is a shrinking relative gain
- * and stalls against any quantised objective. That is a property of quantised waypoints in
- * general, not of any particular sink. */
+/* Batch size from the count of `needle` already present, so each application grows
+ * the structure by a constant ratio. A fixed batch gives a shrinking relative gain
+ * against a superlinear cost. */
 static int batch_for(const char *hay, size_t n, const char *needle, size_t nl, int floor_k) {
     int count = 0;
     const char *p = hay, *e = hay + n;
@@ -241,9 +166,8 @@ static int batch_for(const char *hay, size_t n, const char *needle, size_t nl, i
     return k;
 }
 
-/* BATCH axis (AFL's "how many edits" lifted to structure). Default build: always proportional.
- * -DSUITE_ADAPTIVE: the fuzzer chooses between growing proportionally to what is already there
- * and adding a small fixed amount. Both arms start equally likely. */
+/* Batch size: proportional to what is already present. Under -DSUITE_ADAPTIVE the
+ * bandit can also pick a small fixed batch. */
 #ifdef SUITE_ADAPTIVE
 static int batch_axis(const char *hay, size_t n, const char *needle, size_t nl) {
     if (bandit_pick(CP_BATCH) == 1) return 1 + (rand() % 8);            /* small fixed */
@@ -300,8 +224,8 @@ static void pick_elem_name(const char *hay, size_t n, char *nm, size_t nmsz) {
 }
 
 #ifdef SUITE_SPLIT_LINE1
-/* The thirteen axes of XPath 1.0, REC-xpath-19991116 section 2.2, in specification order.
- * Drawn from UNIFORMLY. No axis is preferred, and none is omitted. */
+/* The thirteen axes of XPath 1.0 (REC-xpath-19991116, section 2.2), in specification
+ * order, drawn uniformly. */
 static const char *const kAxes[] = {
     "ancestor", "ancestor-or-self", "attribute", "child", "descendant", "descendant-or-self",
     "following", "following-sibling", "namespace", "parent", "preceding", "preceding-sibling",
@@ -310,7 +234,7 @@ static const char *const kAxes[] = {
 #define N_AXES ((int) (sizeof kAxes / sizeof kAxes[0]))
 
 /* A node test: either a name borrowed from the document, or one of the wildcard/kind tests the
- * grammar allows. Borrowing matters -- `child::*` matches, `child::zzz` matches nothing, and an
+ * grammar allows. Borrowing matters: `child::*` matches, `child::zzz` matches nothing, and an
  * expression that selects nothing exercises nothing. */
 static void gen_node_test(const char *doc, size_t dlen, char *nt, size_t ntsz) {
     switch (rand() % 4) {
@@ -373,8 +297,8 @@ static size_t fuzz_doc(st_t *d, uint8_t *buf, size_t buf_size, uint8_t **out_buf
     char  *hay = (char *) buf;
     size_t o = 0;
 
-    /* BOOTSTRAP. A trivial input such as "<a/>" has no interior to grow. Emit a minimal
-     * two-level document so every operation below has something to anchor on. */
+    /* An input such as "<a/>" has no interior to grow, so start from a minimal
+     * two-level document. */
     if (count_start_tags(hay, buf_size) < 1 || buf_size < 8) {
         int n = snprintf((char *) d->out, MAX_OUT, "<r><e/></r>");
         if (n <= 0) return buf_size;
@@ -384,11 +308,9 @@ static size_t fuzz_doc(st_t *d, uint8_t *buf, size_t buf_size, uint8_t **out_buf
 
     if (op == OP_NEST) {
         /* Wrap the root's body. Wrapping exactly the body keeps the result balanced whatever
-         * the body contains. Plain elements only -- no namespaces, no attributes. */
-        /* Find the ROOT element's '>', not the XML declaration's. memchr from offset 0 hits
-         * "<?xml ... ?>" first, so wrapping started in the wrong place and produced mismatched
-         * tags -- C1's seed carries a declaration, the other seeds do not, which is why only C1
-         * broke. Skip any leading <? ... ?> and <!-- ... --> first. */
+         * the body contains. Plain elements only, with no namespaces or attributes. */
+        /* Find the root element's '>', skipping any leading <? ... ?> and
+         * <!-- ... -->, so an XML declaration is not mistaken for the root. */
         const char *scan = hay, *end = hay + buf_size;
         while (scan < end && *scan != '<') scan++;
         while (scan + 1 < end && (scan[1] == '?' || scan[1] == '!')) {
@@ -417,9 +339,8 @@ static size_t fuzz_doc(st_t *d, uint8_t *buf, size_t buf_size, uint8_t **out_buf
         if (open_at + (size_t) k * 3 + body + (size_t) k * 4 + tail >= max_size) return buf_size;
 
         memcpy(d->out, hay, open_at); o = open_at;
-        /* Half the time, nest with NAMESPACED wrappers rather than plain <w>. Nesting plain
-         * elements can never exercise namespace machinery at depth; alternating is what a
-         * generic suite covering XML's constructs would do, and costs no target knowledge. */
+        /* Half the time, nest with namespaced wrappers rather than plain <w>, so depth
+         * and namespaces can combine. */
         int ns_nest = rand() % 2;
         for (int i = 0; i < k; i++) {
             if (ns_nest) {
@@ -446,11 +367,8 @@ static size_t fuzz_doc(st_t *d, uint8_t *buf, size_t buf_size, uint8_t **out_buf
     }
 
     if (op == OP_CHILD) {
-        /* Reuse a name already present in the document rather than always emitting <c/>.
-         * Mimicking existing structure is generic mutator practice and needs no knowledge of
-         * the target: without it the suite could never produce the element name a given
-         * application happens to care about. (Measured: with a hardcoded <c/> the suite scored
-         * the seed value on C3, whose harness matches elements named `a`.) */
+        /* Reuse an element name already in the document rather than a fixed one, so
+         * the suite can produce names the application actually matches on. */
         char nm[64] = "c";
         pick_elem_name(hay, buf_size, nm, sizeof nm);
         /* Additional children, spliced before the last tag so they land inside the document. */
@@ -470,14 +388,14 @@ static size_t fuzz_doc(st_t *d, uint8_t *buf, size_t buf_size, uint8_t **out_buf
         return o;
     }
 
-    /* OP_NS and OP_ATTR both splice into a start-tag. WHICH start-tag is the WHERE axis:
-     * uniformly random in the default build, learned in the -DSUITE_ADAPTIVE build. */
+    /* OP_NS and OP_ATTR splice into a start-tag chosen uniformly at random (by the
+     * bandit under -DSUITE_ADAPTIVE). */
     int tags = count_start_tags(hay, buf_size);
     if (tags < 1) return buf_size;
     int tgt = rand() % tags;
 #ifdef SUITE_ADAPTIVE
-    /* arm 1 = reuse the previous target (concentrate), arm 0 = draw a fresh one (spread).
-     * Both arms start equally likely; the fuzzer's feedback decides which survives. */
+    /* Bandit choice 1 reuses the previous target element (concentrate), choice 0 draws
+     * a fresh one (spread). Both start equally likely. */
     if (bandit_pick(CP_WHERE) == 1 && d->last_tag >= 0 && d->last_tag < tags) tgt = d->last_tag;
     d->last_tag = tgt;
 #endif
@@ -491,17 +409,12 @@ static size_t fuzz_doc(st_t *d, uint8_t *buf, size_t buf_size, uint8_t **out_buf
         int k = SUITE_BATCH(hay, buf_size, "xmlns:", 6);
         for (int i = 0; i < k; i++) {
             unsigned long idx = d->ctr++;
-            /* DECLARE AND USE. Real XML documents do not carry namespace declarations nothing
-             * references -- a prefix is declared in order to be applied to an element or
-             * attribute name. A mutator that mimics real documents therefore emits the pair,
-             * and RFC 3741 makes the same notion normative for canonicalisation via its
-             * definition of a "visibly utilized" declaration.
-             *
-             * This is DOMAIN knowledge (the XML/C14N specs, public and citable), not
-             * VULNERABILITY knowledge (libxml2's implementation). The distinction matters:
-             * omitting the reference left both C1 and C7 unreachable by this suite, and C7 was
-             * NOT a sink we designed this pairing for -- that it also unlocks reconcile is
-             * evidence the principle is general rather than reverse-engineered from one bug. */
+            /* Declare and use: emit each namespace declaration together with a name that
+             * references it. Real documents declare a prefix to use it, and RFC
+             * 3741 makes this normative for canonicalisation through its definition of a
+             * "visibly utilized" declaration. This is knowledge of the XML and C14N
+             * specifications, not of libxml2. Without the reference, the suite reached
+             * neither exclusive C14N1D3 nor Wreckoncile. */
             int n = snprintf((char *) d->out + o, MAX_OUT - o,
                              " xmlns:n%lu=\"u:%lu\" n%lu:a%lu=\"\"", idx, idx, idx, idx);
             if (n <= 0 || o + (size_t) n + tail_len >= max_size) break;
@@ -590,31 +503,10 @@ size_t afl_custom_fuzz(void *data, uint8_t *buf, size_t buf_size, uint8_t **out_
 }
 
 /* ---------------------------------------------------------------------------------------------
- * HAVOC ROTATION. Exporting afl_custom_havoc_mutation makes AFL++ include this suite as one
- * operator inside havoc's own mutation STACK, alongside its byte-level operators, instead of
- * confining it to a separate stage. AFL++ detects the pair automatically (it sets
- * `stacked_custom` when the symbol is present, src/afl-fuzz-one.c:2243) -- there is no env var.
- *
- * WHY THIS IS LEGITIMATE. It is the documented custom-mutator API (docs/custom_mutators.md), not
- * knowledge about libxml2. It changes HOW OFTEN the operator is applied and what it composes
- * with, never what it generates.
- *
- * WHY IT MATTERS HERE. Without it the suite and havoc alternate as separate stages, so a
- * structural edit is never composed with byte edits inside one input. With it they interleave --
- * which is the configuration MOpt actually schedules over, and therefore the only way the suite
- * can participate in the adaptive rotation at all.
- *
- * GUARDED BEHIND -DSUITE_HAVOC_HOOK, AND OFF BY DEFAULT. FuzzFactory can only apply the suite via
- * AFL_POST_LIBRARY, where afl_postprocess runs ONCE on the final buffer AFTER havoc has finished.
- * If the AFL++ build stacked the suite inside havoc while the ff build post-processed it, the
- * two engines' positive arms would differ in HOW the operator is applied as well as in engine --
- * reintroducing exactly the confound batch 5's `pos-ff` rows exist to remove. The default build
- * therefore matches ff's mechanism (separate application), and the stacked behaviour lives in its
- * own binary for its own arm.
- *
- * The probability is deliberately NOT adaptive. Returning a fixed value keeps selection
- * non-adaptive for the same reason the operator menu is uniform: an operator that noticed which
- * of its own choices paid off would re-acquire target knowledge through a side door.
+ * -DSUITE_HAVOC_HOOK exports afl_custom_havoc_mutation, which makes AFL++ apply the
+ * suite as one operator inside havoc's mutation stack (src/afl-fuzz-one.c:2243)
+ * rather than as a separate stage. Not used by this artifact: the default build
+ * applies the suite as a separate stage, matching how PerfFuzz applies it.
  * ------------------------------------------------------------------------------------------- */
 #ifdef SUITE_HAVOC_HOOK
 size_t afl_custom_havoc_mutation(void *data, uint8_t *buf, size_t buf_size,
@@ -624,15 +516,8 @@ size_t afl_custom_havoc_mutation(void *data, uint8_t *buf, size_t buf_size,
     return afl_custom_fuzz(d, buf, buf_size, out_buf, NULL, 0, max_size);
 }
 
-/* Percent chance this suite is applied at any one step of a havoc stack.
- *
- * 6 is AFL++'s OWN DOCUMENTED DEFAULT for this callback ("By default, it is 6%",
- * docs/custom_mutators.md), and its shipped reference mutator returns 5
- * (custom_mutators/examples/example.c:291). An earlier version of this file returned 20, a
- * number with no derivation behind it -- 3-4x the convention, which would have quietly made this
- * arm "mostly structure" rather than "havoc plus some structure" and invited exactly the
- * question of where the constant came from. Adopting the upstream default means the value is
- * cited rather than chosen. */
+/* Percent chance the suite is applied at a havoc step: AFL++'s documented default
+ * for this callback (docs/custom_mutators.md, "By default, it is 6%"). */
 uint8_t afl_custom_havoc_mutation_probability(void *data) {
     (void) data;
     return 6;
@@ -648,20 +533,11 @@ void afl_custom_deinit(void *data) {
 }
 
 /* ---------------------------------------------------------------------------------------------
- * -DPOST_BUILD: expose the SAME suite through FuzzFactory's AFL_POST_LIBRARY ABI.
- *
- * WHY. FuzzFactory is AFL 2.52b and has no AFL_CUSTOM_MUTATOR_LIBRARY. Without this, the
- * positive arm on FuzzFactory had to use the per-sink `post_c*` operators -- which are the
- * INFORMED, bug-derived operators -- while the positive arm on AFL++ used this generic suite.
- * Two different kinds of arm under one label makes the comparison meaningless. Building both
- * ABIs from one source means "pos" denotes the same generator on both engines.
- *
- * TWO DIFFERENCES REMAIN, and both are engine limitations rather than choices:
- *   1. afl_postprocess runs AFTER havoc and cannot disable it, so the FuzzFactory positive arm
- *      is "suite + havoc" where the AFL++ arm can be "suite only" (AFL_CUSTOM_MUTATOR_ONLY).
- *   2. a post-processor is applied to EVERY candidate before execution, not selected as one
- *      mutation among many, so the suite is applied more often per execution.
- * Both must be stated when the two engines' positive arms are compared.
+ * -DPOST_BUILD: the same suite through AFL 2.52b's AFL_POST_LIBRARY interface, for
+ * PerfFuzz (perffuzz-suite). Two differences from the AFL++ build follow from that
+ * interface: the post-processor runs after havoc and cannot turn it off, and it is
+ * applied to every candidate before execution rather than chosen as one mutation
+ * among several.
  * ------------------------------------------------------------------------------------------- */
 #ifdef POST_BUILD
 #include <unistd.h>
@@ -687,25 +563,17 @@ uint8_t *afl_postprocess(uint8_t *buf, unsigned int *len) {
 #endif /* POST_BUILD */
 
 /* ---------------------------------------------------------------------------------------------
- * -DLIBFUZZER_BUILD: expose the SAME suite through libFuzzer's LLVMFuzzerCustomMutator ABI, for
- * arm 6 (SlowFuzz + suite).
+ * -DLIBFUZZER_BUILD: the same suite through libFuzzer's LLVMFuzzerCustomMutator, for
+ * SlowFuzz (slowfuzz-suite). One source with three entry points, so every engine
+ * applies the same generator.
  *
- * WHY A THIRD ABI. Arms 2 (AFL++), 4 (PerfFuzz/FuzzFactory) and 6 (SlowFuzz) must apply the SAME
- * generator, or an arm-to-arm difference could be a generator difference rather than an engine
- * difference. AFL++ takes afl_custom_fuzz, AFL 2.52b takes afl_postprocess, libFuzzer takes
- * LLVMFuzzerCustomMutator. One source, three entry points, identical body.
+ * SlowFuzz picks one mutator uniformly per step (FuzzerMutate.cpp:671). With the
+ * suite registered the menu has 14 entries, and with the default -mutate_depth=5
+ * the suite touches about 1-(13/14)^5, or 31%, of generated inputs.
  *
- * HOW ARM 6 DIFFERS FROM ARMS 2 AND 4 -- state this when comparing. SlowFuzz selects one mutator
- * uniformly from its menu (FuzzerMutate.cpp:671, idx = TrueRand(Mutators.size())). With the suite
- * registered, the menu is 14 entries, so the suite runs on about 1/14 of mutation steps; with
- * -mutate_depth=5 (libFuzzer's default) that is 1-(13/14)^5 ~= 31% of generated inputs. This is
- * *between* arm 2 (a separate stage with its own budget, seeing clean parents) and arm 4 (applied
- * to every execution, after havoc). It is SlowFuzz's own scheduling, not a choice of ours.
- *
- * ABI CONTRACT. libFuzzer mutates IN PLACE: we must copy our buffer back into Data, bounded by
- * MaxSize, and return the new size. Returning 0 means "declined", and SlowFuzz's MutateImpl then
- * tries the next mutator (FuzzerMutate.cpp:688 requires a non-zero size <= MaxSize), which is the
- * same fallback the suite already relies on elsewhere.
+ * libFuzzer mutates in place: copy the result into Data within MaxSize and return
+ * the new size. Returning 0 declines, and SlowFuzz tries another mutator
+ * (FuzzerMutate.cpp:688).
  * ------------------------------------------------------------------------------------------- */
 #ifdef LIBFUZZER_BUILD
 static void *g_lf_state;
@@ -718,8 +586,7 @@ size_t LLVMFuzzerCustomMutator(uint8_t *Data, size_t Size, size_t MaxSize, unsig
         g_lf_state = afl_custom_init(NULL, Seed);
         if (!g_lf_state) return 0;
     }
-    /* Make the suite's internal rand() draws follow libFuzzer's -seed, so a run is reproducible
-     * from the engine's own seed rather than from wall-clock state. */
+    /* Seed rand() from libFuzzer's -seed so a run is reproducible. */
     srand(Seed);
 
     n = afl_custom_fuzz(g_lf_state, Data, Size, &out, NULL, 0,

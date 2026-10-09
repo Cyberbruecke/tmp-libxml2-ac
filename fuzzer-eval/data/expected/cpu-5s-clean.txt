@@ -5,6 +5,6 @@ vector                  Stock   AFL++ all  AFL++ only    PerfFuzz    SlowFuzz   
 C14N1D3 (excl.)             -           -           -           -           -           -
 C14N1D3 (incl.)             -           -         yes           -           -           -
 XPlode                      -           -         yes         yes           -         yes
-FlAttr                      -           -           -           -           -         yes
-Wreckoncile                 -           -           -           -           -         yes
-runs clearing            0/40        0/10        3/10        2/10        0/10        3/10
+FlAttr                      -           -           -           -           -           -
+Wreckoncile                 -           -           -           -           -           -
+runs clearing            0/40        0/10        3/10        2/10        0/10        1/10

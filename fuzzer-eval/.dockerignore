@@ -1,1 +1,5 @@
 build/
+out-*/
+# Tier 2 output. It belongs on the host, and a root-owned leftover would make
+# `docker build` fail with "permission denied".
+runs/

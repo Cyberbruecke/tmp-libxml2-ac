@@ -1,26 +1,34 @@
 #!/usr/bin/env bash
 # Build the measurement harnesses used to score fuzzer-produced inputs.
 #
-#   scripts/build.sh                     the revision the paper reports (default)
+#   scripts/build.sh                     the revision the paper's runs used (default)
 #   scripts/build.sh --commit latest     current upstream master
 #   scripts/build.sh --commit v2.15.0    a tag
 #   scripts/build.sh --commit c6324894   any commit
 #   scripts/build.sh --instrumented      match the paper's CPU measurements
 #
-# The paper's CPU figures were taken on an AFL-instrumented libxml2, which costs
-# 1.0x to 4.1x more than a clean build for identical work. --instrumented
-# reproduces that; without it the operation counts still match exactly but CPU
-# times are lower. Needs AFL++ (set AFL_PATH or put afl-clang-fast on PATH).
+# The paper's CPU figures were measured on an AFL-instrumented libxml2, which
+# costs up to about 4x more than a clean build for the same work.
+# --instrumented reproduces that; without it the operation counts are the same
+# and the CPU times are lower. Needs AFL++ (set AFL_PATH or put afl-clang-fast
+# on PATH).
 #
-# Each revision builds into its own directory, so several can coexist and be
-# compared. Nothing here builds or runs a fuzzer: Tier 1 only replays inputs we
-# have already saved.
+# Each revision builds into its own directory, so several can be compared. This
+# script builds no fuzzer: Tier 1 only replays saved inputs.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 BUILD="$ROOT/build"
 JOBS="${JOBS:-$(nproc 2>/dev/null || echo 4)}"
-LIBXML2_REPO="${LIBXML2_REPO:-https://gitlab.gnome.org/GNOME/libxml2.git}"
+# Upstream first, then GNOME's GitHub mirror if upstream is unreachable. The
+# commit hash is resolved after cloning, so either source yields the same tree.
+# LIBXML2_REPO replaces the list with a single source, such as a local clone.
+if [ -n "${LIBXML2_REPO:-}" ]; then
+  LIBXML2_REPOS=("$LIBXML2_REPO")
+else
+  LIBXML2_REPOS=(https://gitlab.gnome.org/GNOME/libxml2.git
+                 https://github.com/GNOME/libxml2.git)
+fi
 
 # The revision the paper's measurements were taken on. `git describe` renders it
 # v2.15.0-124-gc6324894: 124 commits past the v2.15.0 tag. The tree's own
@@ -43,7 +51,17 @@ mkdir -p "$BUILD"
 
 if [ ! -d "$MIRROR" ]; then
   echo "== fetching libxml2 =="
-  git clone --quiet --bare "$LIBXML2_REPO" "$MIRROR"
+  ok=0
+  for r in "${LIBXML2_REPOS[@]}"; do
+    [ ${#LIBXML2_REPOS[@]} -gt 1 ] && echo "   trying $r"
+    if git clone --quiet --bare "$r" "$MIRROR" 2>/dev/null; then ok=1; break; fi
+    rm -rf "$MIRROR"
+    echo "   unavailable, trying the next source" >&2
+  done
+  [ "$ok" = 1 ] || {
+    echo "could not fetch libxml2 from any source:" >&2
+    printf '   %s\n' "${LIBXML2_REPOS[@]}" >&2
+    echo "Set LIBXML2_REPO to a reachable clone if you are offline." >&2; exit 1; }
 elif [ "$WANT" = "latest" ]; then
   echo "== updating mirror =="
   git --git-dir="$MIRROR" fetch --quiet origin \

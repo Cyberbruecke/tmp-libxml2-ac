@@ -1,12 +1,9 @@
-/* measure_c3.c — report C3 axis iterations for a file, offline (no waypoint, no AFL).
+/* measure_c3.c: report XPlode sink iterations for one input file.
  *
- * MUST MIRROR c3_xpath_afl.c EXACTLY. When the harness took a hardcoded XPath and this tool
- * took the same one, they agreed by luck. Now that the expression comes from the input, any
- * divergence would mean the fuzzer optimises one thing while we report another -- and a seed
- * that cannot reach its own sink already cost us once (the c3 seed scored 0 for a day because
- * it used <c/> against an expression matching `a`).
+ * Parses its input exactly as cputime_afl.c does with SINK_OP=4, so the fuzzer
+ * and the scorer evaluate the same expression against the same document.
  *
- * Input format, identical to the harness:
+ * Input format:
  *   line 1     XPath expression
  *   remainder  XML document
  * Output: "<iterations> <bytes> <parsed>"

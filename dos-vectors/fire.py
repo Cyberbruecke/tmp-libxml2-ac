@@ -386,7 +386,7 @@ def send_once(t, body, cookies, headers, nbytes, stats):
     t0 = time.perf_counter()
     try:
         r = requests.post(t["url"], data=body, cookies=cookies, headers=headers,
-                          verify=False, timeout=600, allow_redirects=False)
+                          verify=False, timeout=None, allow_redirects=False)  # no client-side timeout: wait as long as the server holds the request
         dt = time.perf_counter() - t0
         stats.record(t0, t0 + dt, nbytes)
         return dt, r.status_code

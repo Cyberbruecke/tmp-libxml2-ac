@@ -1,4 +1,4 @@
-/* Report C5 attribute tail-walk iterations for a file (parser entry point only). */
+/* measure_c7.c: report Wreckoncile reconciliation iterations for one input file. */
 #include <stdio.h>
 #include <stdlib.h>
 #include <libxml/parser.h>

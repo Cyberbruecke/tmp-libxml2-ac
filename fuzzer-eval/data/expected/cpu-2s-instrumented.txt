@@ -3,8 +3,8 @@ libxml2  : v2.15.0-124-gc6324894 (c6324894, instrumented)
 criterion: CPU time >= 2 s   (median of 5 runs per input)
 vector                  Stock   AFL++ all  AFL++ only    PerfFuzz    SlowFuzz    Informed
 C14N1D3 (excl.)             -           -           -           -           -         yes
-C14N1D3 (incl.)             -         yes         yes           -         yes         yes
+C14N1D3 (incl.)             -         yes         yes           -           -         yes
 XPlode                      -         yes         yes         yes           -         yes
 FlAttr                      -           -           -           -           -         yes
 Wreckoncile                 -           -         yes           -           -         yes
-runs clearing            0/40        4/10        6/10        2/10        1/10        8/10
+runs clearing            0/40        4/10        6/10        2/10        0/10        9/10
